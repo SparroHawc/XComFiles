@@ -1707,7 +1707,7 @@
         - name: VILLGE01
           width: 40
           length: 40
-  - type: STR_MIB_BASE_LANDING
+  - type: STR_MIB_BASE
     size: STR_VERY_LARGE
     modSprite: interception_jammed
     damageMax: 500

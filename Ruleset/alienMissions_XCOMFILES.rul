@@ -1020,6 +1020,9 @@
   - type: STR_MIB_BASE
     points: 0
     retaliationOdds: 0
+    objective: 2
+    siteType: STR_MIB_BASE
+    spawnZone: 3 #Mission zone for terror missions
     raceWeights:
       0:
           STR_MIB: 100
@@ -1033,10 +1036,11 @@
           STR_MIB: 50
           STR_LATE_MIB: 50
     waves:
-      - ufo: STR_MIB_BASE_LANDING
+      - ufo: dummy
         count: 1
-        trajectory: B0
-        timer: 15000
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
   - type: STR_DAVID_VINCENT_HOUSE
     despawnEvenIfTargeted: false
     objective: 3

@@ -3708,3 +3708,9 @@
           - type: floor
             set: 1
             entry: 63
+  - type: MIB_BASE
+    commands:
+    - type: addUFO
+      UFOName: STR_MIB_BASE
+    - type: addCraft
+    - type: fillArea

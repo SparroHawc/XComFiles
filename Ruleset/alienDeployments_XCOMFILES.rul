@@ -20584,21 +20584,42 @@
             - STR_MASS_DRIVER_SNIPER_RIFLE
             - STR_MASS_DRIVER_SNIPER_RIFLE_CLIP
             - STR_MASS_DRIVER_SNIPER_RIFLE_CLIP
-  - type: STR_MIB_BASE_LANDING
+  - type: STR_MIB_BASE
     randomRace:
       - STR_MIB
       - STR_MIB
       - STR_LATE_MIB
-    race: STR_LATE_MIB
+    race: STR_MIB
     width: 60
     length: 60
     height: 6
+    markerName: STR_MIB_BASE
+    markerIcon: 10
+    points: 10
+    alert: STR_ALERT_MIB_BASE
+    alertBackground: BACKGROUND_MIB.SCR
+    alertDescription: STR_MIB_BASE_DESCRIPTION
     briefing:
       background: BACKGROUND_MIB.SCR
       palette: 2
       music: UNR2_INTRO
     music:
       - SR2_SPACE
+    script: MIB_BASE
+    terrains:
+      - URBAN
+      - DAWNURBAN
+      - DUSKURBAN
+      - PORTURBAN
+      - INDUSTRIALURBAN
+      - RAILYARDURBAN
+      - NATIVEURBAN
+      - NATIVEURBAN_JUNK
+      - NATIVEURBANROAD
+      - NATIVEURBANROAD_JUNK
+      - COMRCURBAN
+      - PORTTFTD
+      - RURAL
     data:
       - alienRank: 5
         lowQty: 2
