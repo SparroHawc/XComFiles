@@ -9299,6 +9299,12 @@ extraSprites:
     height: 200
     files:
       0: Resources/UfopediaTechPics/RedQueen_CPAL.png
+  - type: TOWER_OF_APOCALYPSE_CPAL
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/UfopediaTechPics/TowerOfApocalypse_CPAL.png
   - type: BLACK_SPHERE_CPAL
     singleImage: true
     width: 320

@@ -42128,11 +42128,6 @@ items:
     weight: 0
     invWidth: 2
     invHeight: 3
-  - type: STR_TOWER_OF_APOCALYPSE
-    bigSprite: 307
-    weight: 0
-    invWidth: 2
-    invHeight: 3
   - type: STR_PROJECT_SAMAEL
     bigSprite: 307
     weight: 0
