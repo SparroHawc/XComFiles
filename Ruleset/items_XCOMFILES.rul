@@ -42804,11 +42804,6 @@ items:
     weight: 0
     invWidth: 2
     invHeight: 3
-  - type: STR_ORDER_OF_ELIMINATION
-    bigSprite: 306
-    weight: 0
-    invWidth: 2
-    invHeight: 3
   - type: STR_CALL_OF_TLETH
     bigSprite: 306
     weight: 0
