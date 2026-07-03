@@ -42128,11 +42128,6 @@ items:
     weight: 0
     invWidth: 2
     invHeight: 3
-  - type: STR_PROJECT_SAMAEL
-    bigSprite: 307
-    weight: 0
-    invWidth: 2
-    invHeight: 3
   - type: STR_HIDDEN_CAVES
     bigSprite: 307
     weight: 0
