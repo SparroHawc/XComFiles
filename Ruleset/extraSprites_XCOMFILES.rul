@@ -8999,6 +8999,12 @@ extraSprites:
     height: 200
     files:
       0: Resources/UfopediaTechPics/HybridGroundConvoy_CPAL.png
+  - type: HYBRID_MIB_MEETING_CPAL
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/UfopediaTechPics/HybridMiBMeeting_CPAL.png
   - type: HYBRID_CONTROLLERS_CPAL
     singleImage: true
     width: 320

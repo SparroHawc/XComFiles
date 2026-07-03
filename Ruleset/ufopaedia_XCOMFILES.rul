@@ -8323,11 +8323,14 @@ ufopaedia:
       - STR_HYBRID_GROUND_CONVOY
     listOrder: 180410
   - id: STR_HYBRID_MIB_MEETING
-    type_id: 4
+    type_id: 7
     section: STR_ALIEN_RESEARCH_UC
+    image_id: HYBRID_MIB_MEETING_CPAL
+    text: STR_HYBRID_MIB_MEETING_UFOPEDIA
+    text_width: 310
+    align_bottom: true
     requires:
       - STR_HYBRID_MIB_MEETING
-    text: STR_HYBRID_MIB_MEETING_UFOPEDIA
     listOrder: 188100
   - id: STR_HYBRID_SECTOID_MEETING
     type_id: 4

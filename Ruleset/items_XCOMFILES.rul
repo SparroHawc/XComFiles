@@ -42228,11 +42228,6 @@ items:
     weight: 0
     invWidth: 2
     invHeight: 3
-  - type: STR_HYBRID_MIB_MEETING
-    bigSprite: 299
-    weight: 0
-    invWidth: 2
-    invHeight: 3
   - type: STR_HYBRID_SECTOID_MEETING
     bigSprite: 299
     weight: 0
