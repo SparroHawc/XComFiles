@@ -8298,7 +8298,7 @@ ja:
   STR_ALERT_HYBRID_KEEP: "ハイブリッドが築城"
   STR_HYBRID_KEEP_DESCRIPTION: "ハイブリッドがこのエリア内に要塞型のビルを築きあげた。彼らの破壊活動の拠点として使われ、堅固な守りを誇っている。"
   STR_HYBRID_KEEP_BRIEFING: "ハイブリッドネットワークがこのエリア内に要塞型のビルを築きあげた。彼らの破壊活動の拠点として使われ、堅固な守りを誇っている。任務を中断する場合は全ての隊員を輸送機に戻した後'任務中断'を実行せよ。"
-  STR_HYBRID_SECTOID_MEETING: "ハイブリッドとエイリアンの会合"
+  STR_HYBRID_SECTOID_MEETING: "ハイブリッ/とエイリアンの会合"
   STR_ALERT_HYBRID_SECTOID_MEETING: "ハイブリッドが首領と会合中！"
   STR_HYBRID_SECTOID_MEETING_DESCRIPTION: "情報筋によれば此処がハイブリッド達がエイリアンの首領から指令を受ける場所らしい。これは彼らの活動に歯止めをかけ、貴重な情報を手にする良いチャンスだ。"
   STR_HYBRID_SECTOID_MEETING_BRIEFING: "情報筋によれば此処がハイブリッド達がエイリアンの首領から指令を受ける場所らしい。これは彼らの活動に歯止めをかけ、貴重な情報を手にする良いチャンスだ。任務を中断する場合は全ての隊員を輸送機に戻した後'任務中断'を実行せよ。"
