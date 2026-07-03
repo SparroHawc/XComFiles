@@ -9305,6 +9305,12 @@ extraSprites:
     height: 200
     files:
       0: Resources/UfopediaTechPics/BlackSphere_CPAL.png
+  - type: THE_STAR_SABBATH_CPAL
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/UfopediaTechPics/TheStarSabbath_CPAL.png
   - type: THUNDER_ARCER_STUDY_CPAL.SPK
     singleImage: true
     width: 320

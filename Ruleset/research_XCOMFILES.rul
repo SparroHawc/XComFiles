@@ -41,6 +41,7 @@ research:
       - STR_SECTOID_GUARD
       - STR_ETHEREAL_ORDER
       - STR_ORDER_OF_ELIMINATION
+      - STR_THE_STAR_SABBATH
       - STR_ETHEREAL_ORIGINS
       - STR_SNAKEMEN_HOMEWORLD
       - STR_MUTON_CULTURE
@@ -9714,6 +9715,8 @@ research:
         - STR_ALIEN_GOVERNANCE
       STR_ALIEN_POWER_SYSTEMS:
         - STR_UFO_POWER_SOURCE
+      STR_GOLDEN_LADY_ORIGINS_STR_ALIEN_NARRATIVE:
+        - STR_THE_STAR_SABBATH
     listOrder: 141040
   - name: STR_ETHEREAL_LEGATE
     requiresBaseFunc: [BIOLAB]
@@ -9757,6 +9760,8 @@ research:
         - STR_ORDER_OF_ELIMINATION
       STR_ALIEN_POWER_SYSTEMS:
         - STR_UFO_POWER_SOURCE
+      STR_GOLDEN_LADY_ORIGINS_STR_ALIEN_NARRATIVE:
+        - STR_THE_STAR_SABBATH
     #listOrder: 141045
   - name: STR_ETHEREAL_SERVITOR
     requiresBaseFunc: [BIOLAB]
@@ -9815,6 +9820,8 @@ research:
         - STR_ALIEN_ENVOY
       STR_ALIEN_POWER_SYSTEMS:
         - STR_UFO_POWER_SOURCE
+      STR_GOLDEN_LADY_ORIGINS_STR_ALIEN_NARRATIVE:
+        - STR_THE_STAR_SABBATH
     listOrder: 141038
   - name: STR_SECTOID_GUARD_CAPTAIN
     requiresBaseFunc: [BIOLAB]
@@ -19746,6 +19753,13 @@ research:
     unlocks:
       - STR_ALIEN_SECRETS
     listOrder: 169205
+  - name: STR_THE_STAR_SABBATH
+    cost: 50
+    points: 350
+    needItem: true
+    unlocks:
+      - STR_ALIEN_SECRETS
+    listOrder: 169210
   - name: STR_ALIEN_DIPLOMACY
     dependencies:
       - STR_ETHEREAL_GRAND_MASTER
@@ -30240,6 +30254,12 @@ research:
     dependencies:
       - STR_TROLLIUM
 # hidden combinations
+  - name: STR_GOLDEN_LADY_ORIGINS_STR_ALIEN_NARRATIVE
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GOLDEN_LADY_ORIGINS
+      - STR_ALIEN_NARRATIVE
   - name: STR_MINOTAUR_STR_CHIEF_RESEARCHER_CONTACT
     cost: 0
     points: 0

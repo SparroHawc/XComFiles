@@ -7418,6 +7418,15 @@ ufopaedia:
       - STR_ORDER_OF_ELIMINATION
     text: STR_ORDER_OF_ELIMINATION_UFOPEDIA
     listOrder: 169205
+  - id: STR_THE_STAR_SABBATH
+    type_id: 7
+    section: STR_ALIEN_RESEARCH_UC
+    image_id: THE_STAR_SABBATH_CPAL
+    text: STR_THE_STAR_SABBATH_UFOPEDIA
+    text_width: 185
+    requires:
+      - STR_THE_STAR_SABBATH
+    listOrder: 169210
   - id: STR_ETHEREAL_ORIGINS
     type_id: 7
     section: STR_ALIEN_RESEARCH_UC
