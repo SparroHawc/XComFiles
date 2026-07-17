@@ -4957,6 +4957,17 @@ manufacture:
     producedItems:
       STR_ASSAULT_CANNON_CLIP_AA: 3
     listOrder: 23420
+  - name: STR_MACRO_CANNON_TT_AMMO
+    category: STR_AMMUNITION
+    requires:
+      - STR_MACRO_CANNON_TT_AMMO_MANUFACTURING
+    space: 3
+    time: 275
+    cost: 800
+    requiresBaseFunc: [WORKS]
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    listOrder: 23442
   - name: STR_MACRO_SMG_AA_CLIP_XXX
     category: STR_AMMUNITION
     requires:
@@ -10079,6 +10090,8 @@ manufacture:
       - [3, {STR_ROCKET_LAUNCHER: 1, STR_LARGE_ROCKET: 3}]
       - [3, {STR_ROCKET_LAUNCHER: 1, STR_INCENDIARY_ROCKET: 3}]
       - [4, {STR_ROCKET_LAUNCHER: 1, STR_SMALL_ROCKET: 3}]
+      - [3, {STR_MACRO_CANNON: 1, STR_MACRO_CANNON_AMMO: 3}]
+      - [2, {STR_MACRO_CANNON: 1, STR_MACRO_CANNON_AMMO: 12}]
       - [3, {STR_LIGHT_CANNON: 1, STR_LC_HE_AMMO: 3}]
       - [3, {STR_LIGHT_CANNON: 1, STR_LC_I_AMMO: 3}]
       - [7, {STR_LIGHT_CANNON: 1, STR_LC_AP_AMMO: 3}]
@@ -10232,6 +10245,7 @@ manufacture:
       - [10, {STR_LC_BS_AMMO: 10}]
       - [6, {STR_LC_HE_AMMO: 10}]
       - [6, {STR_LC_I_AMMO: 10}]
+      - [2, {STR_MACRO_CANNON_AMMO: 10}]
 # Sniper Rifles
       - [75, {STR_SNIPER_RIFLE_CLIP: 5}]
       - [65, {STR_SWD_CLIP: 5}]
@@ -10575,6 +10589,7 @@ manufacture:
       - [12, {STR_BLACKOPS_MAGNUM: 2, STR_MAGNUM_DRUM: 30}]
       - [40, {STR_SMG: 1, STR_SMG_CLIP: 10}]
       - [6, {STR_MACRO_SMG: 1, STR_MACRO_SMG_CLIP: 7}]
+      - [3, {STR_MACRO_CANNON: 1, STR_MACRO_CANNON_AMMO: 10}]
       - [4, {STR_BLACKOPS_SHOTGUN: 1, STR_SHOTGUN_SHELLS: 15}]
       - [4, {STR_BLACKOPS_SHOTGUN: 1, STR_SHOTGUN_SHELLS_AP: 15}]
       - [4, {STR_BLACKOPS_SHOTGUN: 1, STR_SHOTGUN_SHELLS_BATON: 15}]

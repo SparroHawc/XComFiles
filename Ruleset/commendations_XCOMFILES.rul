@@ -732,6 +732,8 @@ commendations:
       -
          - [1, ["STR_ASSAULT_CANNON", "FACTION_HOSTILE", "STATUS_DEAD"]]
       -
+         - [1, ["STR_MACRO_CANNON", "FACTION_HOSTILE", "STATUS_DEAD"]]
+      -
          - [1, ["STR_GAS_CANNON", "FACTION_HOSTILE", "STATUS_DEAD"]]
       -
          - [1, ["STR_DISRUPTOR_HEAVY", "FACTION_HOSTILE", "STATUS_DEAD"]]

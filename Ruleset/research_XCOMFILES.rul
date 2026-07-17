@@ -17014,6 +17014,22 @@ research:
       - STR_ALLOY_AMMO
       - STR_MACRO_SMG
     listOrder: 520910
+  - name: STR_MACRO_CANNON_TT_AMMO
+    cost: 0
+    points: 0
+    needItem: true
+    dependencies:
+      - STR_MACRO_CANNON
+    listOrder: 23442
+  - name: STR_MACRO_CANNON_TT_AMMO_MANUFACTURING
+    cost: 3
+    points: 3
+    lookup: STR_MACRO_CANNON_TT_AMMO
+    dependencies:
+      - STR_SYNDICATE_OPERATIONS
+      - STR_ALLOY_AMMO
+      - STR_MACRO_CANNON
+    listOrder: 523430
   - name: STR_SMOKE_GRENADE
     cost: 0
     points: 0
@@ -17212,6 +17228,20 @@ research:
       - STR_BLACKOPS_PREMIUM
       - STR_MACRO_SMG
     listOrder: 420890
+  - name: STR_MACRO_CANNON
+    cost: 25
+    points: 25
+    needItem: true
+    listOrder: 23440
+  - name: STR_MACRO_CANNON_BUY
+    cost: 3
+    points: 2
+    lookup: STR_MACRO_CANNON
+    dependencies:
+      - STR_MILESTONE_3_SUMMARY
+      - STR_BLACKOPS_PREMIUM
+      - STR_MACRO_CANNON
+    listOrder: 423440
   - name: STR_HMG
     cost: 20
     points: 10
@@ -23351,6 +23381,7 @@ research:
       - STR_BLACKOPS_SMARTRIFLE
       - STR_BLACKOPS_SMARTGUN
       - STR_MACRO_SMG
+      - STR_MACRO_CANNON
       - STR_ASSAULT_CANNON
       - STR_ROCKET_LAUNCHER
       - STR_BLACKOPS_LMG

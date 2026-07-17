@@ -9781,6 +9781,78 @@ items:
     invHeight: 1
     attraction: 16
     listOrder: 23350
+  - type: STR_MACRO_CANNON
+    categories: [STR_HUMAN_TECH, STR_FIREARMS, STR_CANNONS, STR_HEAVY_WEAPONS, STR_LAND]
+    requiresBuy:
+      - STR_MACRO_CANNON_BUY
+    size: 0.35
+    costBuy: 46000
+    costSell: 35800
+    weight: 50
+    bigSprite: 895
+    floorSprite: 795
+    handSprite: 2600
+    bulletSprite: 3
+    fireSound: 80
+    reloadSound: 1030
+    compatibleAmmo:
+      - STR_MACRO_CANNON_AMMO
+      - STR_MACRO_CANNON_TT_AMMO
+    accuracyCloseQuarters: 40
+    accuracySnap: 30
+    accuracyAimed: 100
+    tuSnap: 36
+    tuAimed: 85
+    battleType: 1
+    twoHanded: true
+    oneHandedPenalty: 40
+    aimRange: 24
+    armor: 40
+    invWidth: 1
+    invHeight: 3
+    attraction: 20
+    listOrder: 23440
+  - type: STR_MACRO_CANNON_AMMO
+    categories: [STR_HUMAN_TECH, STR_FIREARMS, STR_CANNONS, STR_HEAVY_WEAPONS, STR_CLIPS, STR_LAND]
+    requiresBuy:
+      - STR_MACRO_CANNON_BUY
+    size: 0.1
+    costBuy: 1000
+    costSell: 750
+    weight: 6
+    bigSprite: 896
+    floorSprite: 1182
+    hitSound: 81
+    hitAnimation: 26
+    power: 82
+    damageType: 1
+    damageAlter:
+      ArmorEffectiveness: 0.75
+    clipSize: 3
+    battleType: 2
+    invWidth: 1
+    invHeight: 2
+    attraction: 16
+    listOrder: 23441
+  - type: STR_MACRO_CANNON_TT_AMMO
+    categories: [STR_HUMAN_TECH, STR_FIREARMS, STR_CANNONS, STR_HEAVY_WEAPONS, STR_CLIPS, STR_LAND]
+    size: 0.1
+    costSell: 19500
+    weight: 6
+    bigSprite: 1413
+    floorSprite: 1182
+    hitSound: 81
+    hitAnimation: 26
+    power: 108
+    damageType: 1
+    damageAlter:
+      ArmorEffectiveness: 0.75
+    clipSize: 3
+    battleType: 2
+    invWidth: 1
+    invHeight: 2
+    attraction: 16
+    listOrder: 23442
   - type: STR_MASS_DRIVER_PISTOL
     categories: [STR_ALIEN_TECH, STR_MASS_DRIVER, STR_PISTOLS, STR_CONCEALABLE, STR_SPACE, STR_LAND]
     size: 0.1

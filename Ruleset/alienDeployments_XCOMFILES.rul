@@ -68018,9 +68018,10 @@ alienDeployments:
             - STR_BLACKOPS_LMG_CLIP
             - STR_NAPALM_GRENADE
           -
-            - STR_ASSAULT_CANNON
-            - STR_ASSAULT_CANNON_CLIP_AP
-            - STR_ASSAULT_CANNON_CLIP_AP
+            - STR_MACRO_CANNON
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
             - STR_GRENADE
           -
             - STR_ROCKET_LAUNCHER
@@ -68836,11 +68837,10 @@ alienDeployments:
             - STR_ASSAULT_CANNON_CLIP_AP
             - STR_GRENADE
           -
-            - STR_ROCKET_LAUNCHER
-            - STR_LARGE_ROCKET
-            - STR_LARGE_ROCKET
-            - STR_LARGE_ROCKET
-            - STR_LARGE_ROCKET
+            - STR_MACRO_CANNON
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
             - STR_GRENADE
   - type: STR_SYNDICATE_WAREHOUSE
     width: 50
@@ -70018,10 +70018,10 @@ alienDeployments:
             - STR_AUTO_SHOTGUN_AA_SHELLS
             - STR_SCHUTZSTAFFELN_RING
           -
-            - STR_ASSAULT_CANNON
-            - STR_ASSAULT_CANNON_CLIP_AA
-            - STR_ASSAULT_CANNON_CLIP_AA
-            - STR_ASSAULT_CANNON_CLIP_AA
+            - STR_MACRO_CANNON
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
             - STR_SCHUTZSTAFFELN_RING
   - type: STR_SYNDICATE_HQ
     width: 50
@@ -70393,10 +70393,9 @@ alienDeployments:
             - STR_BLACKOPS_LMG_AA_CLIP
             - STR_GRENADE
           -
-            - STR_ASSAULT_CANNON
-            - STR_ASSAULT_CANNON_CLIP_AA
-            - STR_ASSAULT_CANNON_CLIP_AA
-            - STR_NAPALM_GRENADE
+            - STR_MACRO_CANNON
+            - STR_MACRO_CANNON_AMMO
+            - STR_MACRO_CANNON_AMMO
           -
             - STR_ROCKET_LAUNCHER
             - STR_SMALL_ROCKET

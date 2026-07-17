@@ -1508,6 +1508,7 @@ extraSprites:
       1410: Resources/CiviliansPack/Citizens/bigob_FEMALE_NUDE_CORPSE_ZZZ.png
       1411: Resources/FactionsPack/MenInBlack/bigob_MIB_MEDIC.png
       1412: Resources/Races_Compilation/TasothRace/bigob_TentaculatWeapon.png
+      1413: Resources/Weapons_Compilation/BlackopsWeapons/bigob_MacroCannonTTClip.png
   - type: FLOOROB.PCK
     files:
       41: Resources/Armors_Compilation/PowerSuit/floorob_POWER_SUIT.png
@@ -2517,6 +2518,7 @@ extraSprites:
       1179: Resources/CiviliansPack/Citizens/floorob_MALE_NUDE_CORPSE_ZZZ.png
       1180: Resources/CiviliansPack/Citizens/floorob_FEMALE_NUDE_CORPSE_ZZZ.png
       1181: Resources/FactionsPack/MenInBlack/floorob_MIB_COMBAT_ARMOR.png
+      1182: Resources/Weapons_Compilation/BlackopsWeapons/floorob_MacroCannonClip.png
   - type: HANDOB.PCK
     height: 40
     width: 256
@@ -2832,6 +2834,7 @@ extraSprites:
       2576: Resources/Weapons_Compilation/MeleeWeapons/handob_BrassKnuckles.png
       2584: Resources/Weapons_Compilation/XComWeapons/handob_Terramace.png
       2592: Resources/Weapons_Compilation/CultPsiWeapons/handob_ChaosWand.png
+      2600: Resources/Weapons_Compilation/BlackopsWeapons/handob_MacroCannon.png
   - type: INTICON.PCK
     files:
       13: Resources/Vessels/Inticon/AvengerDogfight.png
