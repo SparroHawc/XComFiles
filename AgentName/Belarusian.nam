@@ -1,3 +1,4 @@
+globalWeight: 26
 lookWeights:
   - 50
   - 50
@@ -300,7 +301,7 @@ maleLast:
   - Zhuk
   - Zhukau
   - Zhukovsky
-femaleLast
+femaleLast:
   - Adamovich
   - Alexievich
   - Alferava

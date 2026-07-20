@@ -1,4 +1,5 @@
-﻿lookWeights:
+globalWeight: 43
+lookWeights:
   - 50
   - 50
   - 0
@@ -70,6 +71,7 @@ maleFirst:
   - Michał
   - Mieczysław
   - Mikołaj
+  - Miłosz
   - Mirosław
   - Norbert
   - Paweł
@@ -185,8 +187,10 @@ maleLast:
   - Górniak
   - Górski
   - Grabowski
+  - Hryniewiecki
   - Indeka
   - Jabłoński
+  - Jakubowski
   - Janik
   - Jankowski
   - Jarczok
@@ -194,6 +198,7 @@ maleLast:
   - Kalinowski
   - Kamiński
   - Karłowicz
+  - Kobiela
   - Kobza
   - Kołodziejczak
   - Kominek
@@ -207,6 +212,7 @@ maleLast:
   - Kowalczyk
   - Kowalski
   - Kozłowski
+  - Kraśkiewicz
   - Krawczyk
   - Król
   - Kuś
@@ -236,6 +242,7 @@ maleLast:
   - Płatek
   - Poddańczyk
   - Podkański
+  - Pokora
   - Polak
   - Poradowski
   - Pragłowski
@@ -301,8 +308,10 @@ femaleLast:
   - Górniak
   - Górska
   - Grabowska
+  - Hryniewiecka
   - Indeka
   - Jabłońska
+  - Jakubowska
   - Janik
   - Jankowska
   - Jarczok
@@ -310,6 +319,7 @@ femaleLast:
   - Kalinowska
   - Kamińska
   - Karłowicz
+  - Kobiela
   - Kobza
   - Kołodziejczak
   - Kominek
@@ -323,6 +333,7 @@ femaleLast:
   - Kowalczyk
   - Kowalska
   - Kozłowska
+  - Kraśkiewicz
   - Krawczyk
   - Król
   - Kuś
@@ -352,6 +363,7 @@ femaleLast:
   - Płatek
   - Poddańczyk
   - Podkańska
+  - Pokora
   - Polak
   - Poradowska
   - Pragłowska

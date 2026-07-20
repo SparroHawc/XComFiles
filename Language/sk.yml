@@ -1,4 +1,5 @@
 sk:
+  STR_MARRAKESH: "Murrákuš"
   STR_HOLODRONE_TERRORIST: "Holodron terorista"
   STR_GAZER: "Gazer"
   STR_GAZER_SOLDIER: "Gazer vojak"
@@ -28,3 +29,4 @@ sk:
   STR_TOXIGUN: "Toxizbraň"
   STR_TOXIGUN_FLASK: "Banka pre toxizbraň"
   STR_TOXIGUN_FLASK_UFOPEDIA: "Táto malá nádobka naplnená účinnou kyselinou funguje ako munícia pre toxizbraň."
+  STR_GROUND: "ZEM {0}/{1}"

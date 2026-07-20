@@ -1,9 +1,11 @@
+globalWeight: 43
 lookWeights:
   - 45
   - 45
   - 10
   - 0
 maleFirst:
+  - Alan
   - Andriy
   - Borys
   - Dmytro

@@ -1,13 +1,13 @@
 soldiers:
   - type: STR_SOLDIER
-    costBuy: 40000
+    costBuy: 30000
     costSalary: 15000
     costSalarySquaddie: 5000 # squaddie salary 20000
     costSalarySergeant: 10000 # sergeant salary 25000
     costSalaryCaptain: 20000 # captain salary 35000
     costSalaryColonel: 40000 # colonel salary 55000
     costSalaryCommander: 70000 # commander salary 85000
-    minStats:
+    minStats: &AnchorHumanMinStats
       tu: 45
       stamina: 40
       health: 25
@@ -20,7 +20,7 @@ soldiers:
       psiSkill: 0
       melee: 20
       mana: 20
-    maxStats:
+    maxStats: &AnchorHumanMaxStats
       tu: 55
       stamina: 65
       health: 35
@@ -33,7 +33,7 @@ soldiers:
       psiSkill: 6
       melee: 60
       mana: 80
-    statCaps:
+    statCaps: &AnchorHumanStatCaps
       tu: 65
       stamina: 90
       health: 45
@@ -59,12 +59,160 @@ soldiers:
       psiSkill: 50
       melee: 60
       mana: 0
-    dogfightExperience:
+    dogfightExperience: &AnchorHumanDogfightExperience
       bravery: 10
       reactions: 30
       firing: 25
     armor: STR_SUIT_UC
     armorForAvatar: STR_SUIT_UC
+    avatarOffsetX: 68
+    avatarOffsetY: 48
+    standHeight: 22
+    kneelHeight: 14
+    spawnedSoldier:
+      randomTransformationBonuses:
+        STR_CAREER_COMMONER: 80
+        STR_CAREER_MARTIAL_ARTIST: 40
+        STR_CAREER_SABOTEUR: 40
+        STR_CAREER_RANGER: 40
+        STR_CAREER_SAPPER: 40
+        STR_CAREER_MARINE: 40
+        STR_CAREER_SPY: 40
+        STR_CAREER_MARKSMAN: 40
+        STR_CAREER_SOLDIER: 40
+        STR_CAREER_POLICE_OFFICER: 80
+        STR_CAREER_DETECTIVE: 80
+        STR_CAREER_JOURNALIST: 80
+        STR_CAREER_STUDENT: 40
+        STR_CAREER_SAILOR: 40
+        STR_CAREER_MYSTERY_HUNTER: 80
+        STR_CAREER_PILOT: 80
+        STR_CAREER_MEDIC: 40
+        STR_CAREER_PSYCHOLOGIST: 20
+        STR_CAREER_FIREMAN: 20
+        STR_CAREER_EXPLORER: 80
+        STR_CAREER_DATA_ANALYST: 40
+        STR_CAREER_ADEPT: 40
+        STR_CAREER_THIEF: 20
+        STR_CAREER_ILLUSIONIST: 20
+        STR_CAREER_DELIVERY_MAN: 40
+        STR_CAREER_MOUNTAINEER: 20
+        STR_CAREER_DRIVER: 20
+        STR_CAREER_ATHLETE: 20
+        STR_CAREER_LABORER: 20
+        STR_CAREER_FENCER: 20
+        STR_CAREER_MYSTIC: 10
+        STR_CAREER_ENGINEER: 20
+        STR_CAREER_ASTRONOMER: 20
+        STR_CAREER_TRADER: 20
+        STR_CAREER_PUNK: 40
+        STR_CAREER_COACH: 20
+        STR_CAREER_FARMER: 40
+        STR_CAREER_HUNTER: 40
+        STR_CAREER_PRIEST: 40
+        STR_CAREER_HISTORIAN: 20
+        STR_CAREER_ENTERTAINER: 40
+        STR_CAREER_NEGOTIATOR: 20
+        STR_CAREER_ASTRONAUT: 10
+        STR_CAREER_INSTITUTIONALIZED: 20
+        STR_CAREER_MERCENARY: 40
+        STR_CAREER_BODYGUARD: 40
+        STR_CAREER_ARISTOCRAT: 20
+        STR_CAREER_SECRET_AGENT: 20
+    femaleFrequency: 25
+    soldierNames:
+      - delete
+      - AgentName/
+    deathMale: [41, 42, 43, 135, 136, 137, 138, 139, 140, 141]
+    deathFemale: [44, 45, 46, 160, 161, 162, 163]
+    panicMale: [701, 702, 703, 704, 705, 706, 707, 708, 709]
+    panicFemale: [731, 732, 733, 734, 735, 736, 737]
+    berserkMale: [801, 802, 803, 804, 805]
+    berserkFemale: [831, 832, 833]
+  - type: STR_INFERNAL
+    requires:
+      - STR_TROLLIUM
+    costBuy: 30000
+    costSalary: 15000
+    costSalarySquaddie: 5000 # squaddie salary 20000
+    costSalarySergeant: 10000 # sergeant salary 25000
+    costSalaryCaptain: 20000 # captain salary 35000
+    costSalaryColonel: 40000 # colonel salary 55000
+    costSalaryCommander: 70000 # commander salary 85000
+    minStats: *AnchorHumanMinStats
+    maxStats: *AnchorHumanMaxStats
+    statCaps: *AnchorHumanStatCaps
+    trainingStatCaps: *AnchorHumanTrainingStatCaps
+    dogfightExperience: *AnchorHumanDogfightExperience
+    armor: STR_SUIT_INFERNAL_UC
+    armorForAvatar: STR_SUIT_INFERNAL_UC
+    avatarOffsetX: 68
+    avatarOffsetY: 48
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 25
+    soldierNames:
+      - delete
+      - AgentName/
+    deathMale: [41, 42, 43, 135, 136, 137, 138, 139, 140, 141]
+    deathFemale: [44, 45, 46, 160, 161, 162, 163]
+    panicMale: [701, 702, 703, 704, 705, 706, 707, 708, 709]
+    panicFemale: [731, 732, 733, 734, 735, 736, 737]
+    berserkMale: [801, 802, 803, 804, 805]
+    berserkFemale: [831, 832, 833]
+  - type: STR_SPARTAN
+    requires:
+      - STR_TROLLIUM
+    costBuy: 30000
+    costSalary: 15000
+    costSalarySquaddie: 5000 # squaddie salary 20000
+    costSalarySergeant: 10000 # sergeant salary 25000
+    costSalaryCaptain: 20000 # captain salary 35000
+    costSalaryColonel: 40000 # colonel salary 55000
+    costSalaryCommander: 70000 # commander salary 85000
+    minStats: *AnchorHumanMinStats
+    maxStats:
+      tu: 55
+      stamina: 65
+      health: 35
+      bravery: 60
+      reactions: 60
+      firing: 65
+      throwing: 55
+      strength: 40
+      psiStrength: 100
+      psiSkill: 0
+      melee: 60
+      mana: 80
+    statCaps:
+      tu: 65
+      stamina: 90
+      health: 45
+      bravery: 100
+      reactions: 60
+      firing: 90
+      throwing: 70
+      strength: 50
+      psiStrength: 100
+      psiSkill: 0
+      melee: 90
+      mana: 120
+    trainingStatCaps:
+      tu: 60
+      stamina: 70
+      health: 35
+      bravery: 100
+      reactions: 60
+      firing: 65
+      throwing: 55
+      strength: 45
+      psiStrength: 100
+      psiSkill: 0
+      melee: 60
+      mana: 0
+    dogfightExperience: *AnchorHumanDogfightExperience
+    armor: STR_SUIT_SPARTAN_UC
+    armorForAvatar: STR_SUIT_SPARTAN_UC
     avatarOffsetX: 68
     avatarOffsetY: 48
     standHeight: 22
@@ -82,7 +230,7 @@ soldiers:
   - type: STR_OLYMPIAN
     requires:
       - STR_TROLLIUM
-    costBuy: 40000
+    costBuy: 30000
     costSalary: 15000
     costSalarySquaddie: 5000 # squaddie salary 20000
     costSalarySergeant: 10000 # sergeant salary 25000
@@ -129,10 +277,7 @@ soldiers:
       melee: 90
       mana: 100
     trainingStatCaps: *AnchorHumanTrainingStatCaps
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
+    dogfightExperience: *AnchorHumanDogfightExperience
     armor: STR_SUIT_OLYMPIAN_UC
     armorForAvatar: STR_SUIT_OLYMPIAN_UC
     avatarOffsetX: 68
@@ -152,7 +297,7 @@ soldiers:
   - type: STR_PROTEAN
     requires:
       - STR_TROLLIUM
-    costBuy: 40000
+    costBuy: 30000
     costSalary: 15000
     costSalarySquaddie: 5000 # squaddie salary 20000
     costSalarySergeant: 10000 # sergeant salary 25000
@@ -211,10 +356,7 @@ soldiers:
       psiSkill: 25
       melee: 75
       mana: 0
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
+    dogfightExperience: *AnchorHumanDogfightExperience
     armor: STR_SUIT_PROTEAN_UC
     armorForAvatar: STR_SUIT_PROTEAN_UC
     avatarOffsetX: 68
@@ -234,7 +376,7 @@ soldiers:
   - type: STR_KYBEROS
     requires:
       - STR_TROLLIUM
-    costBuy: 40000
+    costBuy: 30000
     costSalary: 25000
     costSalarySquaddie: 15000 # squaddie salary 30000
     costSalarySergeant: 20000 # sergeant salary 35000
@@ -273,7 +415,7 @@ soldiers:
       health: 60
       bravery: 100
       reactions: 80
-      firing: 115
+      firing: 105
       throwing: 70
       strength: 50
       psiStrength: 100
@@ -293,12 +435,9 @@ soldiers:
       psiSkill: 50
       melee: 60
       mana: 0
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
-    armor: STR_SUIT_UC
-    armorForAvatar: STR_SUIT_UC
+    dogfightExperience: *AnchorHumanDogfightExperience
+    armor: STR_SUIT_KYBEROS_UC
+    armorForAvatar: STR_SUIT_KYBEROS_UC
     avatarOffsetX: 68
     avatarOffsetY: 48
     standHeight: 22
@@ -316,7 +455,7 @@ soldiers:
   - type: STR_HYBRID
     requires:
       - STR_HYBRID_RECRUITMENT
-    costBuy: 90000
+    costBuy: 70000
     costSalary: 15000
     costSalarySquaddie: 5000 # squaddie salary 20000
     costSalarySergeant: 10000 # sergeant salary 25000
@@ -375,10 +514,7 @@ soldiers:
       psiSkill: 60
       melee: 75
       mana: 0
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
+    dogfightExperience: *AnchorHumanDogfightExperience
     flagOffset: 666
     specialWeapon: STR_HYBRID_PSI_WEAPON
     armor: STR_SUIT_H_UC
@@ -666,10 +802,7 @@ soldiers:
       psiSkill: 0
       melee: 0
       mana: 0
-    dogfightExperience:
-      bravery: 10
-      reactions: 30
-      firing: 25
+    dogfightExperience: *AnchorHumanDogfightExperience
     armor: STR_SMALL_TANK_ARMOR
     armorForAvatar: STR_SMALL_TANK_ARMOR
     avatarOffsetX: 79

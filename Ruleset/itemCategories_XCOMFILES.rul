@@ -1,4 +1,4 @@
-﻿itemCategories:
+itemCategories:
   - type: STR_CRAFT_SYSTEMS
     listOrder: 2
   - type: STR_AUXILIARY
@@ -97,6 +97,8 @@
     listOrder: 410
   - type: STR_BEACH
     listOrder: 415
+  - type: STR_RELIGIOUS
+    listOrder: 420
   - type: STR_HUMAN_TECH
     listOrder: 500
   - type: STR_XCOM_TECH
@@ -127,6 +129,8 @@
     listOrder: 930
   - type: STR_EVIDENCE
     listOrder: 960
+  - type: STR_HULLS
+    listOrder: 970
   - type: STR_COMPONENTS
     listOrder: 980
   - type: STR_BUILT_INS

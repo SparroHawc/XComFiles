@@ -160,5 +160,5 @@ extended:
               end;
             end;
           end;
-          
+
           return new_pixel;

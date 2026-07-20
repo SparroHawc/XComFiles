@@ -1,4 +1,4 @@
-﻿globe:
+globe:
   textures:
     - id: 0 # northern forest
       terrain:
@@ -404,12 +404,21 @@
     - id: -630
       deployments:
         STR_ALIEN_PURGE: 100
+    - id: -803
+      deployments:
+        STR_CYBERWEB_POWER_PLANT: 100
     - id: -804
       deployments:
         STR_CYBERWEB_FORTRESS_ASSAULT: 100
     - id: -805
       deployments:
         STR_CYBERDREDNAUGHT_ASSAULT: 100
+    - id: -806
+      deployments:
+        STR_INFESTED_CYBERWEB_FORTRESS_ASSAULT: 100
+    - id: -807
+      deployments:
+        STR_WILD_PINK_CAVES: 100
     - id: -810
       deployments:
         STR_DIMENSION_X_BASE_DEFENSE_FAUNA: 100
@@ -443,6 +452,9 @@
     - id: -2400
       deployments:
         STR_MIB_OLD_UFO_LANDING_SITE: 100
+    - id: -2500
+      deployments:
+        STR_MIB_LUNAR_BASE_LANDING: 100
     - id: -3000
       deployments:
         STR_DREAMSCAPE_VILLA: 100
@@ -544,7 +556,7 @@
       - -42.125
       - 3.25
       - -42.5
-    - - 7.375
+    - - 7.375 # French eastern border
       - -43.625
       - 7
       - -45.875
@@ -634,7 +646,7 @@
       - -31.375
       - 34.71
       - -29.466
-    - - 16.25
+    - - 16.25 # South Africa
       - 28.625
       - 20
       - 28.375
@@ -654,7 +666,7 @@
       - 26.875
       - 33
       - 26.625
-    - - 307.25
+    - - 307.25 # Brazil
       - 33.25
       - 302.5
       - 30
@@ -688,7 +700,7 @@
       - -1.875
       - 308.625
       - -4.25
-    - - 235
+    - - 235 # Canadian border, west of Great Lakes
       - -48.875
       - 255
       - -48.875
@@ -696,8 +708,8 @@
       - -49
       - 270.375
       - -48
-    - - 293.125
-      - -44.5
+    - - 293 # Canadian border, east of Great Lakes
+      - -44.76
       - 291.375
       - -47.25
       - 288.375
@@ -706,6 +718,8 @@
       - -45
       - 283.625
       - -44.125
+      - 283.234
+      - -43.93
     - - 219
       - -69.6253
       - 219
@@ -714,7 +728,7 @@
       - -56
       - 226.875
       - -54.375
-    - - 242.875
+    - - 242.875 # US/Mexico border
       - -32.625
       - 253.625
       - -31.75
@@ -724,16 +738,20 @@
       - -29.75
       - 261
       - -26.375
-      - 263
-      - -26.125
-    - - 276.5
-      - -41.75
-      - 277.875
-      - -43
-    - - 275.375
-      - -46.625
-      - 276.625
-      - -45.875
+      - 262.57
+      - -26.166
+    - - 277.2
+      - -41.8
+      - 277.828
+      - -43.09
+    - - 275.215 # Canadian border, between Great Lakes
+      - -46.651
+      - 276.455
+      - -45.995
+    - - 280.562 # Canadian border, south of Toronto
+      - -42.704
+      - 280.513
+      - -43.235
     - - 31.25
       - -69.8751
       - 31.5
@@ -752,7 +770,7 @@
       - -49.5
       - 38.125
       - -46.875
-    - - 40.27
+    - - 40.27 # northern Georgia border
       - -43.41
       - 40.65
       - -43.58
@@ -824,7 +842,7 @@
       - -28
       - 80.87529999999998
       - -30.375
-    - - 77.87529999999998
+    - - 77.87529999999998 # China/Mongolia
       - -35.375
       - 73.37529999999998
       - -39.375
@@ -956,6 +974,18 @@
       - -45
       - 18.88
       - -45.88
+    - - 19.17 # south and west SERBIA border
+      - -45
+      - 19.24
+      - -43.54
+      - 20.34
+      - -42.83
+      - 20
+      - -42.55
+      - 20.63
+      - -41.88
+      - 22.42
+      - -42.33
     - - 13.55 # CROATIA/SLOVENIA border
       - -45.44
       - 15.38
@@ -1705,7 +1735,7 @@
     - - 282 # COLOMBIA/PANAMA border
       - -8.87
       - 281.88
-      - -7.42
+      - -7.485
     - - 80.5 # KAZAKHSTAN/KIRGYZSTAN border
       - -42.25
       - 79.15

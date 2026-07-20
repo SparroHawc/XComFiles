@@ -1,4 +1,5 @@
-﻿lookWeights: 
+globalWeight: 39
+lookWeights: 
   - 10  
   - 30 
   - 30 
@@ -26,18 +27,36 @@ femaleFirst:
   - Gloria
   - Claudia
 maleLast:
-  - Quispe
-  - Flores
-  - Chavez
-  - Ramos
-  - Huaman
-  - Vazquez
-  - Mamani
-  - Pizango
-  - Ruiz
-  - Romero
-  - Morales
-  - Reyes
+  - Aysanoa
   - Bacuy
-  - Salazar
+  - Castillo
   - Castro
+  - Chavez
+  - Diaz
+  - Espinoza
+  - Flores
+  - Garcia
+  - Gómez
+  - Gonzales
+  - Herrera
+  - Huaman
+  - Lopez
+  - Mamani
+  - Mendoza
+  - Morales
+  - Perez
+  - Pizango
+  - Quispe
+  - Ramirez
+  - Ramos
+  - Romero
+  - Ruiz
+  - Reyes
+  - Rodriguez
+  - Rojas
+  - Salazar
+  - Sanchez
+  - Santome
+  - Soria
+  - Torres
+  - Vazquez

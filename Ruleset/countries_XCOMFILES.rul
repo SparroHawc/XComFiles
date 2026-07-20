@@ -1,4 +1,4 @@
-﻿countries:
+countries:
   - delete: STR_USA
   - delete: STR_RUSSIA
   - delete: STR_UK
@@ -50,7 +50,7 @@
       - [134, 146.1, -50.5, -45.63] # Sakhalin Island Area
       - [130, 137.6, -45.63, -42.36] # Vladivostok Area
       - [19.16, 22.84, -55.2, -54.52] # Kaliningrad Area
-      - [32.5, 38.3, -46.75, -42] # Sevastopol Area
+      - [36.59, 38.3, -46.75, -42] # west of Sochi
       - [141, 146, -50.5, -45.6] # Sakhalin
   - type: STR_UK
     fundingBase: 20
@@ -60,7 +60,7 @@
     areas:
       - [352, 2, -60, -53.93] # Scotland and Northern Ireland
       - [353.9, 2, -53.93, -51.25] # Central Part of England
-      - [353.9, 1.7, -51.25, -51] # Lower Part of England 
+      - [353.9, 1.7, -51.25, -51] # Lower Part of England
       - [353.9, 1.5, -51, -50] # southern coast
       - [354, 354.6, -36.3, -36] # Gibraltar
       - [299.22, 302.33, 51.16, 52.66] # Falkland Islands
@@ -79,7 +79,7 @@
       - [355, 7, -45.75, -43] # European France 5
       - [8.2, 9.88, -43, -41.3] # Corsica
       - [163.6, 167, 19.9, 22.71] # New Caledonia - E of Australia
-      - [304, 308, -6.8, -2.6] # French Guiana - N of Brazil   
+      - [304, 308, -6.8, -2.6] # French Guiana - N of Brazil
   - type: STR_GERMANY
     fundingBase: 25
     fundingCap: 9000
@@ -405,6 +405,18 @@
       - [15.85, 16.5, -44.25, -43] # southern Croatia 1
       - [16.5, 17.3, -43.7, -42.75] # southern Croatia 2
       - [17, 18.5, -42.75, -42.1] # very southern Croatia
+  - type: STR_SERBIA
+    fundingBase: 20
+    fundingCap: 900
+    labelLon: 21
+    labelLat: -43.75
+    areas:
+      - [19, 20.7, -46, -45.33] # northern Serbia
+      - [19, 21.5, -45.33, -45] # north of Belgrad
+      - [19.19, 21.5, -45, -43.5] # central Serbia
+      - [21.5, 22.5, -44.75, -42.2] # eastern Serbia
+      - [19.9, 21.5, -43.5, -42.8] # southcentral Serbia
+      - [20.3, 21.5, -42.8, -42.2] # southern Serbia
   - type: STR_AUSTRIA
     fundingBase: 20
     fundingCap: 2800
@@ -426,7 +438,7 @@
     areas:
       - [20, 21.5, -48.5, -47.8] # northern Hungary 1
       - [18.85, 20, -48.25, -47.8] # northern Hungary 2
-      - [21.5, 22.2, -48.5, -22.2] # eastern Hungary
+      - [21.5, 22.2, -48.5, -47] # eastern Hungary
       - [16.6, 21.5, -47.8, -46.33] # main Hungary 1
       - [16.9, 20.7, -46.33, -46] # main Hungary 2
       - [17, 17.63, -46, -47.8] # northwestern Hungary
@@ -480,7 +492,7 @@
       - [30, 34, -52.1, -46.75] # Central Ukraine
       - [34, 38.3, -50.35, -46.75] # Eastern Ukraine
       - [22.2, 24, -49.25, -48] # Western Podole
-      - [30, 32.5, -46.75, -45.45] # Odessa
+      - [30, 36.59, -46.75, -44.33] # Crimea
   - type: STR_ROMANIA
     fundingBase: 25
     fundingCap: 700

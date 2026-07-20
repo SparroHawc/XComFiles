@@ -1,4 +1,4 @@
-﻿facilities:
+facilities:
   - delete: STR_FUSION_BALL_DEFENSES
   - delete: STR_HYPER_WAVE_DECODER
   - delete: STR_MIND_SHIELD
@@ -18,6 +18,7 @@
     rightClickActionType: 3
     radarRange: 10800
     radarChance: 2
+    sightRange: 400
     mapName: XBASS_22
     listOrder: 6830
   - type: STR_CYBER_HQ
@@ -39,6 +40,7 @@
     rightClickActionType: 3
     radarRange: 10800
     radarChance: 3
+    sightRange: 1000
     mapName: XBASS_33
     listOrder: 6832
   - type: STR_GRAV_SHIELD
@@ -153,6 +155,7 @@
     monthlyCost: 10000
     personnel: 50
     manaRecoveryPerDay: 3
+    sightRange: 200
     mapName: XBASS_01
     listOrder: 6900
   - type: STR_LIVING_QUARTERS_2
@@ -161,12 +164,13 @@
     buildCost: 2250000
     buildTime: 24
     monthlyCost: 35000
-    personnel: 200
+    personnel: 250
     rightClickActionType: 6
     manaRecoveryPerDay: 4
     aliens: 5
     prisonType: 4
     storage: 50
+    sightRange: 250
     mapName: XBASS_02
     listOrder: 6910
   - type: STR_MIND_SHIELD
@@ -238,6 +242,24 @@
     storage: 275
     mapName: XBASS_06
     listOrder: 6860
+  - type: STR_GENERAL_STORES_3
+    requires:
+      - STR_GENERAL_STORES_3
+    spriteShape: 328
+    size: 3
+    requiresBaseFunc: [AI]
+    buildCost: 2500000
+    buildTime: 33
+    monthlyCost: 40000
+    aliens: 400
+    prisonType: 4
+    storage: 1500
+    buildCostItems:
+      STR_ALIEN_ALLOYS:
+        build: 150
+        refund: 30
+    mapName: XBASS_51
+    listOrder: 6870
   - type: STR_MISSILE_DEFENSES
     requires:
       - STR_MISSILE_DEFENSES
@@ -333,6 +355,7 @@
     forbiddenBaseFunc: [ CELL ]
     radarRange: 10800
     radarChance: 1
+    sightRange: 400
     buildCost: 750000
     buildTime: 20
     monthlyCost: 70000
@@ -350,7 +373,8 @@
     forbiddenBaseFunc: [ CELL ]
     requiresBaseFunc: [INTLAB]
     radarRange: 10800
-    radarChance: 2
+    radarChance: 4
+    sightRange: 1000
     buildOverFacilities:
       - STR_INTEL_LABORATORY
     buildCost: 1250000
@@ -449,6 +473,23 @@
     trainingRooms: 10
     mapName: XBASS_23
     listOrder: 6960
+  - type: STR_LARGE_GYM
+    requires:
+      - STR_LARGE_GYM
+    spriteShape: 347
+    spriteFacility: 347
+    size: 2
+    provideBaseFunc: [GYM]
+    buildCost: 500000
+    buildTime: 24
+    monthlyCost: 60000
+    trainingRooms: 60
+    mapName: XBASS_61
+    buildCostItems:
+      STR_OPTRONIC_PARTS:
+        build: 5
+        refund: 5
+    listOrder: 6961
   - type: STR_PSIONIC_LABORATORY
     requires:
       - STR_PSIONIC_LABORATORY
@@ -482,8 +523,50 @@
     sickBayAbsoluteBonus: 0.25
     sickBayRelativeBonus: 1.0
     provideBaseFunc: [MEDBAY]
+    forbiddenBaseFunc: [ MEDBAY ]
+    canBeBuiltOver: true
     mapName: XBASS_25
     listOrder: 6920
+  - type: STR_ADVANCED_SICK_BAY
+    requires:
+      - STR_ADVANCED_SICK_BAY
+    spriteShape: 1
+    spriteFacility: 346
+    buildCost: 750000
+    buildTime: 25
+    monthlyCost: 45000
+    buildOverFacilities: [ STR_SICK_BAY ]
+    maxAllowedPerBase: 1
+    sickBayAbsoluteBonus: 0.50
+    sickBayRelativeBonus: 2.0
+    manaRecoveryPerDay: 5
+    mapName: XBASS_46
+    provideBaseFunc: [MEDBAY]
+    forbiddenBaseFunc: [ MEDBAY ]
+    buildCostItems:
+      STR_ALIEN_SURGERY:
+        build: 4
+        refund: 4
+      STR_ALIEN_REPRODUCTION:
+        build: 2
+        refund: 2
+      STR_EXAMINATION_ROOM:
+        build: 1
+        refund: 1
+    listOrder: 6921
+  - type: STR_TRANSDIMENSIONAL_RECEIVER
+    requires:
+      - STR_TRANSDIMENSIONAL_RECEIVER
+    spriteShape: 2
+    spriteFacility: 885
+    maxAllowedPerBase: 1
+    provideBaseFunc: [DIMX]
+    requiresBaseFunc: [WORKS]
+    buildCost: 3500000
+    buildTime: 25
+    monthlyCost: 1000000
+    mapName: XBASS_47
+    listOrder: 6990
   - type: STR_SENSORIUM
     requires:
       - STR_SENSORIUM
@@ -566,6 +649,8 @@
     monthlyCost: 35000
     radarRange: 2577
     radarChance: 20
+    buildOverFacilities:
+      - STR_SMALL_RADAR_SYSTEM
     mapName: XBASE_05
     listOrder: 7250
   - type: STR_MINIGUN_DRONE_BAY
@@ -576,6 +661,7 @@
     buildCost: 160000
     buildTime: 16
     monthlyCost: 25000
+    canBeBuiltOver: true
     requiresBaseFunc: [AI]
     mapName: XBASS_34
     listOrder: 7275
@@ -587,6 +673,7 @@
     buildCost: 200000
     buildTime: 18
     monthlyCost: 45000
+    buildOverFacilities: [ STR_MINIGUN_DRONE_BAY ]
     requiresBaseFunc: [AI]
     mapName: XBASS_35
     listOrder: 7278
@@ -602,6 +689,7 @@
       STR_ELERIUM_115:
         build: 20
         refund: 10
+    buildOverFacilities: [ STR_MINIGUN_DRONE_BAY, STR_LASER_DRONE_BAY ]
     requiresBaseFunc: [AI]
     mapName: XBASS_44
     listOrder: 7280

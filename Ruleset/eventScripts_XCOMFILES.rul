@@ -3,7 +3,7 @@ eventScripts:
 #  - type: STR_TEST_EVENT
 #    eventWeights:
 #      0:
-#        STR_WANDERING_RAT: 100
+#        STR_DIMENSION_X_SURVEY: 100
 #    firstMonth: 0
 #    lastMonth: 0
 #    executionOdds: 100
@@ -32,6 +32,22 @@ eventScripts:
     firstMonth: 0
     executionOdds: 10
     researchTriggers:
+       STR_MIB_ACTIVITY: true
+  - type: STR_MIB_TRITANIUM_AMMO_SHIPMENT
+    eventWeights:
+      0:
+        STR_MIB_TRITANIUM_AMMO_SHIPMENT: 100
+    firstMonth: 0
+    executionOdds: 5
+    researchTriggers:
+       STR_MIB_ACTIVITY: true
+# M.A.G.M.A.
+  - type: STR_MAGMA_TARGETED_BY_MIB
+    oneTimeRandomEvents:
+      STR_MAGMA_TARGETED_BY_MIB: 100
+    executionOdds: 75
+    researchTriggers:
+       STR_MAGMA_REACTOR_CHAINSAWBOTS_SAVED: true
        STR_MIB_ACTIVITY: true
 # UAC
   - type: STR_UAC_ASSASSINATIONS
@@ -92,11 +108,12 @@ eventScripts:
         STR_RAT_INFESTATION: 100
         STR_GIANT_BEETLE_MIGRATION: 100
         STR_NIGHT_HOWLERS: 100
+        STR_SERPENTINE_NEST: 100
         STR_WANDERING_RAT: 50
     firstMonth: 0
     executionOdds: 20
     researchTriggers:
-       STR_SYNDICATE_TESTAMENT_ENCRYPTED: false
+       STR_MONSTERS_FINAL_SOLUTION: false
   - type: STR_MONSTER_EVENT_2
     eventWeights:
       0:
@@ -105,11 +122,12 @@ eventScripts:
         STR_RAT_INFESTATION: 100
         STR_GIANT_BEETLE_MIGRATION: 100
         STR_NIGHT_HOWLERS: 100
+        STR_SERPENTINE_NEST: 100
         STR_WANDERING_RAT: 100
     firstMonth: 0
     executionOdds: 15
     researchTriggers:
-       STR_SYNDICATE_TESTAMENT_ENCRYPTED: false
+       STR_MONSTERS_FINAL_SOLUTION: false
   - type: STR_PESTS_BE_GONE
     eventWeights:
       0:
@@ -127,7 +145,15 @@ eventScripts:
        STR_SYNDICATE_TESTAMENT_DECRYPTED: true
        STR_SYNDICATE_MYSTERIOUS_PARCEL_RECEIVED: false
     firstMonth: 0
-    executionOdds: 25
+  - type: STR_MONSTERS_UNLEASHED
+    eventWeights:
+      0:
+        STR_MONSTERS_UNLEASHED: 100
+    firstMonth: 0
+    executionOdds: 33
+    researchTriggers:
+       STR_MONSTROUS_BREED: true
+       STR_MONSTERS_FINAL_SOLUTION: false
 # Osiron
   - type: STR_OSIRON_EVENT
     eventWeights:
@@ -411,7 +437,7 @@ eventScripts:
     executionOdds: 100
     researchTriggers:
        STR_BLACK_LOTUS_OPERATIONS: true
-  - type: STR_CHURCH_OF_DAGON_AFTER_HQ_EVENT
+  - type: STR_BLACK_LOTUS_AFTER_HQ_EVENT
     oneTimeRandomEvents:
       STR_BLACK_LOTUS_AFTER_HQ_EVENT: 100
     executionOdds: 100
@@ -478,6 +504,34 @@ eventScripts:
     researchTriggers:
        STR_CYBERWEB: true
        STR_CYBERDREDNAUGHT_SECURED: false
+  - type: STR_CYBERWEB_AFTER_PLANT_EVENT
+    oneTimeRandomEvents:
+      STR_CYBERWEB_AFTER_PLANT_EVENT: 100
+    executionOdds: 100
+    researchTriggers:
+       STR_CYBERWEB_PLANS: true
+  - type: STR_CYBERWEB_AFTER_PORTAL_EVENT
+    oneTimeRandomEvents:
+      STR_CYBERWEB_AFTER_PORTAL_EVENT: 100
+    executionOdds: 100
+    researchTriggers:
+       STR_CYBERWEB_DIMENSIONAL_PORTAL_TAKEN: true
+  - type: STR_CYBERWEB_AFTER_FORTRESS_EVENT
+    oneTimeRandomEvents:
+      STR_CYBERWEB_AFTER_FORTRESS_EVENT: 100
+    executionOdds: 100
+    researchTriggers:
+       STR_CYBERWEB_FORTRESS_SECURED: true
+# The Brainsucked
+  - type: STR_ECHOES_OF_ERROR
+    eventWeights:
+      0:
+        STR_ECHOES_OF_ERROR: 100
+        STR_ECHOES_OF_ERROR_MIB: 70
+    firstMonth: 0
+    executionOdds: 20
+    researchTriggers:
+       STR_THEIR_DARKEST_HOUR: true
 # Zombies
   - type: STR_ZOMBIES_ITS_THE_ZOMBIES
     eventWeights:
@@ -532,6 +586,14 @@ eventScripts:
     researchTriggers:
        STR_MILESTONE_1_SUMMARY: true
        STR_MILESTONE_3_SUMMARY: false
+# Reptoids
+  - type: STR_REPTOIDS_THREAT
+    oneTimeRandomEvents:
+      STR_REPTOIDS_THREAT: 100
+    executionOdds: 50
+    researchTriggers:
+       STR_XENONAUTS: true
+    firstMonth: 22
 # Cydonians
   - type: STR_CYDONIANS_PRELUDE_TO_INVASION
     oneTimeRandomEvents:
@@ -572,6 +634,8 @@ eventScripts:
     executionOdds: 66
     researchTriggers:
        STR_KIRYU_KAI: true
+       STR_XCOM_BUREAU: true
+       STR_ADVANCED_INTEL_LABORATORY: true
        STR_MILESTONE_3_SUMMARY: true
        STR_LOST_ALIEN_SHIP_DATA: false
 # Hybrids
@@ -646,6 +710,44 @@ eventScripts:
     firstMonth: 0
     executionOdds: 10
 # Plot
+  - type: STR_MUDRANGER_CONTRACTED
+    oneTimeRandomEvents:
+      STR_MUDRANGER_CONTRACTED: 100
+    executionOdds: 100
+    researchTriggers:
+       STR_QUARTERMASTER_INTRODUCTION: true
+  - type: STR_DIMENSION_X_SURVEY
+    oneTimeRandomEvents:
+      STR_DIMENSION_X_SURVEY: 100
+    researchTriggers:
+       STR_DIMENSION_X_DESERT_SECURED: true
+  - type: STR_DIMENSION_X_SURVEY_CONTINUES
+    oneTimeRandomEvents:
+      STR_CITY_X_SURVEY: 100
+      STR_DIMENSION_X_PLANETOLOGY: 100
+      STR_DIMENSION_X_XENOBIOLOGY: 100
+      STR_CYBERWEB_POWER_PLANT: 100
+      STR_CYBERWEB_FORTRESS: 100
+    researchTriggers:
+       STR_DIMENSION_X_SURVEY: true
+  - type: STR_AFTER_THE_END
+    oneTimeRandomEvents:
+      STR_AFTER_THE_END: 100
+    executionOdds: 100
+    researchTriggers:
+       STR_CYBERDREDNAUGHT_SECURED: true
+  - type: STR_THEIR_DARKEST_HOUR
+    oneTimeRandomEvents:
+      STR_THEIR_DARKEST_HOUR: 100
+    executionOdds: 75
+    researchTriggers:
+       STR_AFTER_THE_END: true
+  - type: STR_THE_COUNCIL_BACKTRACKS
+    oneTimeRandomEvents:
+      STR_THE_COUNCIL_BACKTRACKS: 100
+    executionOdds: 75
+    researchTriggers:
+       STR_THE_BRAINSUCKED_HARVEST_WON: true
   - type: STR_QUARTERMASTER_INTRODUCTION
     oneTimeRandomEvents:
       STR_QUARTERMASTER_INTRODUCTION: 100
@@ -681,6 +783,52 @@ eventScripts:
        STR_MOTION_SCANNER: true
        STR_UNDERWATER_OPERATIONS: true
        STR_CRASHED_STARFIGHTER_DATA: false
+  - type: STR_XCOM_GATEWAY_ISSUES
+    eventWeights:
+      0:
+        STR_CYBERWEB_FAILED_GATEWAY: 100
+        STR_TRANSDIMENSIONAL_DEFECT: 33
+        STR_TRANSDIMENSIONAL_DEFECT_AVERTED: 50
+        STR_ERRATIC_WEATHER_LOW: 125
+        STR_ERRATIC_WEATHER_MEDIUM: 50
+        STR_TRANSDIMENSIONAL_POLICY_DEBATE: 100
+    firstMonth: 0
+    executionOdds: 33
+    facilityTriggers:
+       STR_TRANSDIMENSIONAL_RECEIVER: true
+  - type: STR_POLICING_DIMENSION_X
+    eventWeights:
+      0:
+        STR_POLICING_DIMENSION_X: 100
+    firstMonth: 0
+    executionOdds: 10
+    researchTriggers:
+       STR_AFTER_THE_END: true
+  - type: STR_XCOM_MINOTAURS
+    oneTimeRandomEvents:
+      STR_XCOM_MINOTAURS: 100
+    executionOdds: 40
+    researchTriggers:
+       STR_SCARAB: true
+       STR_DRAGONFLY: true
+       STR_MINOTAUR_TAMING: true
+       STR_SYNDICATE: true
+       STR_ALLOY_VEST: true
+# Tips
+  - type: STR_BIO_LABORATORY_TIP
+    oneTimeRandomEvents:
+      STR_BIO_LABORATORY_TIP: 100
+    firstMonth: 0
+    researchTriggers:
+       STR_MEDICINE: true
+    interruptResearch: STR_BIO_LABORATORY
+  - type: STR_INTEL_LABORATORY_TIP
+    oneTimeRandomEvents:
+      STR_INTEL_LABORATORY_TIP: 100
+    firstMonth: 0
+    researchTriggers:
+       STR_BASIC_OPERATIONS: true
+    interruptResearch: STR_INTEL_LABORATORY
 # M.A.G.M.A. tech sharing penalties
   - type: STR_ELERIUM_BOMB_TERROR
     eventWeights:
@@ -723,7 +871,54 @@ eventScripts:
     researchTriggers:
        STR_SHARE_TERRAMITE_TECH: true
        STR_SHARE_POWER_SOURCE_MINIATURIZATION_TECH: true
+# Council
+  - type: STR_UNTANGLING_THE_RED_TAPE
+    eventWeights:
+      0:
+        STR_UNTANGLING_THE_RED_TAPE: 100
+    firstMonth: 1
+    minScore: 1000
+    researchTriggers:
+       STR_ALL_CLASSIC_WEAPONS_KNOWN: false
+  - type: STR_VETERAN_AGENT_REQUISITION_1
+    eventWeights:
+      0:
+        STR_VETERAN_AGENT_REQUISITION_1: 100
+    firstMonth: 1
+    minScore: 1000
+    researchTriggers:
+       STR_REQUESTING_VETERAN_AGENTS: true
+  - type: STR_VETERAN_AGENT_REQUISITION_2
+    eventWeights:
+      0:
+        STR_VETERAN_AGENT_REQUISITION_2: 100
+    firstMonth: 1
+    minScore: 2000
+    researchTriggers:
+       STR_REQUESTING_VETERAN_AGENTS: true
+  - type: STR_VETERAN_AGENT_REQUISITION_3
+    eventWeights:
+      0:
+        STR_VETERAN_AGENT_REQUISITION_3: 100
+    firstMonth: 1
+    minScore: 3500
+    researchTriggers:
+       STR_REQUESTING_VETERAN_AGENTS: true
+  - type: STR_VETERAN_AGENT_REQUISITION_4
+    eventWeights:
+      0:
+        STR_VETERAN_AGENT_REQUISITION_4: 100
+    firstMonth: 1
+    minScore: 5000
+    researchTriggers:
+       STR_REQUESTING_VETERAN_AGENTS: true
 # Other
+  - type: STR_AYYLMAO
+    eventWeights:
+      0:
+        STR_AYYLMAO: 100
+    firstMonth: 10
+    executionOdds: 2
   - type: STR_INVESTIGATED_EARLY
     eventWeights:
       0:
@@ -749,6 +944,14 @@ eventScripts:
         STR_THE_BANQUET: 100
     firstMonth: 6
     executionOdds: 2
+  - type: STR_THE_XCOM_HANGOVER
+    eventWeights:
+      0:
+        STR_THE_XCOM_HANGOVER: 100
+    firstMonth: 0
+    executionOdds: 5
+    researchTriggers:
+       STR_COUNCIL_OF_EARTH: true
   - type: STR_ITS_ALL_PROFESSIONAL
     eventWeights:
       0:
@@ -852,6 +1055,28 @@ eventScripts:
         STR_LOOSE_LIPS: 100
     firstMonth: 1
     executionOdds: 3
+  - type: STR_ILLEGAL_TRADE_FOILED
+    eventWeights:
+      0:
+        STR_ILLEGAL_TRADE_FOILED: 100
+    firstMonth: 1
+    executionOdds: 6
+    researchTriggers:
+       STR_CULT_CONTAINED: false
+  - type: STR_ILLEGAL_TRADE_FOILED_LATE
+    eventWeights:
+      0:
+        STR_ILLEGAL_TRADE_FOILED: 100
+    firstMonth: 1
+    executionOdds: 3
+  - type: STR_MONEY_PRIZE
+    eventWeights:
+      0:
+        STR_MONEY_PRIZE: 100
+    firstMonth: 1
+    minScore: 2000
+    researchTriggers:
+       STR_MILESTONE_3_SUMMARY: false
   - type: STR_HOLY_PROTECTION
     oneTimeRandomEvents:
       STR_HOLY_PROTECTION: 100

@@ -1,3 +1,4 @@
+globalWeight: 39
 lookWeights:
   - 25
   - 40
@@ -12,6 +13,7 @@ maleFirst:
   - Benjamin
   - Charlie
   - Cooper
+  - Daniel
   - Edward
   - Eli
   - Elijah
@@ -229,6 +231,7 @@ maleLast:
   - Pearson
   - Perry
   - Peters
+  - Peterson
   - Phillips
   - Porter
   - Powell

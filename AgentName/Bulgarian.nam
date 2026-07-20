@@ -1,3 +1,4 @@
+globalWeight: 21
 lookWeights:
   - 50
   - 50
@@ -22,6 +23,7 @@ maleFirst:
   - Desislav
   - Dimitar
   - Dragomir
+  - Dragostin
   - Gavrail
   - Georgi
   - Hristo
@@ -39,12 +41,14 @@ maleFirst:
   - Lyubomir
   - Lyudmil
   - Marko
+  - Martin
   - Miroslav
   - Momchil
   - Nikola
   - Ognyan
   - Penko
   - Petar
+  - Petko
   - Plamen
   - Radomir
   - Samuil
@@ -78,6 +82,7 @@ femaleFirst:
   - Borislava
   - Boyana
   - Desislava
+  - Elena
   - Elisaveta
   - Emiliya
   - Gergana
@@ -88,6 +93,7 @@ femaleFirst:
   - Ivet
   - Izabela
   - Krasimira
+  - Kristina
   - Lidiya
   - Lilyana
   - Lyubina
@@ -97,10 +103,12 @@ femaleFirst:
   - Mirela
   - Miroslava
   - Nadejda
+  - Nadya
   - Nevena
   - Nikolina
   - Pavla
   - Pavlina
+  - Pepa
   - Radomira
   - Radoslava
   - Radostina
@@ -137,44 +145,63 @@ maleLast:
   - Antoniev
   - Angelov
   - Apostolov
+  - Arangelov
   - Atanasov
+  - Barimov
   - Bogdanov
   - Bogomilov
   - Borislavov
   - Boykov
+  - Branzov
   - Damyanov
   - Danailov
+  - Delchev
   - Desislavov
+  - Dikliev
   - Dimitrov
+  - Dinev
   - Dragomirov
+  - Evtimov
   - Gavrailov
   - Georgiev
   - Hristov
+  - Idakiev
   - Ilianov
   - Iliev
   - Ivanov
   - Ivaylov
   - Kaloyanov
+  - Karev
   - Kirilov
+  - Koev
+  - Kolev
   - Konstantinov
+  - Kostadinov
   - Krasimirov
   - Lyubenov
   - Lyubomirov
   - Lyudmilov
   - Markov
+  - Mihailov
   - Miroslavov
   - Momchilov
   - Nikolaev
   - Ognyanov
   - Penkov
+  - Peev
   - Petrov
   - Plamenov
   - Radomirov
+  - Raykov
   - Samuilov
+  - Sotirov
   - Spasov
+  - Stanchev
   - Stanimirov
   - Stanislavov
+  - Stefanov
   - Stoyanov
+  - Stoyev
   - Teodorov
   - Tihomirov
   - Todorov
@@ -197,43 +224,63 @@ femaleLast:
   - Antonieva
   - Angelova
   - Apostolova
+  - Arangelova
   - Atanasova
+  - Barimova
   - Bogdanova
   - Bogomilova
   - Borislavova
   - Boykova
+  - Branzova
   - Damyanova
   - Danailova
+  - Delcheva
   - Desislavova
+  - Diklieva
   - Dimitrova
+  - Dineva
   - Dragomirova
+  - Evtimova
   - Gavrailova
   - Georgieva
   - Hristova
+  - Idakieva
   - Ilianova
   - Ilieva
   - Ivanova
   - Ivaylova
   - Kaloyanova
+  - Kareva
   - Kirilova
+  - Koeva
+  - Koleva
   - Konstantinova
+  - Kostadinova
   - Krasimirova
   - Lyubenova
   - Lyubomirova
   - Lyudmilova
   - Markova
+  - Mihailova
   - Miroslavova
   - Momchilova
   - Nikolaeva
   - Ognyanova
   - Penkova
+  - Peeva
   - Petrova
   - Plamenova
   - Radomirova
+  - Raykova
   - Samuilova
+  - Spasova
+  - Sotirova
+  - Stancheva
   - Stanimirova
   - Stanislavova
+  - Stefanova
   - Stoyanova
+  - Stoyeva
   - Stoykova
   - Teodorova
   - Tihomirova

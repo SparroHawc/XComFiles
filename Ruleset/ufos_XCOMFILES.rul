@@ -27,6 +27,8 @@ ufos:
         - name: CIVILIANCAR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_AH1_COBRA
     size: STR_VERY_SMALL
     modSprite: InterceptionAH1
@@ -55,6 +57,8 @@ ufos:
         - name: UH_1B_HUEY
           width: 10
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_UH_1B_HUEY
     size: STR_VERY_SMALL
     modSprite: InterceptionUH1
@@ -83,6 +87,8 @@ ufos:
         - name: UH_1B_HUEY
           width: 10
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MI_24
     size: STR_VERY_SMALL
     modSprite: InterceptionMI24
@@ -111,6 +117,8 @@ ufos:
         - name: MI_24_HIND
           width: 10
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_CHINOOK
     size: STR_SMALL
     modSprite: InterceptionChinook
@@ -139,6 +147,8 @@ ufos:
         - name: UH_1B_HUEY
           width: 10
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_F4_PHANTOM
     size: STR_VERY_SMALL
     modSprite: InterceptionF4
@@ -167,6 +177,8 @@ ufos:
         - name: INTERCEPTOR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MIG17
     size: STR_VERY_SMALL
     modSprite: InterceptionMiG17
@@ -195,6 +207,8 @@ ufos:
         - name: INTERCEPTOR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MIG29
     size: STR_VERY_SMALL
     modSprite: InterceptionMiG29
@@ -223,6 +237,8 @@ ufos:
         - name: INTERCEPTOR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MIRAGE
     size: STR_VERY_SMALL
     modSprite: InterceptionMirage
@@ -251,6 +267,8 @@ ufos:
         - name: INTERCEPTOR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_ANGEL_FIGHTER
     size: STR_VERY_SMALL
     modSprite: InterceptionAngelFighter
@@ -279,6 +297,8 @@ ufos:
         - name: INTERCEPTOR
           width: 10
           length: 10
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_TROOP_SHIP
     modSprite: InterceptionTroopShip
     size: STR_LARGE
@@ -334,7 +354,7 @@ ufos:
         hitBonus: 30
       STR_RAIDERS_MID:
         hitBonus: 20
-    battlescapeTerrainData:
+    battlescapeTerrainData: &TroopShipBattlescapeTerrainData
       name: UFO_151
       mapDataSets:
         - BLANKS
@@ -377,6 +397,136 @@ ufos:
           fuseTimers:
             STR_SPAWN_ALIEN_LASER_TURRET: [0, 0]
             STR_SPAWN_ALIEN_SMALL_PLASMA_TURRET: [0, 0]
+  - type: STR_TROOP_SHIP_ASSAULT
+    modSprite: InterceptionTroopShip
+    size: STR_LARGE
+    damageMax: 1500
+    shieldCapacity: 450
+    shieldRecharge: 75
+    shieldRechargeInGeoscape: 300
+    shieldBleedThrough: 100
+    speedMax: 7200
+    armor: 30
+    accel: 8
+    power: 270
+    range: 55
+    score: 800
+    reload: 40
+    breakOffTime: 3000
+    hitBonus: 20
+    raceBonus:
+      STR_SECTOID:
+        craftCustomDeploy: STR_TROOP_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_SECTOID
+        hitBonus: 20
+      STR_SECTOID_SECTOPOD:
+        craftCustomDeploy: STR_TROOP_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_SECTOID
+        hitBonus: 20
+      STR_SECTOID_GUARD:
+        craftCustomDeploy: STR_TROOP_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_SECTOID
+        hitBonus: 20
+      STR_FLOATER:
+        craftCustomDeploy: STR_TROOP_SHIP_FLOATER
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_FLOATER
+        hitBonus: 30
+      STR_MUTON:
+        craftCustomDeploy: STR_TROOP_SHIP_MUTON
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_MUTON
+      STR_ORDER_OF_ELIMINATION:
+        craftCustomDeploy: STR_TROOP_SHIP_ELIMINATOR
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_ELIMINATOR
+        hitBonus: 40
+      STR_ETHEREAL:
+        hitBonus: 40
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_ETHEREAL_CYBERDISC:
+        hitBonus: 40
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_CEREBREAL:
+        hitBonus: 20
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_GAZER:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_CHASER:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_SNAKEMAN:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_SNAKEMAN_SALAMANDRON:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_CHTONITE:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_WASPITE:
+        hitBonus: 35
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_RAIDERS_EARLY:
+        hitBonus: 30
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_RAIDERS_MIDEARLY:
+        hitBonus: 30
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_RAIDERS_MID:
+        hitBonus: 20
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT
+      STR_ANTHROPOD:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_DIMENSION_X_ARMY
+      STR_DIMENSION_X_FAUNA:
+        missionCustomDeploy: STR_BASE_DEFENSE_TROOP_SHIP_ASSAULT_DIMENSION_X_FAUNA
+    battlescapeTerrainData: *TroopShipBattlescapeTerrainData
+  - type: STR_DREADNOUGHT
+    modSprite: InterceptionDreadnought
+    size: STR_VERY_LARGE
+    damageMax: 2000
+    shieldCapacity: 550
+    shieldRecharge: 15
+    shieldRechargeInGeoscape: 80
+    shieldBleedThrough: 125
+    speedMax: 4700
+    armor: 35
+    accel: 5
+    power: 300
+    range: 60
+    score: 1000
+    reload: 40
+    breakOffTime: 2500
+    hitBonus: 20
+    raceBonus:
+      STR_ETHEREAL:
+        hitBonus: 40
+        missionCustomDeploy: STR_DREADNOUGHT_BASE_DEFENSE_ETHEREAL
+      STR_ETHEREAL_CYBERDISC:
+        hitBonus: 40
+        missionCustomDeploy: STR_DREADNOUGHT_BASE_DEFENSE_ETHEREAL
+    battlescapeTerrainData:
+      name: DREADNOUGHT
+      mapDataSets:
+        - BLANKS
+        - U_EXT02
+        - U_WALL02
+        - U_PODS
+        - U_BITS
+        - U_DISEC2
+        - U_OPER2
+      mapBlocks:
+        - name: G0013_DREADNOUGHT_INTERCEPTOR_BY_WOLWERIN
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [17, 2, 0]
+              - [16, 1, 0]
+              - [12, 2, 0]
+              - [13, 1, 0]
+              - [12, 25, 2]
+              - [12, 26, 2]
+              - [17, 25, 2]
+              - [17, 26, 2]
+            STR_SPAWN_ALIEN_CYBERWATCH_TURRET:
+              - [23, 11, 3]
+              - [6, 11, 3]
+          fuseTimers:
+            STR_SPAWN_ALIEN_CYBERWATCH_TURRET: [0, 0]
   - type: STR_STRIKER
     modSprite: InterceptionStriker
     size: STR_MEDIUM_UC
@@ -814,18 +964,23 @@ ufos:
     raceBonus:
       STR_SECTOID:
         craftCustomDeploy: STR_ABDUCTOR_SECTOID
+        missionCustomDeploy: STR_ALIEN_ABDUCTION_SITE_SECTOID
         hitBonus: 10
       STR_SECTOID_SECTOPOD:
         craftCustomDeploy: STR_ABDUCTOR_SECTOID
+        missionCustomDeploy: STR_ALIEN_ABDUCTION_SITE_SECTOID
         hitBonus: 10
       STR_SECTOID_GUARD:
         craftCustomDeploy: STR_ABDUCTOR_SECTOID
+        missionCustomDeploy: STR_ALIEN_ABDUCTION_SITE_SECTOID
         hitBonus: 10
       STR_FLOATER:
         craftCustomDeploy: STR_ABDUCTOR_FLOATER
+        missionCustomDeploy: STR_ALIEN_ABDUCTION_SITE_FLOATER
         hitBonus: 15
       STR_MUTON:
         craftCustomDeploy: STR_ABDUCTOR_MUTON
+        missionCustomDeploy: STR_ALIEN_ABDUCTION_SITE_MUTON
       STR_ETHEREAL:
         hitBonus: 25
       STR_ETHEREAL_CYBERDISC:
@@ -1782,34 +1937,57 @@ ufos:
     raceBonus:
       STR_SECTOID:
         craftCustomDeploy: STR_SENTRY_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY_SECTOID
         hitBonus: 10
       STR_SECTOID_SECTOPOD:
         craftCustomDeploy: STR_SENTRY_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY_SECTOID
         hitBonus: 10
       STR_SECTOID_GUARD:
         craftCustomDeploy: STR_SENTRY_SHIP_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY_SECTOID
         hitBonus: 10
       STR_FLOATER:
         craftCustomDeploy: STR_SENTRY_SHIP_FLOATER
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY_FLOATER
         hitBonus: 15
       STR_MUTON:
         craftCustomDeploy: STR_SENTRY_SHIP_MUTON
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY_MUTON
+      STR_GAZER:
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
+      STR_SNAKEMAN:
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
+      STR_SNAKEMAN_SALAMANDRON:
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
+      STR_CHTONITE:
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
+      STR_CHASER:
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_ETHEREAL:
         hitBonus: 25
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_ETHEREAL_CYBERDISC:
         hitBonus: 25
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_ORDER_OF_ELIMINATION:
         hitBonus: 25
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_CEREBREAL:
         hitBonus: 10
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_WASPITE:
         hitBonus: 20
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_RAIDERS_EARLY:
         hitBonus: 15
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_RAIDERS_MIDEARLY:
         hitBonus: 15
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
       STR_RAIDERS_MID:
         hitBonus: 10
+        missionCustomDeploy: STR_BASE_DEFENSE_SENTRY
     battlescapeTerrainData:
       name: SENTRY
       mapDataSets:
@@ -1861,6 +2039,93 @@ ufos:
         - name: SENTRY13
           width: 20
           length: 20
+  - type: STR_SABOTEUR
+    modSprite: InterceptionSaboteur
+    size: STR_MEDIUM_UC
+    damageMax: 650
+    speedMax: 6200
+    armor: 6
+    accel: 7
+    power: 75
+    range: 40
+    score: 200
+    reload: 50
+    breakOffTime: 600
+    hitBonus: 10
+    raceBonus:
+      STR_SECTOID:
+        craftCustomDeploy: STR_SABOTEUR_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_SECTOID
+        hitBonus: 10
+      STR_SECTOID_SECTOPOD:
+        craftCustomDeploy: STR_SABOTEUR_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_SECTOID
+        hitBonus: 10
+      STR_SECTOID_GUARD:
+        craftCustomDeploy: STR_SABOTEUR_SECTOID
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_SECTOID
+        hitBonus: 10
+      STR_FLOATER:
+        craftCustomDeploy: STR_SABOTEUR_FLOATER
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_FLOATER
+        hitBonus: 15
+      STR_MUTON:
+        craftCustomDeploy: STR_SABOTEUR_MUTON
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_MUTON
+      STR_GAZER:
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_CHASER:
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_CHTONITE:
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_SNAKEMAN:
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_SNAKEMAN_SALAMANDRON:
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_ORDER_OF_ELIMINATION:
+        craftCustomDeploy: STR_SABOTEUR_ELIMINATOR
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR_ELIMINATOR
+        hitBonus: 25
+      STR_ETHEREAL:
+        hitBonus: 25
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_ETHEREAL_CYBERDISC:
+        hitBonus: 25
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_CEREBREAL:
+        hitBonus: 10
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_WASPITE:
+        hitBonus: 20
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_RAIDERS_EARLY:
+        hitBonus: 15
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_RAIDERS_MIDEARLY:
+        hitBonus: 15
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+      STR_RAIDERS_MID:
+        hitBonus: 10
+        missionCustomDeploy: STR_BASE_DEFENSE_SABOTEUR
+    battlescapeTerrainData:
+      name: SABOTEUR
+      mapDataSets:
+        - BLANKS
+        - U_EXT02
+        - U_WALL02
+        - U_PODS
+        - U_BITS
+        - U_OPER2
+      mapBlocks:
+        - name: G0012_CRAB_SABOTEUR_BY_WOLWERIN
+          width: 30
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [2, 5, 0]
+              - [2, 9, 0]
+              - [27, 5, 0]
+              - [27, 9, 0]
   - type: STR_CONTACT_SHIP
     modSprite: InterceptionContactShip
     size: STR_MEDIUM_UC
@@ -2122,18 +2387,94 @@ ufos:
         - name: LABSHIP4
           width: 30
           length: 30
+  - type: STR_ARBITER
+    size: STR_VERY_LARGE
+    modSprite: InterceptionArbiter
+    damageMax: 5500
+    shieldCapacity: 550
+    shieldRecharge: 140
+    shieldRechargeInGeoscape: 350
+    shieldBleedThrough: 100
+    speedMax: 7500
+    armor: 70
+    accel: 5
+    power: 200
+    range: 80
+    score: 550
+    reload: 28
+    breakOffTime: 2000
+    radarRange: 1800
+    raceBonus:
+      STR_ETHEREAL:
+        hitBonus: 25
+      STR_ETHEREAL_CYBERDISC:
+        hitBonus: 25
+      STR_ORDER_OF_ELIMINATION:
+        hitBonus: 25
+    battlescapeTerrainData:
+      name: ARBITER
+      mapDataSets:
+        - BLANKS
+        - U_EXT02
+        - U_WALL02
+        - U_PODS
+        - U_BITS
+        - U_OPER2
+        - UFOL83
+      mapBlocks:
+        - name: ARBITER
+          width: 50
+          length: 30
+          items:
+            STR_SPAWN_ALIEN_SMALL_PLASMA_TURRET:
+              - [17, 9, 3]
+              - [17, 20, 3]
+            STR_SPAWN_ALIEN_LASER_TURRET:
+              - [24, 3, 1]
+              - [24, 25, 1]
+              - [13, 3, 1]
+              - [13, 25, 1]
+              - [6, 14, 1]
+              - [39, 14, 1]
+              - [44, 2, 1]
+              - [44, 26, 1]
+              - [30, 18, 3]
+              - [30, 10, 3]
+              - [38, 8, 3]
+              - [38, 20, 3]
+              - [6, 12, 3]
+              - [6, 16, 3]
+            STR_SPAWN_ALIEN_CYBERWATCH_TURRET:
+              - [13, 11, 0]
+              - [13, 18, 0]
+              - [23, 11, 0]
+              - [23, 18, 0]
+            STR_ELERIUM_115:
+              - [8, 9, 0]
+              - [8, 20, 0]
+              - [18, 9, 0]
+              - [18, 20, 0]
+              - [28, 9, 0]
+              - [28, 20, 0]
+              - [43, 3, 0]
+              - [43, 26, 0]
+          fuseTimers:
+            STR_SPAWN_ALIEN_LASER_TURRET: [0, 0]
+            STR_SPAWN_ALIEN_SMALL_PLASMA_TURRET: [0, 0]
+            STR_SPAWN_ALIEN_CYBERWATCH_TURRET: [0, 0]
   - type: STR_SMALL_GROUND_CONVOY
     size: STR_SMALL
+    modSprite: InterceptionVanSmallConvoy
     sprite: 4
-    damageMax: 500
-    speedMax: 500
+    damageMax: 35
+    speedMax: 120
     accel: 1
-    power: 3
+    power: 2
     range: 10
-    reload: 18
+    reload: 20
     score: 25
     fireSound: 145
-    breakOffTime: 20
+    breakOffTime: 15
     battlescapeTerrainData:
       name: CONVOY00
       mapDataSets:
@@ -2143,15 +2484,17 @@ ufos:
         - name: CONVOY00
           width: 50
           length: 10
-        - name: CONVOY01
-          width: 50
-          length: 20
-        - name: CONVOY02
-          width: 10
-          length: 50
-        - name: CONVOY04
-          width: 10
-          length: 50
+#        - name: CONVOY01
+#          width: 50
+#          length: 20
+#        - name: CONVOY02
+#          width: 10
+#          length: 50
+#        - name: CONVOY04
+#          width: 10
+#          length: 50
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MEDIUM_GROUND_CONVOY
     size: STR_MEDIUM_UC
     modSprite: InterceptionVanMediumConvoy
@@ -2182,6 +2525,8 @@ ufos:
         - name: CONVOY03
           width: 50
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MEDIUM_MILITARY_CONVOY
     size: STR_MEDIUM_UC
     modSprite: InterceptionMediumMilitaryConvoy
@@ -2218,6 +2563,8 @@ ufos:
         - name: MILITARY_CONVOY
           width: 20
           length: 50
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_LARGE_MILITARY_CONVOY
     size: STR_MEDIUM_UC
     modSprite: InterceptionMediumMilitaryConvoy
@@ -2238,6 +2585,9 @@ ufos:
       STR_BLACK_LOTUS:
         craftCustomDeploy: STR_LARGE_MILITARY_CONVOY_GOLDEN_ACADEMY
         missionCustomDeploy: STR_BASE_DEFENSE_GOLDEN_ACADEMY
+      STR_OSIRON:
+        craftCustomDeploy: STR_LARGE_MILITARY_CONVOY_GOLDEN_ACADEMY
+        missionCustomDeploy: STR_BASE_DEFENSE_GOLDEN_ACADEMY
     battlescapeTerrainData:
       name: MILITARY_CONVOY_LARGE
       mapDataSets:
@@ -2248,6 +2598,8 @@ ufos:
         - name: MILITARY_CONVOY_LARGE
           width: 20
           length: 50
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MANSION
     size: STR_LARGE
     sprite: 4
@@ -2382,6 +2734,84 @@ ufos:
                 amount: 1
                 mixed: false
                 itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+        - name: D_ATRIUM_2
+          width: 20
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [2, 12, 1]
+              - [4, 6, 1]
+              - [12, 10, 0]
+              - [14, 1, 0]
+          randomizedItems:
+              - position: [4, 6, 1]
+                amount: 1
+                mixed: false
+                itemList: *richCultStash
+              - position: [2, 12, 1]
+                amount: 6
+                mixed: false
+                itemList: *standardCultStash
+              - position: [12, 10, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [14, 1, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [4, 14, 1]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+              - position: [3, 5, 0]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+              - position: [10, 12, 0]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+        - name: D_ATRIUM_3
+          width: 20
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [6, 9, 1]
+              - [4, 8, 1]
+              - [11, 1, 1]
+              - [1, 6, 0]
+          randomizedItems:
+              - position: [4, 8, 1]
+                amount: 1
+                mixed: false
+                itemList: *richCultStash
+              - position: [6, 9, 1]
+                amount: 6
+                mixed: false
+                itemList: *standardCultStash
+              - position: [11, 1, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [1, 6, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [8, 12, 0]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+              - position: [4, 18, 0]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+              - position: [6, 15, 1]
+                amount: 1
+                mixed: false
+                itemList: [STR_MONEY_BRIEFCASE, STR_MONEY_BAG]
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_WESTMEN_TAVERN
     size: STR_LARGE
     sprite: 4
@@ -2472,7 +2902,7 @@ ufos:
             STR_SPAWN_WESTMEN_INFORMANT:
               - [3, 3, 2]
           fuseTimers:
-            STR_SPAWN_WESTMEN_INFORMANT: [0, 0]  
+            STR_SPAWN_WESTMEN_INFORMANT: [0, 0]
           randomizedItems:
               - position: [7, 5, 0]
                 amount: 5
@@ -2593,7 +3023,7 @@ ufos:
               - position: [3, 9, 0]
                 amount: 5
                 mixed: true
-                itemList: &MiBMudrangerLoot [STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ALIEN_ORGAN_SAMPLE]
+                itemList: &MiBMudrangerLoot [STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ETRACE, STR_ALIEN_ORGAN_SAMPLE, STR_SUPERCONDUCTIVE_CIRCUITS]
               - position: [4, 9, 0]
                 amount: 5
                 mixed: true
@@ -2681,7 +3111,7 @@ ufos:
               - position: [3, 10, 0]
                 amount: 5
                 mixed: true
-                itemList: &MiBMudrangerConvoyLoot [STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_OPTRONIC_PARTS, STR_OPTRONIC_PARTS, STR_OPTRONIC_PARTS, STR_OPTRONIC_PARTS, STR_ELERIUM_115, STR_ELERIUM_115, STR_ELERIUM_115, STR_ALIEN_ORGAN_SAMPLE, STR_MIND_PROBE, STR_ALIEN_ALLOY_WELDER, STR_ALIEN_MULTITOOL, STR_ALIEN_EMBRYO, STR_ALIEN_COMMUNICATOR]
+                itemList: &MiBMudrangerConvoyLoot [STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_OPTRONIC_PARTS, STR_OPTRONIC_PARTS, STR_OPTRONIC_PARTS, STR_SUPERCONDUCTIVE_CIRCUITS, STR_SUPERCONDUCTIVE_CIRCUITS, STR_SUPERCONDUCTIVE_CIRCUITS, STR_SUPERCONDUCTIVE_CIRCUITS, STR_SUPERCONDUCTIVE_CIRCUITS, STR_ELERIUM_115, STR_ELERIUM_115, STR_ELERIUM_115, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE]
               - position: [4, 10, 0]
                 amount: 5
                 mixed: false
@@ -2805,6 +3235,9 @@ ufos:
     radarRange: 2000
     hunterKillerPercentage: 40
     huntMode: 1
+    raceBonus:
+      STR_MIB:
+        missionCustomDeploy: STR_MONSTERS_HUNT_MIB
     battlescapeTerrainData:
       name: MIB_TRANSPORTER
       mapDataSets:
@@ -2820,8 +3253,57 @@ ufos:
             STR_SPAWN_MIB_PILOT:
               - [3, 16, 0]
               - [7, 16, 0]
+            STR_TRITANIUM_AMMO_CRATE:
+              - [2, 10, 0]
+              - [2, 11, 0]
+              - [8, 10, 0]
+              - [8, 11, 0]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
+  - type: STR_MIB_ARMORY_SHIP
+    size: STR_SMALL
+    modSprite: InterceptionMiBArmoryShip
+    damageMax: 280
+    speedMax: 2600
+    accel: 9
+    power: 35
+    range: 30
+    score: 125
+    reload: 30
+    breakOffTime: 200
+    hitBonus: 10
+    radarRange: 100
+    raceBonus:
+      STR_MIB:
+        missionCustomDeploy: STR_MIB_WEAPONS_DISTRIBUTION_SITE
+    battlescapeTerrainData:
+      name: MIB_ARMORY_SHIP
+      mapDataSets:
+        - BLANKS
+        - MIB_EXT02
+        - MIB_WALL02
+        - MIB_BITS
+        - MIB_L83
+      mapBlocks:
+        - name: UFO_120AA_BY_CIVILIAN
+          width: 20
+          length: 10
+          items:
+            STR_SPAWN_MIB_PILOT:
+              - [3, 4, 0]
+            STR_TRITANIUM_AMMO_CRATE:
+              - [6, 1, 0]
+              - [7, 1, 0]
+              - [8, 1, 0]
+              - [9, 1, 0]
+              - [10, 1, 0]
+              - [6, 7, 0]
+              - [7, 7, 0]
+              - [8, 7, 0]
+              - [9, 7, 0]
+              - [10, 7, 0]
+          fuseTimers:
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_SCIENCE_SHIP
     size: STR_SMALL
     modSprite: InterceptionMiBSciShip
@@ -2850,7 +3332,37 @@ ufos:
             STR_SPAWN_MIB_PILOT:
               - [3, 11, 0]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
+  - type: STR_MIB_SCOUT_SHIP
+    size: STR_SMALL
+    modSprite: InterceptionMiBScoutShip
+    damageMax: 150
+    speedMax: 2200
+    accel: 9
+    power: 20
+    range: 16
+    score: 100
+    reload: 60
+    breakOffTime: 500
+    hitBonus: 10
+    radarRange: 1800
+    battlescapeTerrainData:
+      name: MIB_SCOUT_SHIP
+      mapDataSets:
+        - BLANKS
+        - MIB_EXT02
+        - MIB_WALL02
+        - MIB_BITS
+        - MIB_CRAFTBITS
+      mapBlocks:
+        - name: MIB_SCOUT_SHIP
+          width: 10
+          length: 10
+          items:
+            STR_SPAWN_MIB_PILOT:
+              - [4, 5, 1]
+          fuseTimers:
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_DROPSHIP
     size: STR_SMALL
     modSprite: InterceptionMiBDropShip
@@ -2866,6 +3378,9 @@ ufos:
     radarRange: 2000
     hunterKillerPercentage: 40
     huntMode: 1
+    raceBonus:
+      STR_MIB:
+        missionCustomDeploy: STR_BASE_DEFENSE_MIB_DROPSHIP
     battlescapeTerrainData:
       name: MIB_DROPSHIP
       mapDataSets:
@@ -2883,7 +3398,39 @@ ufos:
               - [4, 14, 2]
               - [6, 13, 2]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
+  - type: STR_MIB_ESCORT_SHIP
+    size: STR_MEDIUM_UC
+    modSprite: InterceptionMiBEscortShip
+    damageMax: 450
+    speedMax: 2900
+    accel: 9
+    power: 70
+    range: 40
+    score: 200
+    reload: 33
+    hitBonus: 10
+    breakOffTime: 310
+    radarRange: 1500
+    hunterKillerPercentage: 40
+    huntMode: 1
+    battlescapeTerrainData:
+      name: MIB_ESCORT_SHIP
+      mapDataSets:
+        - BLANKS
+        - MIB_EXT02
+        - MIB_WALL02
+        - MIB_PODS
+        - MIB_BITS
+      mapBlocks:
+        - name: G0010_INTERCEPTOR_BY_WOLWERIN
+          width: 30
+          length: 20
+          items:
+            STR_SPAWN_MIB_PILOT:
+              - [26, 12, 0]
+          fuseTimers:
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_STEALTH_BOMBER
     size: STR_SMALL
     modSprite: InterceptionMiBStealthBomber
@@ -2899,6 +3446,9 @@ ufos:
     radarRange: 2000
     hunterKillerPercentage: 40
     huntMode: 1
+    raceBonus:
+      STR_MIB:
+        missionCustomDeploy: STR_BASE_DEFENSE_MIB_STEALTH_BOMBER
     battlescapeTerrainData:
       name: MIB_STEALTH_BOMBER
       mapDataSets:
@@ -2915,7 +3465,38 @@ ufos:
               - [8, 16, 1]
               - [11, 16, 1]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
+  - type: STR_MIB_DEFENDER
+    size: STR_LARGE
+    modSprite: InterceptionMiBDefender
+    damageMax: 2500
+    speedMax: 5200
+    accel: 9
+    power: 100
+    range: 50
+    score: 400
+    reload: 35
+    hitBonus: 10
+    breakOffTime: 3000
+    radarRange: 400
+    battlescapeTerrainData:
+      name: MIB_DEFENDER
+      mapDataSets:
+        - BLANKS
+        - MIB_EXT02
+        - MIB_WALL02
+        - MIB_PODS
+        - MIB_BITS
+      mapBlocks:
+        - name: G0007_BATTLE_HEAVY_SHIP_BY_WOLWERIN
+          width: 30
+          length: 20
+          items:
+            STR_SPAWN_MIB_PILOT:
+              - [18, 6, 1]
+              - [16, 11, 1]
+          fuseTimers:
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_STRIKE_SHIP
     size: STR_VERY_LARGE
     modSprite: InterceptionMiBStrikeShip
@@ -2954,7 +3535,7 @@ ufos:
               - [15, 22, 2]
               - [16, 23, 2]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_ENGINEERING_SHIP
     size: STR_VERY_LARGE
     modSprite: InterceptionMiBEngineeringShip
@@ -2976,6 +3557,7 @@ ufos:
         - MIB_WALL02
         - MIB_BITS
         - MIB_CRAFTBITS
+        - MIB_CRATE
         - MILTECH
       mapBlocks:
         - name: MIB_ENGINEERING_SHIP
@@ -2986,7 +3568,136 @@ ufos:
               - [18, 23, 1]
               - [11, 23, 1]
           fuseTimers:
-            STR_SPAWN_MIB_PILOT: [0, 0]  
+            STR_SPAWN_MIB_PILOT: [0, 0]
+  - type: STR_MIB_FREIGHT_SHIP
+    size: STR_LARGE
+    modSprite: InterceptionMiBFreightShip
+    damageMax: 3000
+    speedMax: 2000
+    accel: 5
+    power: 80
+    range: 30
+    score: 300
+    reload: 33
+    hitBonus: 10
+    breakOffTime: 500
+    radarRange: 100
+    battlescapeTerrainData:
+      name: MIB_FREIGHT_SHIP
+      mapDataSets:
+        - BLANKS
+        - MIB_EXT02
+        - MIB_WALL02
+        - MIB_PODS
+        - MIB_BITS
+        - MIB_OPER2
+      mapBlocks:
+        - name: G0014_LANDING_SHIP_BY_WOLWERIN_SOLAR_MIX
+          width: 30
+          length: 20
+          items:
+            STR_MEDICAL_SUPPLIES_RICH:
+              - [3, 1, 1]
+              - [4, 1, 1]
+              - [5, 1, 1]
+              - [3, 18, 1]
+              - [4, 18, 1]
+              - [5, 18, 1]
+            STR_MIB_CRATE:
+              - [23, 8, 1]
+              - [23, 9, 1]
+              - [23, 10, 1]
+              - [23, 11, 1]
+              - [25, 3, 1]
+              - [25, 4, 1]
+              - [25, 5, 1]
+              - [26, 3, 1]
+              - [28, 3, 1]
+              - [25, 14, 1]
+              - [25, 15, 1]
+              - [26, 15, 1]
+              - [28, 15, 1]
+              - [25, 1, 1]
+              - [26, 1, 1]
+              - [25, 18, 1]
+              - [26, 18, 1]
+              - [10, 9, 1]
+              - [11, 9, 1]
+              - [12, 9, 1]
+              - [13, 9, 1]
+              - [14, 9, 1]
+              - [15, 9, 1]
+              - [16, 9, 1]
+              - [17, 9, 1]
+              - [18, 9, 1]
+              - [10, 11, 1]
+              - [11, 11, 1]
+              - [12, 11, 1]
+              - [13, 11, 1]
+              - [14, 11, 1]
+              - [15, 11, 1]
+              - [16, 11, 1]
+              - [17, 11, 1]
+              - [18, 11, 1]
+              - [10, 12, 1]
+              - [11, 12, 1]
+              - [12, 12, 1]
+              - [13, 12, 1]
+              - [14, 12, 1]
+              - [15, 12, 1]
+              - [16, 12, 1]
+              - [17, 12, 1]
+              - [18, 12, 1]
+            STR_SPAWN_MIB_PILOT:
+              - [22, 16, 1]
+              - [22, 3, 1]
+          randomizedItems:
+              - position: [21, 6, 1]
+                amount: 1
+                mixed: true
+                itemList: &MiBFreight [STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_MIB_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_TRITANIUM_AMMO_CRATE, STR_EXPLOSIVES_BOX_ADVANCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_GOOD_OSIRON_CRATE, STR_SYNDICATE_WEAPON_BOX]
+              - position: [22, 6, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [23, 6, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 7, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 8, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 8, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 11, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 12, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [21, 13, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [22, 13, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+              - position: [23, 13, 1]
+                amount: 1
+                mixed: true
+                itemList: *MiBFreight
+          fuseTimers:
+            STR_SPAWN_MIB_PILOT: [0, 0]
   - type: STR_MIB_SURFACE_OUTPOST
     size: STR_VERY_LARGE
     modSprite: interception_jammed
@@ -3068,6 +3779,35 @@ ufos:
         - name: LT_HOUSE_04G
           width: 20
           length: 30
+          items:
+            STR_GENERIC_CRATE:
+              - [7, 16, 0]
+              - [2, 20, 0]
+          randomizedItems:
+              - position: [7, 16, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [2, 20, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+        - name: LT_HOUSE_05G
+          width: 30
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [19, 3, 0]
+              - [25, 9, 0]
+          randomizedItems:
+              - position: [19, 3, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
+              - position: [25, 9, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardCultStash
   - type: STR_BARN_LUCHADORES
     size: STR_LARGE
     damageMax: 1
@@ -3116,7 +3856,7 @@ ufos:
     breakOffTime: 500
     battlescapeTerrainData:
       name: STR_CULTHOUSE
-      mapDataSets:
+      mapDataSets: &CultBuildings
         - BLANKS
         - CULTMIL
         - CULTDECOR
@@ -3454,6 +4194,31 @@ ufos:
                 amount: 5
                 mixed: true
                 itemList: *poorCultEvidenceStash
+        - name: CULTHOUSE14
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [2, 8, 0]
+              - [8, 7, 1]
+              - [8, 8, 1]
+          randomizedItems:
+              - position: [2, 8, 0]
+                amount: 4
+                mixed: false
+                itemList: *richCultShootyStash
+              - position: [8, 7, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardCultShootyStash
+              - position: [1, 6, 1]
+                amount: 2
+                mixed: true
+                itemList: *standardCultShootyStash
+              - position: [8, 8, 1]
+                amount: 5
+                mixed: true
+                itemList: *poorCultEvidenceStash
   - type: STR_CULTHIDEOUT
     size: STR_MEDIUM_UC
     modSprite: interception_jammed
@@ -3467,11 +4232,7 @@ ufos:
     breakOffTime: 500
     battlescapeTerrainData:
       name: STR_CULTHIDEOUT
-      mapDataSets:
-        - BLANKS
-        - CULTMIL
-        - CULTDECOR
-        - CULTEXTRA
+      mapDataSets: *CultBuildings
       mapBlocks:
         - name: CULTHIDEOUT00
           width: 20
@@ -3672,6 +4433,89 @@ ufos:
                 amount: 3
                 mixed: false
                 itemList: *richCultShootyStash
+        - name: CULTHIDEOUT05
+          width: 20
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [7, 4, 0]
+              - [13, 7, 0]
+              - [16, 3, 0]
+              - [8, 3, 1]
+              - [14, 6, 1]
+          randomizedItems:
+              - position: [14, 6, 1]
+                amount: 5
+                mixed: false
+                itemList: *poorCultShootyStash
+              - position: [13, 7, 0]
+                amount: 4
+                mixed: false
+                itemList: *poorCultShootyStash
+              - position: [8, 3, 1]
+                amount: 5
+                mixed: false
+                itemList: *standardCultShootyStash
+              - position: [16, 3, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardCultShootyStash
+              - position: [7, 4, 0]
+                amount: 5
+                mixed: false
+                itemList: *richCultShootyStash
+        - name: CULTHIDEOUT06
+          width: 20
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [7, 7, 0]
+              - [8, 7, 0]
+              - [12, 15, 0]
+              - [9, 7, 0]
+          randomizedItems:
+              - position: [7, 7, 0]
+                amount: 10
+                mixed: false
+                itemList: *standardCultExplosivesStash
+              - position: [8, 7, 0]
+                amount: 6
+                mixed: false
+                itemList: *standardCultExplosivesStash
+              - position: [12, 15, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardCultShootyStash
+              - position: [9, 7, 0]
+                amount: 3
+                mixed: false
+                itemList: *richCultShootyStash
+        - name: CULTHIDEOUT07
+          width: 20
+          length: 20
+          items:
+            STR_GENERIC_CRATE:
+              - [7, 5, 0]
+              - [6, 10, 1]
+              - [9, 18, 0]
+              - [4, 15, 1]
+          randomizedItems:
+              - position: [7, 5, 0]
+                amount: 10
+                mixed: false
+                itemList: *standardCultExplosivesStash
+              - position: [6, 10, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardCultExplosivesStash
+              - position: [9, 18, 0] #
+                amount: 4
+                mixed: false
+                itemList: *standardCultShootyStash
+              - position: [4, 15, 1]
+                amount: 5
+                mixed: false
+                itemList: *richCultShootyStash
   - type: STR_DAGON_PYRAMID
     size: STR_VERY_LARGE
     sprite: 4
@@ -3723,7 +4567,7 @@ ufos:
               - [6, 6, 0]
               - [6, 9, 0]
           fuseTimers:
-            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER: [0, 0]  
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER: [0, 0]
   - type: STR_DURATHREAD_FACTORY_UFO
     size: STR_LARGE
     sprite: 4
@@ -3854,7 +4698,7 @@ ufos:
           length: 10
           items:
             STR_ZRBITE_TANK:
-              - [3, 3, 0]
+              - [2, 3, 0]
   - type: STR_USO_ESCORT
     size: STR_SMALL
     modSprite: InterceptionUSOEscort
@@ -3912,35 +4756,11 @@ ufos:
           length: 20
           items:
             STR_ZRBITE_TANK:
-              - [10, 3, 0]
-  - type: STR_USO_FLEET_CRUISER
-    size: STR_LARGE
-    modSprite: interception_jammed
-    damageMax: 300
-    speedMax: 2600
-    armor: 10
-    accel: 9
-    power: 25
-    range: 35
-    score: 125
-    reload: 35
-    breakOffTime: 300
-    battlescapeTerrainData:
-      name: USOFLEETSUPPLYCRUISER
-      mapDataSets:
-        - BLANKS
-        - USOEXT2
-        - USOEXT3
-        - USOINT1
-        - USOINT2
-        - USOINT3
-      mapBlocks:
-        - name: USOFLEETSUPPLYCRUISER00
-          width: 20
-          length: 30
+              - [6, 10, 0]
+              - [13, 10, 0]
   - type: STR_USO_HEAVY_CRUISER
     size: STR_LARGE
-    modSprite: interception_jammed
+    modSprite: InterceptionUSOHeavyCruiser
     damageMax: 300
     speedMax: 2600
     armor: 15
@@ -3963,6 +4783,42 @@ ufos:
         - name: USOHEAVYCRUISER00
           width: 20
           length: 20
+          items:
+            STR_ZRBITE_TANK:
+              - [3, 10, 0]
+              - [5, 10, 0]
+              - [5, 7, 0]
+  - type: STR_USO_FLEET_CRUISER
+    size: STR_LARGE
+    modSprite: InterceptionUSOFleetSupplyCruiser
+    damageMax: 300
+    speedMax: 2600
+    armor: 10
+    accel: 9
+    power: 25
+    range: 35
+    score: 125
+    reload: 35
+    breakOffTime: 300
+    battlescapeTerrainData:
+      name: USOFLEETSUPPLYCRUISER
+      mapDataSets:
+        - BLANKS
+        - USOEXT2
+        - USOEXT3
+        - USOINT1
+        - USOINT2
+        - USOINT3
+      mapBlocks:
+        - name: USOFLEETSUPPLYCRUISER00
+          width: 20
+          length: 30
+          items:
+            STR_ZRBITE_TANK:
+              - [8, 3, 0]
+              - [9, 3, 0]
+              - [10, 3, 0]
+              - [11, 3, 0]
   - type: STR_USOLANDINGPAD
     size: STR_SMALL
     modSprite: interception_jammed
@@ -4039,6 +4895,59 @@ ufos:
         - SEANOM
       mapBlocks:
         - name: TLETHEMBASSY
+          width: 20
+          length: 20
+  - type: STR_VOLCANO_FARM
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: VOLCANOFARM
+      mapDataSets:
+        - BLANKS
+        - USOEXT2
+        - USOEXT3
+        - SEAORGANIC1
+        - SEAORGANIC2
+        - SEAORGANIC3
+        - SEANOM
+      mapBlocks:
+        - name: VOLCANOFARM
+          width: 30
+          length: 30
+  - type: STR_MOLECULAR_EMITTER
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 300
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: MOLECULAREMITTER
+      mapDataSets:
+        - BLANKS
+        - USOEXT2
+        - USOEXT3
+        - SEAORGANIC1
+        - SEAORGANIC2
+        - SEAORGANIC3
+        - USOINT1
+        - USOINT2
+        - USOINT3
+        - SEANOM
+      mapBlocks:
+        - name: MOLECULAREMITTER
           width: 20
           length: 20
   - type: STR_USO_IN_DIMENSION_X
@@ -4156,6 +5065,41 @@ ufos:
         - name: CLONEBARN00
           width: 20
           length: 20
+  - type: STR_HYBRID_SCHOOL_UFO
+    size: STR_VERY_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: CLONEBARN
+      mapDataSets:
+        - BLANKS
+        - COLDISLE
+        - SEAURBAN
+        - COLDISLEB1
+        - COLDISLEB2
+        - MILBARR
+      mapBlocks:
+        - name: HYBRIDSCHOOL
+          width: 30
+          length: 30
+          items:
+            STR_HYBRID_JUVENILE:
+              - [21, 10, 1]
+              - [23, 10, 1]
+              - [25, 10, 1]
+              - [23, 18, 1]
+              - [23, 26, 1]
+              - [25, 22, 1]
+              - [21, 26, 1]
+              - [27, 14, 1]
+              - [27, 26, 1]
   - type: STR_HYBRID_STORAGE_FACILITY
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4180,6 +5124,71 @@ ufos:
         - name: HYBRSTOR00
           width: 20
           length: 20
+  - type: STR_HYBRID_WORKSHOP_FACILITY
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: HYBRWORKS
+      mapDataSets:
+        - BLANKS
+        - PORTROADS
+        - INDUSLUM
+        - ROADS
+        - MILTECH
+        - HYBRID_INDUSLUM
+      mapBlocks:
+        - name: INDUSTRIALSLUMHYBRIDWORKS
+          width: 30
+          length: 30
+          randomizedItems:
+              - position: [21, 25, 0]
+                amount: 1
+                mixed: false
+                itemList: &hybridProducts [STR_GAS_GRENADE, STR_GAS_GRENADE, STR_CHEMPISTOL, STR_CHEMOGUN_CLIP, STR_CHEMOGUN_CLIP, STR_CHEMOGUN, STR_CHEMOGUN_CLIP, STR_CHEMOGUN_CLIP, STR_SCRAP_METAL, STR_ASSORTED_JUNK, STR_CELL_PHONE]
+              - position: [17, 25, 0]
+                amount: 1
+                mixed: false
+                itemList: *hybridProducts
+              - position: [13, 24, 0]
+                amount: 1
+                mixed: false
+                itemList: *hybridProducts
+              - position: [9, 25, 0]
+                amount: 1
+                mixed: false
+                itemList: *hybridProducts
+  - type: STR_HYBRID_DRONE_FACTORY_BUILDING
+    size: STR_VERY_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: DRONEFACTORY
+      mapDataSets:
+        - BLANKS
+        - PORTROADS
+        - INDUSLUM
+        - ROADS
+        - MILTECH
+        - HYBRID_INDUSLUM
+      mapBlocks:
+        - name: INDUSTRIALSLUMHYBRIDDRONE
+          width: 40
+          length: 40
   - type: STR_HYBRID_CONTROL_ROOM
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4295,6 +5304,30 @@ ufos:
         - name: STRIXCAVE_00
           width: 20
           length: 20
+  - type: STR_KNIGHT_CAVE
+    size: STR_VERY_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: KNIGHTCAVE
+      mapDataSets:
+        - BLANKS
+        - CAVEBLACK
+        - CATACOMB
+        - CATACDECOR
+        - LAVA
+        - DUNGEON
+      mapBlocks:
+        - name: KNIGHTCAVE_00
+          width: 40
+          length: 40
   - type: STR_DOOM_PORTAL
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4358,7 +5391,7 @@ ufos:
               - [1, 9, 3]
               - [18, 9, 3]
           fuseTimers:
-            STR_SPAWN_DOOM_IMP: [0, 0]  
+            STR_SPAWN_DOOM_IMP: [0, 0]
   - type: STR_TRANSFIGURATION_POOL_SAMAEL
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4397,8 +5430,8 @@ ufos:
               - [1, 9, 3]
               - [18, 9, 3]
           fuseTimers:
-            STR_SPAWN_SAMAEL_OF_APOCALYPSE: [0, 0]  
-            STR_SPAWN_DOOM_IMP: [0, 0]  
+            STR_SPAWN_SAMAEL_OF_APOCALYPSE: [0, 0]
+            STR_SPAWN_DOOM_IMP: [0, 0]
   - type: STR_SWAT_CAR
     size: STR_VERY_SMALL
     modSprite: interception_jammed
@@ -4427,7 +5460,9 @@ ufos:
               - [7, 3, 0]
               - [5, 2, 0]
           fuseTimers:
-            STR_SPAWN_CIVILIAN_MALE_SWAT: [0, 0]  
+            STR_SPAWN_CIVILIAN_MALE_SWAT: [0, 0]
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_SUV_SYNDICATE
     size: STR_VERY_SMALL
     modSprite: interception_jammed
@@ -4462,8 +5497,8 @@ ufos:
               - [2, 5, 0]
               - [8, 5, 0]
           fuseTimers:
-            STR_SPAWN_GIANT_BEETLE_TERRORIST: [0, 0]  
-            STR_SPAWN_GIANT_BEETLE_BOMBARDIER_TERRORIST: [0, 0]  
+            STR_SPAWN_GIANT_BEETLE_TERRORIST: [0, 0]
+            STR_SPAWN_GIANT_BEETLE_BOMBARDIER_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4480,7 +5515,7 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_CHUPACABRA_TERRORIST: [0, 0]  
+            STR_SPAWN_CHUPACABRA_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4497,7 +5532,7 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_SPIKEBOAR_TERRORIST: [0, 0]  
+            STR_SPAWN_SPIKEBOAR_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4514,7 +5549,7 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_BULLFROG_TERRORIST: [0, 0]  
+            STR_SPAWN_BULLFROG_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4531,7 +5566,7 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_GIANT_RAT_TERRORIST: [0, 0]  
+            STR_SPAWN_GIANT_RAT_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4548,7 +5583,7 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_MEGASCORPION_TERRORIST: [0, 0]  
+            STR_SPAWN_MEGASCORPION_TERRORIST: [0, 0]
         - name: SUV
           width: 10
           length: 10
@@ -4565,7 +5600,9 @@ ufos:
               - [8, 5, 0]
               - [8, 8, 0]
           fuseTimers:
-            STR_SPAWN_SHADOWBAT_TERRORIST: [0, 0]  
+            STR_SPAWN_SHADOWBAT_TERRORIST: [0, 0]
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_SYNDICATE_UNDERGROUND_LAB
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4590,7 +5627,7 @@ ufos:
             STR_SPAWN_BLOODHOUND_TERRORIST:
               - [25, 10, 0]
           fuseTimers:
-            STR_SPAWN_BLOODHOUND_TERRORIST: [0, 0]  
+            STR_SPAWN_BLOODHOUND_TERRORIST: [0, 0]
   - type: STR_SYNDICATE_WAREHOUSE_UFO
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4603,7 +5640,7 @@ ufos:
     reload: 32
     breakOffTime: 500
     battlescapeTerrainData:
-      name: CORPLAB
+      name: CORPWAREHOUSE
       mapDataSets:
         - BLANKS
         - CORPWAREHOUSE
@@ -4656,7 +5693,7 @@ ufos:
           length: 40
   - type: STR_DRAGONFLY_DARK
     size: STR_SMALL
-    modSprite: interception_jammed
+    modSprite: InterceptionDragonfly
     damageMax: 50
     speedMax: 560
     accel: 1
@@ -4673,9 +5710,11 @@ ufos:
         - name: DRAGONFLY_DARK
           width: 10
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_SCARAB
     size: STR_MEDIUM_UC
-    modSprite: interception_jammed
+    modSprite: InterceptionScarab
     damageMax: 80
     speedMax: 390
     armor: 2
@@ -4696,6 +5735,8 @@ ufos:
         - name: SCARAB
           width: 20
           length: 20
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_MAGMA_TANK_FACTORY_SITE
     size: STR_LARGE
     modSprite: interception_jammed
@@ -4787,6 +5828,31 @@ ufos:
         - name: CYBERPORTAL
           width: 10
           length: 10
+  - type: STR_CYBERWEB_REACTOR
+    size: STR_MEDIUM
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: CYBERWEB_REACTOR
+      mapDataSets:
+        - BLANKS
+        - CYBERWAREAN
+        - CYBERWAREBITS
+        - XOPSUFOWALLS
+        - XOPSUFOFLOOR
+        - XOPSUFOITEMS2SM
+        - CYBERWAREEXTRA
+      mapBlocks:
+        - name: CYBERWEB_REACTOR
+          width: 20
+          length: 20
   - type: STR_CYBERCOMPUTER
     size: STR_SMALL
     modSprite: interception_jammed
@@ -4812,6 +5878,370 @@ ufos:
         - name: CYBERCOMPUTER
           width: 10
           length: 10
+  - type: STR_BRAINSUCKEDHOUSE
+    size: STR_SMALL
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: STR_BRAINSUCKEDHOUSE
+      mapDataSets: *CultBuildings
+      mapBlocks:
+        - name: CULTHOUSE00
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [5, 0, 0]
+              - [5, 1, 0]
+          randomizedItems:
+              - position: [6, 0, 0]
+                amount: 1
+                mixed: true
+                itemList: &standardBrainsuckedStash [STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_BOOMEROID, STR_BOOMEROID, STR_BOOMEROID, STR_BOOMEROID, STR_BOOMEROID, STR_ACID_BOLT, STR_ACID_BOLT, STR_ACID_BOLT, STR_ACID_BOLT, STR_ACID_BOLT, STR_DISRUPTOR_RIFLE, STR_DISRUPTOR_RIFLE, STR_DISRUPTOR_RIFLE, STR_DISRUPTOR_HEAVY, STR_DISRUPTOR_HEAVY, STR_EXPEDITION_DIMENSION_X] # 1x standard Brainsucked stash
+              - position: [5, 0, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 1, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 2, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 3, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 4, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 5, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE01
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [6, 4, 1]
+          randomizedItems:
+              - position: [0, 0, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [6, 1, 1]
+                amount: 1
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [6, 2, 1]
+                amount: 1
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE02
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [7, 5, 0]
+          randomizedItems:
+              - position: [7, 8, 0]
+                amount: 4
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [7, 8, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [7, 5, 0]
+                amount: 3
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [7, 5, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE03
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [2, 8, 0]
+              - [7, 8, 0]
+          randomizedItems:
+              - position: [1, 8, 0]
+                amount: 5
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [7, 8, 0]
+                amount: 4
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [2, 8, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE04
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [1, 8, 0]
+          randomizedItems:
+              - position: [1, 8, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [3, 8, 0]
+                amount: 4
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE05
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [8, 2, 0]
+              - [8, 3, 0]
+          randomizedItems:
+              - position: [8, 6, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [8, 2, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [8, 3, 0]
+                amount: 1
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE06
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [5, 2, 0]
+              - [0, 8, 0]
+              - [3, 5, 0]
+          randomizedItems:
+              - position: [0, 8, 0]
+                amount: 3
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [3, 5, 0]
+                amount: 4
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [5, 2, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE07
+          width: 10
+          length: 10
+          randomizedItems:
+              - position: [3, 2, 0]
+                amount: 2
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [8, 8, 0]
+                amount: 3
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [3, 1, 0]
+                amount: 4
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE08
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [2, 7, 1]
+              - [8, 5, 1]
+          randomizedItems:
+              - position: [8, 5, 1]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [2, 7, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE09
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [1, 7, 0]
+              - [6, 2, 1]
+          randomizedItems:
+              - position: [1, 7, 0]
+                amount: 6
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [6, 2, 1]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [5, 7, 1]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE10
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [1, 4, 0]
+              - [8, 2, 1]
+          randomizedItems:
+              - position: [2, 0, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 4, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [8, 2, 1]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE11
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [0, 0, 1]
+              - [0, 1, 1]
+              - [0, 3, 0]
+          randomizedItems:
+              - position: [7, 6, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [0, 1, 1]
+                amount: 1
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [7, 3, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [0, 3, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [0, 1, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [8, 0, 0]
+                amount: 6
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [0, 0, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE12
+          width: 10
+          length: 10
+          randomizedItems:
+              - position: [6, 6, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [3, 1, 0]
+                amount: 7
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 6, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 1, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 2, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 4, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [6, 2, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [6, 6, 0]
+                amount: 5
+                mixed: false
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE13
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [4, 6, 1]
+              - [8, 3, 0]
+              - [8, 6, 0]
+          randomizedItems:
+              - position: [4, 6, 1]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [8, 3, 0]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [4, 8, 0]
+                amount: 2
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [8, 6, 0]
+                amount: 5
+                mixed: true
+                itemList: *standardBrainsuckedStash
+        - name: CULTHOUSE14
+          width: 10
+          length: 10
+          items:
+            STR_GENERIC_CRATE:
+              - [2, 8, 0]
+              - [8, 7, 1]
+              - [8, 8, 1]
+          randomizedItems:
+              - position: [2, 8, 0]
+                amount: 4
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [8, 7, 1]
+                amount: 3
+                mixed: false
+                itemList: *standardBrainsuckedStash
+              - position: [1, 6, 1]
+                amount: 2
+                mixed: true
+                itemList: *standardBrainsuckedStash
+              - position: [8, 8, 1]
+                amount: 5
+                mixed: true
+                itemList: *standardBrainsuckedStash
   - type: STR_FARM_SILO
     size: STR_SMALL
     modSprite: interception_jammed
@@ -4860,6 +6290,50 @@ ufos:
         - name: COMMUNION
           width: 20
           length: 20
+  - type: STR_CRONE_STONES
+    size: STR_VERY_SMALL
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: CRONE_STONES
+      mapDataSets:
+        - BLANKS
+        - FORESTMOUNT
+        - FOREST
+        - FORESTMOUNTBITS
+        - RITUALS
+      mapBlocks:
+        - name: CRONE_STONES
+          width: 10
+          length: 10
+          randomizedItems:
+              - position: [2, 2, 0]
+                amount: 1
+                mixed: true
+                itemList: [STR_HUMAN_SACRIFICE_0, STR_HUMAN_SACRIFICE_1, STR_HUMAN_SACRIFICE_2]
+              - position: [5, 1, 0]
+                amount: 1
+                mixed: true
+                itemList: [STR_HUMAN_SACRIFICE_0, STR_HUMAN_SACRIFICE_1, STR_HUMAN_SACRIFICE_2]
+              - position: [6, 6, 0]
+                amount: 1
+                mixed: true
+                itemList: [STR_HUMAN_SACRIFICE_0, STR_HUMAN_SACRIFICE_1, STR_HUMAN_SACRIFICE_2]
+              - position: [5, 7, 0]
+                amount: 1
+                mixed: true
+                itemList: [STR_HUMAN_SACRIFICE_0, STR_HUMAN_SACRIFICE_1, STR_HUMAN_SACRIFICE_2]
+              - position: [1, 5, 0]
+                amount: 1
+                mixed: true
+                itemList: [STR_HUMAN_SACRIFICE_0, STR_HUMAN_SACRIFICE_1, STR_HUMAN_SACRIFICE_2]
   - type: STR_JUNGLE_SHRINE
     size: STR_SMALL
     modSprite: interception_jammed
@@ -4896,11 +6370,7 @@ ufos:
     breakOffTime: 500
     battlescapeTerrainData:
       name: LO_WO_HOUSE
-      mapDataSets:
-        - BLANKS
-        - CULTMIL
-        - CULTDECOR
-        - CULTEXTRA
+      mapDataSets: *CultBuildings
       mapBlocks:
         - name: LO_WO_HOUSE
           width: 10
@@ -4923,11 +6393,7 @@ ufos:
     breakOffTime: 500
     battlescapeTerrainData:
       name: STR_CULTHOUSE
-      mapDataSets:
-        - BLANKS
-        - CULTMIL
-        - CULTDECOR
-        - CULTEXTRA
+      mapDataSets: *CultBuildings
       mapBlocks:
         - name: CULTHOUSE11
           width: 10
@@ -4937,10 +6403,10 @@ ufos:
               - [0, 0, 1]
               - [0, 1, 1]
               - [0, 3, 0]
-            STR_SPAWN_NATASHA_MOROZOVA: 
+            STR_SPAWN_NATASHA_MOROZOVA:
               - [4, 4, 0]
           fuseTimers:
-             STR_SPAWN_NATASHA_MOROZOVA: [0, 0]  
+             STR_SPAWN_NATASHA_MOROZOVA: [0, 0]
           randomizedItems:
               - position: [7, 6, 1]
                 amount: 3
@@ -4978,10 +6444,10 @@ ufos:
               - [2, 5, 0]
               - [6, 4, 0]
               - [8, 8, 1]
-            STR_SPAWN_NATASHA_MOROZOVA: 
+            STR_SPAWN_NATASHA_MOROZOVA:
               - [2, 2, 1]
           fuseTimers:
-             STR_SPAWN_NATASHA_MOROZOVA: [0, 0]  
+             STR_SPAWN_NATASHA_MOROZOVA: [0, 0]
           randomizedItems:
               - position: [8, 7, 1]
                 amount: 1
@@ -5106,6 +6572,8 @@ ufos:
               - [4, 3, 0]
               - [4, 3, 0]
               - [4, 4, 0]
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_SUV_VIP
     size: STR_VERY_SMALL
     modSprite: interception_jammed
@@ -5129,14 +6597,16 @@ ufos:
           items:
             STR_SPAWN_CIVILIAN_MALE_VIP:
               - [6, 4, 0]
-            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD:
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD_XCOM:
               - [6, 5, 0]
               - [2, 4, 0]
               - [1, 7, 0]
               - [8, 3, 0]
           fuseTimers:
             STR_SPAWN_CIVILIAN_MALE_VIP: [0, 0]
-            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD_XCOM: [0, 0]
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_OSIRON_WAREHOUSE
     size: STR_SMALL
     modSprite: interception_jammed
@@ -5163,37 +6633,37 @@ ufos:
           length: 10
           randomizedItems:
               - position: [0, 0, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: &goodOsironAAWares [STR_BLACKOPS_SPYPISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_SMG_AA_CLIP, STR_SMG_AA_CLIP, STR_SMG_AA_CLIP, STR_RIFLE_AA_CLIP, STR_RIFLE_AA_CLIP, STR_RIFLE_AA_CLIP, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS_AP, STR_SHOTGUN_AA_SHELLS_AP, STR_SHOTGUN_AA_SHELLS_AP, STR_CAWS_CLIP_AA, STR_CAWS_CLIP_AA, STR_AUTO_SHOTGUN_AA_SHELLS, STR_AUTO_SHOTGUN_AA_SHELLS, STR_MAGNUM_AA_DRUM, STR_MAGNUM_AA_DRUM, STR_BLACKOPS_SNIPER_RIFLE_AA_CLIP, STR_BLACKOPS_SNIPER_RIFLE_AA_CLIP, STR_HEAVY_SNIPER_RIFLE_AA_CLIP, STR_BLACKOPS_LMG_AA_CLIP, STR_HMG_AA_CLIP, STR_LIGHT_MINIGUN_AA_CLIP, STR_MINIGUN_AA_CLIP, STR_ALIEN_ALLOYS] # 1x good Osiron AA wares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [0, 1, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: *goodOsironAAWares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [1, 0, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: &standardOsironAAWares [STR_BLACKOPS_SPYPISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_PISTOL_AA_CLIP, STR_SMG_AA_CLIP, STR_SMG_AA_CLIP, STR_SMG_AA_CLIP, STR_RIFLE_AA_CLIP, STR_RIFLE_AA_CLIP, STR_RIFLE_AA_CLIP, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS, STR_SHOTGUN_AA_SHELLS_AP, STR_SHOTGUN_AA_SHELLS_AP, STR_SHOTGUN_AA_SHELLS_AP, STR_CAWS_CLIP_AA, STR_CAWS_CLIP_AA, STR_AUTO_SHOTGUN_AA_SHELLS, STR_AUTO_SHOTGUN_AA_SHELLS, STR_MAGNUM_AA_DRUM, STR_MAGNUM_AA_DRUM, STR_BLACKOPS_SNIPER_RIFLE_AA_CLIP, STR_BLACKOPS_SNIPER_RIFLE_AA_CLIP, STR_HEAVY_SNIPER_RIFLE_AA_CLIP, STR_BLACKOPS_LMG_AA_CLIP, STR_HMG_AA_CLIP, STR_LIGHT_MINIGUN_AA_CLIP, STR_MINIGUN_AA_CLIP, STR_ALIEN_ALLOYS] # 1x standard Osiron AA wares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [5, 0, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: *standardOsironAAWares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [6, 0, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: *standardOsironAAWares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [3, 3, 0]
-                amount: 4
+                amount: 2
                 mixed: false
-                itemList: *standardOsironAAWares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
               - position: [3, 4, 0]
+                amount: 2
+                mixed: false
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
+              - position: [4, 3, 0]
                 amount: 4
                 mixed: false
-                itemList: *standardOsironAAWares
-              - position: [4, 3, 0]
-                amount: 8
-                mixed: false
-                itemList: *standardOsironAAWares
+                itemList: [STR_TRITANIUM_AMMO_CRATE]
   - type: STR_APOCALYPSE_SMALL_WAREHOUSE
     size: STR_SMALL
     modSprite: interception_jammed
@@ -5228,6 +6698,256 @@ ufos:
               - [3, 3, 0]
               - [3, 4, 0]
               - [4, 3, 0]
+  - type: STR_WIZKID_SERVER_ROOM
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: WIZKID_SERVER_ROOM
+      mapDataSets:
+        - BLANKS
+        - URBAN
+        - COMPUTERS
+        - COMFRN2
+        - BATHBITZ_HT
+        - DAWNFRNITURE
+        - COMDECOR
+      mapBlocks:
+        - name: WIZKIDSERVER
+          width: 20
+          length: 20
+          items:
+            STR_SPAWN_WIZKID_TURRET:
+              - [4, 2, 0]
+              - [6, 11, 1]
+          fuseTimers:
+            STR_SPAWN_WIZKID_TURRET: [0, 0]
+  - type: STR_LOC_PREPPERS
+    size: STR_SMALL
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: STR_LOC_PREPPERS
+      mapDataSets:
+        - BLANKS
+        - URBAN40K2
+        - URBITS40K
+        - XCOMENTRY
+        - BATHBITZ
+        - ABUNKER
+      mapBlocks:
+        - name: ENEMYBUNKER_01
+          width: 20
+          length: 20
+          randomizedItems:
+              - position: [7, 7, 0]
+                amount: 1
+                mixed: false
+                itemList: &UACarmory [STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_UAC_WEAPON_BOX, STR_WEAPON_BOX, STR_WEAPON_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE, STR_EXPLOSIVES_BOX_SIMPLE, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_RICH]
+              - position: [8, 12, 0]
+                amount: 1
+                mixed: false
+                itemList: *UACarmory
+              - position: [4, 12, 0]
+                amount: 1
+                mixed: false
+                itemList: *UACarmory
+        - name: ENEMYBUNKER_02
+          width: 20
+          length: 20
+          randomizedItems:
+              - position: [12, 10, 1]
+                amount: 1
+                mixed: false
+                itemList: *UACarmory
+              - position: [18, 9, 1]
+                amount: 1
+                mixed: false
+                itemList: *UACarmory
+              - position: [17, 11, 1]
+                amount: 1
+                mixed: false
+                itemList: *UACarmory
+  - type: STR_BANDIT_BONFIRE
+    size: STR_VERY_SMALL
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: BANDIT_BONFIRE
+      mapDataSets:
+        - BLANKS
+        - RITUALS
+        - CONTAINERS
+      mapBlocks:
+        - name: BANDIT_BONFIRE
+          width: 10
+          length: 10
+          randomizedItems:
+            - position: [4, 2, 0]
+              amount: 1
+              itemList: [STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX]
+            - position: [2, 2, 0]
+              amount: 1
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE]
+            - position: [8, 2, 0]
+              amount: 1
+              itemList: [STR_EXPLOSIVES_BOX_STANDARD, STR_MEDICAL_SUPPLIES_CHEAP, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE]
+            - position: [2, 6, 0]
+              amount: 1
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE]
+            - position: [2, 6, 0]
+              amount: 1
+              itemList: [STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_STANDARD, STR_EXPLOSIVES_BOX_SIMPLE]
+            - position: [2, 6, 0]
+              amount: 1
+              itemList: [STR_EXPLOSIVES_BOX_SIMPLE, STR_AMMO_BOX]
+  - type: STR_LOC_BANDIT_CAMP
+    size: STR_SMALL
+    modSprite: interception_jammed
+    damageMax: 500
+    speedMax: 5000
+    accel: 10
+    power: 40
+    range: 20
+    score: 700
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: BANDIT_CAMP
+      mapDataSets:
+        - BLANKS
+        - RITUALS
+        - CONTAINERS
+        - IDT_ROOF
+        - NUKE3
+        - IDT_FARM
+        - IDT_BARNFLOOR
+        - SLUM_FURNITURE
+        - NUKE_CITY_2
+        - NUKE2
+      mapBlocks:
+        - name: BANDIT_CAMP_01
+          width: 20
+          length: 20
+          items:
+            STR_PSICLONE:
+              - [8, 3, 2]
+              - [16, 4, 0]
+          randomizedItems:
+            - position: [1, 6, 0]
+              amount: 1
+              mixed: false
+              itemList: [STR_BOOM_BOX, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX]
+            - position: [8, 18, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE, STR_MONEY_5000]
+            - position: [11, 17, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_EXPLOSIVES_BOX_STANDARD, STR_MEDICAL_SUPPLIES_CHEAP, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_CELL_PHONE]
+            - position: [4, 2, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_CRIMINAL_RECORDS, STR_EXPLOSIVES_BOX_SIMPLE, STR_MEDICAL_SUPPLIES_CHEAP]
+        - name: BANDIT_CAMP_02
+          width: 20
+          length: 20
+          items:
+            STR_PSICLONE:
+              - [12, 10, 0]
+              - [4, 11, 0]
+          randomizedItems:
+            - position: [3, 6, 0]
+              amount: 1
+              mixed: false
+              itemList: [STR_BOOM_BOX, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX]
+            - position: [12, 3, 0]
+              amount: 2
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE]
+            - position: [6, 10, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_EXPLOSIVES_BOX_STANDARD, STR_MEDICAL_SUPPLIES_CHEAP, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE]
+            - position: [10, 10, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_PSICLONE, STR_MAG_LITE, STR_EXPLOSIVES_BOX_SIMPLE, STR_MEDICAL_SUPPLIES_CHEAP, STR_MONEY_5000]
+        - name: BANDIT_CAMP_03
+          width: 20
+          length: 20
+          items:
+            STR_PSICLONE:
+              - [3, 3, 0]
+              - [1, 3, 0]
+              - [4, 11, 0]
+          randomizedItems:
+            - position: [16, 6, 2]
+              amount: 1
+              mixed: true
+              itemList: [STR_EXPLOSIVES_BOX_SIMPLE, STR_AMMO_BOX]
+            - position: [18, 6, 2]
+              amount: 1
+              mixed: true
+              itemList: [STR_BOOM_BOX, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX]
+            - position: [16, 11, 2]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE]
+            - position: [2, 2, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_EXPLOSIVES_BOX_STANDARD, STR_MEDICAL_SUPPLIES_CHEAP, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_CELL_PHONE, STR_MONEY_5000, STR_MONEY_5000]
+            - position: [4, 3, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_CRIMINAL_RECORDS, STR_EXPLOSIVES_BOX_SIMPLE, STR_MEDICAL_SUPPLIES_CHEAP]
+        - name: BANDIT_CAMP_04
+          width: 20
+          length: 20
+          items:
+            STR_PSICLONE:
+              - [7, 4, 0]
+              - [1, 10, 0]
+          randomizedItems:
+            - position: [14, 8, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_BOOM_BOX, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX]
+            - position: [7, 5, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000]
+            - position: [7, 13, 0]
+              amount: 15
+              mixed: true
+              itemList: [STR_EXPLOSIVES_BOX_STANDARD, STR_MEDICAL_SUPPLIES_CHEAP, STR_WEAPON_BOX_RAMSHACKLE, STR_HANDCUFFS, STR_FIRE_EXTINGUISHER]
+            - position: [7, 17, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_MAG_LITE, STR_EXPLOSIVES_BOX_SIMPLE, STR_MEDICAL_SUPPLIES_CHEAP]
   - type: STR_UAC_LABORATORY
     size: STR_LARGE
     sprite: 4
@@ -5401,7 +7121,7 @@ ufos:
               - position: [4, 16, 1]
                 amount: 1
                 mixed: true
-                itemList: &rareOsironWares [STR_ALIEN_ELECTRONICS, STR_XCOM_FLYING_DRONE, STR_MILITARY_COMPUTER]
+                itemList: &rareOsironWares [STR_ALIEN_ELECTRONICS, STR_ALIEN_ELECTRONICS, STR_SYNTHMUSCLES, STR_SYNTHMUSCLES, STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_MILITARY_COMPUTER, STR_MILITARY_COMPUTER, STR_ALENIUM_SHARD, STR_XCOM_FLYING_DRONE]
               - position: [7, 16, 1]
                 amount: 1
                 mixed: true
@@ -5528,6 +7248,9 @@ ufos:
           width: 30
           length: 30
           items:
+            STR_FLOPPY_DIMENSION_X:
+              - [24, 2, 4]
+              - [18, 6, 4]
             STR_CYBERWEB_BATTERY:
               - [3, 18, 2]
               - [3, 18, 2]
@@ -5557,6 +7280,65 @@ ufos:
               - [26, 2, 2]
               - [26, 2, 2]
               - [26, 2, 2]
+  - type: STR_CYBERWEB_FORTRESS_INFESTED
+    size: STR_VERY_LARGE
+    sprite: 1
+    damageMax: 1000
+    speedMax: 500
+    accel: 1
+    missionScore: 0
+    battlescapeTerrainData:
+      name: CYBERWEBFORTRESS_INFESTED
+      mapDataSets:
+        - BLANKS
+        - CYBER_DISEC2
+        - CYBER_BASE
+        - RET_SHIPS
+        - U_COLUMN
+        - U_COMPUTERS
+        - U_FOOD
+        - U_POD
+        - U_VEINS
+        - U_GRASS_PURP
+        - U_BASEN
+      mapBlocks:
+        - name: CYBERWEBFORTRESS_INFESTED
+          width: 30
+          length: 30
+          items:
+            STR_SPAWN_BRAINSUCKED_PROPHET:
+              - [13, 15, 2]
+            STR_CYBERWEB_BATTERY:
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [3, 19, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+              - [27, 3, 2]
+          fuseTimers:
+            STR_SPAWN_BRAINSUCKED_PROPHET: [0, 0]
   - type: STR_CYBERDREDNAUGHT
     size: STR_VERY_LARGE
     modSprite: InterceptionCyberwebBattleship
@@ -5575,6 +7357,7 @@ ufos:
     missionScore: 5
     score: 300
     breakOffTime: 3000
+    unmanned: true
     battlescapeTerrainData:
       name: VES_270
       mapDataSets:
@@ -5591,6 +7374,8 @@ ufos:
         - name: VES_270
           width: 50
           length: 30
+    tags:
+      PUBLIC_HYPERWAVE_DATA: 1
   - type: STR_LOC_HT_10X10_BUILDING
     size: STR_VERY_SMALL
     damageMax: 1
@@ -5608,7 +7393,7 @@ ufos:
         - COMPUTERS
         - BATHBITZ_HT
         - XBASEN_BITS
-        - DOORS1 
+        - DOORS1
       mapBlocks:
         - name: HTHOUSE_00b
           width: 10
@@ -5646,6 +7431,9 @@ ufos:
         - name: HTHOUSE_09
           width: 20
           length: 20
+        - name: HTHOUSE_16
+          width: 20
+          length: 20
   - type: STR_LOC_HT_20X20_HABITAT
     size: STR_SMALL
     damageMax: 1
@@ -5679,6 +7467,9 @@ ufos:
         - name: HTHOUSE_06G
           width: 20
           length: 20
+        - name: HTHOUSE_15
+          width: 20
+          length: 20
   - type: STR_LOC_HT_30X30_BUILDING
     size: STR_SMALL
     damageMax: 1
@@ -5708,6 +7499,118 @@ ufos:
           length: 30
         - name: HTHOUSE_03G
           width: 20
+          length: 30
+  - type: STR_SPOOKY_FOREST_GRAVEYARD
+    size: STR_LARGE
+    damageMax: 1
+    speedMax: 500
+    accel: 1
+    battlescapeTerrainData:
+      name: SPOOKY_FOREST_GRAVEYARD
+      mapDataSets:
+        - BLANKS
+        - MOUNT
+        - FORESTRED
+        - FORESTBITS
+        - GRAVES
+        - GRAVEYARD_DECOR
+        - GRAVLIFTDIRT01
+      mapBlocks:
+        - name: FORESTMOUNTGRAVEYARD01
+          width: 30
+          length: 30
+          items:
+            STR_SPECTRAL_CORPSE_HAND:
+              - [11, 12, 1]
+            STR_PICKAXE:
+              - [11, 18, 1]
+  - type: STR_SPOOKY_URBAN_HOUSE
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 1
+    speedMax: 500
+    accel: 1
+    power: 0
+    range: 0
+    score: 10
+    missionScore: 0
+    reload: 99
+    breakOffTime: 100
+    battlescapeTerrainData:
+      name: SPOOKY_URBAN_HOUSE
+      mapDataSets:
+        - BLANKS
+        - ROADS
+        - URBITS
+        - URBAN
+        - FRNITURE
+        - MADDECOR
+      mapBlocks:
+        - name: URBANSPOOKY01
+          width: 20
+          length: 20
+          height: 30
+          items:
+            STR_SALT_PILE:
+              - [9, 6, 0]
+              - [10, 6, 0]
+              - [11, 4, 0]
+              - [12, 9, 0]
+              - [13, 8, 0]
+              - [13, 10, 0]
+              - [14, 9, 0]
+              - [11, 6, 1]
+            STR_SPOOKY_CAMCODER:
+              - [5, 6, 0]
+            STR_MALE_GREASER_CORPSE_DUMMY:
+              - [13, 9, 0]
+              - [14, 3, 0]
+              - [6, 5, 1]
+              - [13, 4, 1]
+            STR_CROSS:
+              - [12, 8, 0]
+              - [14, 10, 0]
+              - [12, 10, 0]
+              - [14, 8, 0]
+              - [11, 5, 1]
+            STR_SPAWN_HUMAN_GHOST:
+              - [13, 8, 0]
+              - [3, 16, 0]
+              - [15, 6, 0]
+              - [5, 4, 1]
+              - [5, 9, 1]
+            STR_SPAWN_POLTERGEIST:
+              - [14, 10, 1]
+              - [11, 5, 1]
+              - [6, 5, 1]
+              - [7, 3, 1]
+          fuseTimers:
+            STR_SPAWN_HUMAN_GHOST: [0, 0]
+            STR_SPAWN_POLTERGEIST: [0, 0]
+  - type: STR_RECLAMATION_OF_AETHER_LABORATORY_UFO
+    size: STR_LARGE
+    modSprite: interception_jammed
+    damageMax: 1
+    speedMax: 500
+    accel: 1
+    power: 0
+    range: 0
+    score: 10
+    missionScore: 0
+    reload: 99
+    breakOffTime: 100
+    battlescapeTerrainData:
+      name: RECLAMATION_OF_AETHER_LAB
+      mapDataSets:
+        - BLANKS
+        - URBAN
+        - URBITS
+        - URBAN_FLOOR_AETHER
+        - XBASE2
+        - XCOMBITS
+      mapBlocks:
+        - name: RECLAMATION_OF_AETHER_LAB01
+          width: 30
           length: 30
   - type: STR_VIPER
     size: STR_SMALL
@@ -5788,7 +7691,7 @@ ufos:
     accel: 1
     battlescapeTerrainData:
       name: REPSUR10X10
-      mapDataSets:
+      mapDataSets: &ReptoidSurfaceBuildings
         - BLANKS
         - REP_BASE
         - REP_WALL02
@@ -5822,17 +7725,7 @@ ufos:
     accel: 1
     battlescapeTerrainData:
       name: REPSUR20X20
-      mapDataSets:
-        - BLANKS
-        - REP_BASE
-        - REP_WALL02
-        - REP_PODS
-        - BRAIN
-        - SHOGG_VILLAGE2
-        - REP_FRN
-        - REP_EXT02
-        - REP_BITS
-        - REP_FLOOR
+      mapDataSets: *ReptoidSurfaceBuildings
       mapBlocks:
         - name: REPTOID_FIELD_COMMAND
           width: 20
@@ -5941,6 +7834,24 @@ ufos:
         - name: CLINIC_ASYLUM
           width: 20
           length: 20
+  - type: STR_DINO_MUSEUM
+    size: STR_VERY_LARGE
+    damageMax: 1
+    speedMax: 500
+    accel: 1
+    battlescapeTerrainData:
+      name: DINO_MUSEUM
+      mapDataSets:
+        - BLANKS
+        - COMROADS
+        - COMBITS
+        - COMMERCE
+        - COMFRN2
+        - COMDECOR
+      mapBlocks:
+        - name: DINO_MUSEUM
+          width: 40
+          length: 40
   - type: STR_UACTURRET
     size: STR_VERY_SMALL
     damageMax: 1
@@ -5951,7 +7862,7 @@ ufos:
       mapDataSets:
         - BLANKS
         - STEELHILL
-        - UAC_BASE
+        - VAST_BASE
       mapBlocks:
         - name: UACMOONTURRET
           width: 10
@@ -5977,3 +7888,8 @@ ufos:
         - name: UACDIMPORTAL
           width: 20
           length: 20
+
+extended:
+  tags:
+    RuleUfo:
+      PUBLIC_HYPERWAVE_DATA: int

@@ -1,4 +1,4 @@
-﻿terrains:
+terrains:
   - name: HYBRIDCONTROL
     mapDataSets:
       - BLANKS
@@ -12,6 +12,21 @@
       - name: HYBRID_CONTROL00
         width: 20
         length: 20
+  - name: DIMENSION_X_WILD_CAVE
+    mapDataSets:
+      - BLANKS
+      - CAVEPINK
+      - XCOMEXIT
+      - ALIEN_EGGS_OLD
+      - U_GRASS_PURP
+      - U_GRASS_PINK
+      - U_FOOD
+      - U_PLANET
+    mapBlocks:
+      - name: ALIEN_CAVE_01
+        width: 40
+        length: 40
+        groups: 6
   - name: SHOGG_VILLAGE_CAVE_SETTLEMENT_LANDING
     mapDataSets:
       - BLANKS
@@ -62,7 +77,7 @@
     mapDataSets:
       - BLANKS
       - CAVEBROWN
-    mapBlocks: &ShoggLandingZone
+    mapBlocks: *ShoggLandingZone
   - name: REPTOID_CAVE_SETTLEMENT_LANDING
     mapDataSets:
       - BLANKS
@@ -245,6 +260,11 @@
         length: 20
         height: 1
         groups: 7
+      - name: CORPHQ_A05
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
       - name: CORPHQ_B01
         width: 20
         length: 20
@@ -297,6 +317,11 @@
         height: 1
         groups: 7
       - name: CORPHQ_A04
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A05
         width: 20
         length: 20
         height: 1
@@ -357,6 +382,11 @@
         length: 20
         height: 1
         groups: 7
+      - name: CORPHQ_A05
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
       - name: CORPHQ_B01
         width: 20
         length: 20
@@ -409,6 +439,96 @@
         height: 1
         groups: 7
       - name: CORPHQ_A04
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A05
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_B01
+        width: 20
+        length: 20
+        height: 1
+        groups: 8
+      - name: CORPHQ_B02
+        width: 20
+        length: 20
+        height: 1
+        groups: 8
+      - name: CORPHQ_B03
+        width: 20
+        length: 20
+        height: 1
+        groups: 8
+      - name: CORPHQ_B04
+        width: 20
+        length: 20
+        height: 1
+        groups: 8
+  - name: CORP_AETHER
+    mapDataSets:
+      - BLANKS
+      - CORP2
+      - URBAN_FLOOR_AETHER
+      - XBASE2
+    script: CORP_AETHER
+    mapBlocks:
+      - name: CORPHQ_ROOF_AETHER
+        width: 20
+        length: 20
+        height: 3
+        groups: 9
+        items:
+          STR_SPAWN_PHANTASMAL_TENTACLE:
+            - [4, 3, 0]
+            - [3, 3, 0]
+            - [7, 0, 0]
+            - [4, 13, 0]
+            - [6, 6, 0]
+            - [7, 7, 0]
+            - [8, 7, 0]
+            - [14, 7, 0]
+            - [15, 13, 0]
+            - [16, 13, 0]
+            - [9, 14, 0]
+            - [11, 15, 0]
+        fuseTimers:
+          STR_SPAWN_PHANTASMAL_TENTACLE: [0, 0]
+      - name: CORPHQ_GROUND_AETHER
+        width: 20
+        length: 20
+        height: 3
+        groups: 6
+        items:
+          STR_SPAWN_PHANTASMAL_TENTACLE:
+            - [4, 12, 0]
+            - [8, 8, 0]
+        fuseTimers:
+          STR_SPAWN_PHANTASMAL_TENTACLE: [0, 0]
+      - name: CORPHQ_A01
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A02
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A03
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A04
+        width: 20
+        length: 20
+        height: 1
+        groups: 7
+      - name: CORPHQ_A05
         width: 20
         length: 20
         height: 1
@@ -556,6 +676,10 @@
         width: 10
         length: 10
         groups: 4
+      - name: MANSION_FENCE_S03
+        width: 10
+        length: 10
+        groups: 4
       - name: MANSION_FENCE_SE00
         width: 10
         length: 10
@@ -580,6 +704,18 @@
         width: 10
         length: 10
         groups: 9
+      - name: MANSION_FENCE_S_GATE00_NOSPAWN
+        width: 10
+        length: 10
+        groups: 10
+      - name: MANSION_FENCE_S_GATE00_WIDE_NOSPAWN_LEFT
+        width: 10
+        length: 10
+        groups: 11
+      - name: MANSION_FENCE_S_GATE00_WIDE_NOSPAWN_RIGHT
+        width: 10
+        length: 10
+        groups: 12
   - name: ASYLUM_FENCE
     mapDataSets:
       - BLANKS
@@ -716,7 +852,7 @@
       - DAGON_FRN
       - DAGON_BITS
       - DAGON_FLOOR
-      - OCEANTEMPLE1
+      - OCEANTEMPLE1_HALF
     mapBlocks:
       - name: CAVE_TEMPLE
         width: 20
@@ -1025,43 +1161,43 @@
         length: 10
         groups: [4]
     #horizontal roads
-      - name: URBANROADHF00 # simple horizontal road 
+      - name: URBANROADHF00 # simple horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF01 # simple horizontal road 
+      - name: URBANROADHF01 # simple horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF02 # simple horizontal road 
+      - name: URBANROADHF02 # simple horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF03 # simple horizontal road 
+      - name: URBANROADHF03 # simple horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF04 # simple horizontal road 
+      - name: URBANROADHF04 # simple horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF05 # horizontal road 
+      - name: URBANROADHF05 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF06 # horizontal road 
+      - name: URBANROADHF06 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF07 # horizontal road 
+      - name: URBANROADHF07 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF08 # horizontal road 
+      - name: URBANROADHF08 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF09 # horizontal road 
+      - name: URBANROADHF09 # horizontal road
         width: 10
         length: 10
         groups: [2]
@@ -1081,11 +1217,11 @@
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF14 # horizontal road 
+      - name: URBANROADHF14 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF15 # horizontal road 
+      - name: URBANROADHF15 # horizontal road
         width: 10
         length: 10
         groups: [2]
@@ -1097,24 +1233,24 @@
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF18 # horizontal road 
+      - name: URBANROADHF18 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF19 # horizontal road 
+      - name: URBANROADHF19 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF20 # horizontal road 
+      - name: URBANROADHF20 # horizontal road
         width: 10
         length: 10
         groups: [2]
-      - name: URBANROADHF21 # horizontal road 
+      - name: URBANROADHF21 # horizontal road
         width: 10
         length: 10
         groups: [2]
     #vertical roads
-      - name: URBANROADVF00 # simple vertical road 
+      - name: URBANROADVF00 # simple vertical road
         width: 10
         length: 10
         groups: [3]
@@ -1130,15 +1266,15 @@
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF04 # simple vertical road 
+      - name: URBANROADVF04 # simple vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF05 # vertical road 
+      - name: URBANROADVF05 # vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF06 # vertical road 
+      - name: URBANROADVF06 # vertical road
         width: 10
         length: 10
         groups: [3]
@@ -1158,7 +1294,7 @@
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF11 # vertical road 
+      - name: URBANROADVF11 # vertical road
         width: 10
         length: 10
         groups: [3]
@@ -1178,11 +1314,11 @@
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF16 # vertical road 
+      - name: URBANROADVF16 # vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF17 # vertical road 
+      - name: URBANROADVF17 # vertical road
         width: 10
         length: 10
         groups: [3]
@@ -1190,27 +1326,65 @@
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF19 # vertical road 
+      - name: URBANROADVF19 # vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF20 # vertical road 
+      - name: URBANROADVF20 # vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVF21 # vertical road 
+      - name: URBANROADVF21 # vertical road
         width: 10
         length: 10
         groups: [3]
-      - name: URBANROADVS00 # vertical road 
+      - name: URBANROADVS00 # vertical road
         width: 10
         length: 10
         groups: [3]
+# entries
+      - name: URBANROAD_ENTRY_WE
+        width: 10
+        length: 10
+        groups: [7]
+# Cruise Liner MiB
+  - name: CRUISE_LINER_MIB
+    mapDataSets:
+      - BLANKS
+      - SEAURBAN
+      - LINERSHIPA
+      - LINERSHIPB
+      - LINERSHIPC
+      - LINERSHIPD
+      - DECKSHIPC
+      - LIFTER
+      - BATHBITZ_HT
+      - MIB_SEA
+    mapBlocks:
+      - name: LINERT00_MIB
+        width: 30
+        length: 20
+        randomizedItems:
+          - position: [13, 2, 2]
+            amount: 1
+            itemList: &TableDisplay [STR_AQUA_PLASTICS, STR_AQUA_PLASTICS, STR_AQUA_PLASTICS, STR_VIBRO_BLADE, STR_SONIC_PULSER, STR_SONIC_PULSER, STR_SONIC_PISTOL, STR_SONIC_PISTOL, STR_SONIC_PISTOL_CLIP, STR_SONIC_PISTOL_CLIP, STR_SONIC_BLASTA_RIFLE, STR_SONIC_BLASTA_RIFLE, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_CANNON, STR_SONIC_CANNON, STR_SONIC_CANNON_CLIP, STR_SONIC_CANNON_CLIP, STR_CONCUSSION_CANNON, STR_CONCUSSION_CANNON_CLIP, STR_TLETH_HATCHET, STR_TLETH_HATCHET, STR_TLETH_SPEAR, STR_TLETH_SPEAR, STR_BONE, STR_BIG_BONE, STR_RUSTY_BLADE, STR_MONSTROUS_TOOTH]
+          - position: [15, 2, 2]
+            amount: 1
+            itemList: *TableDisplay
+          - position: [17, 2, 2]
+            amount: 1
+            itemList: *TableDisplay
+          - position: [8, 1, 3]
+            amount: 1
+            itemList: *TableDisplay
+          - position: [21, 1, 3]
+            amount: 1
+            itemList: *TableDisplay
   - name: RITUAL_CAVE
     mapDataSets:
       - BLANKS
       - CAVEBLACK
-      - RITUALS 
+      - RITUALS
     mapBlocks:
       - name: RITUALCAVE_00
         width: 20

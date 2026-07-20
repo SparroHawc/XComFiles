@@ -1,11 +1,13 @@
-﻿startingDifficulty: 2
+startingDifficulty: 2
 difficultyDemigod: true
 aimAndArmorMultipliers: [1.0, 1.0, 1.0, 1.0, 1.0]
-sellPriceCoefficient: [125, 110, 100, 100, 90]
+sellPriceCoefficient: [110, 100, 100, 100, 90]
 turnAIUseGrenade: 1
 turnAIUseBlaster: 1
+useDelayMedikit: 1
 maxViewDistance: 40
 initialFunding: 1200
+infiltrateRandomCountryInTheRegion: true
 psiUnlockResearch: STR_METAPSYCHOLOGY
 extraNerdyPediaInfoType: 2
 #showAllCommendations: false
@@ -18,16 +20,18 @@ startingTime:
   second: 0
   minute: 0
   hour: 12
-  weekday: 2
-  day: 30
+  weekday: 5
+  day: 26
   month: 12
   year: 1996
 costEngineer: 25000
 costScientist: 45000
 enableNewResearchSorting: true
-maxLookVariant: 15
+maxLookVariant: 17
 showDogfightDistanceInKm: true
+pilotsEmergencyEvacuationSurvivalChance: 75
 crewEmergencyEvacuationSurvivalChance: 97
+showUfoPreviewInBaseDefense: true
 surrenderMode: 2
 noLOSAccuracyPenaltyGlobal: 50
 oneHandedPenaltyGlobal: 50
@@ -39,6 +43,7 @@ closeQuartersAccuracyGlobal: 100 # default 100, this sets the default weapon clo
 closeQuartersTuCostGlobal: 0      # TUs required to attempt CQC; unsuccessful attempt doesn't spend the TUs, successful does
 closeQuartersEnergyCostGlobal: 5   # Energy required to attempt CQC; unsuccessful attempt doesn't spend the Energy, successful does
 closeQuartersSneakUpGlobal: 50
+giveScoreAlsoForResearchedArtifacts: true
 drawEnemyRadarCircles: 2
 escortRange: 50
 lighting:
@@ -75,6 +80,7 @@ recommendedUserOptions:
   battleHairBleach: true
   soldierDiaries: true
   allowPsionicCapture: true
+  oxceShowBurningAsWounded: false
 # bughunt stuff:
 bughuntMinTurn: 20
 bughuntMaxEnemies: 3
@@ -95,3 +101,4 @@ mana:
 constants:
   extendedTerrainMelee: 4
   extendedUnderwaterThrowFactor: 60
+  extendedExperienceAwardSystem: true

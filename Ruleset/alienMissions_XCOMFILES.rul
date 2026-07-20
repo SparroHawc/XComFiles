@@ -1,4 +1,4 @@
-﻿alienMissions:
+alienMissions:
   - delete: STR_ALIEN_RESEARCH
   - delete: STR_ALIEN_HARVEST
   - delete: STR_ALIEN_ABDUCTION
@@ -355,6 +355,10 @@
         timer: 1500
   - type: STR_ALIEN_ABDUCTION
     points: 50
+    objective: 3
+    spawnZone: 1
+    siteType: STR_ALIEN_ABDUCTION_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_SECTOID: 40
@@ -413,14 +417,20 @@
         trajectory: P3
         timer: 9000
       - ufo: STR_ABDUCTOR
-        count: 2
+        count: 1
         trajectory: P4
         timer: 60
+      - ufo: STR_ABDUCTOR
+        count: 1
+        trajectory: P_CHWC1_Z1
+        timer: 2000
+        objective: true
+        objectiveOnTheLandingSite: true
   - type: STR_ALIEN_INFILTRATION
     points: 50
     objective: 1
     endlessInfiltration: false
-    siteType: STR_ALIEN_BIG_BASE_ASSAULT 
+    siteType: STR_ALIEN_BIG_BASE_ASSAULT
     spawnZone: 4
     raceWeights:
       0:
@@ -462,7 +472,7 @@
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 10
           STR_MUTON: 30
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL: 10
           STR_FLOATER: 15
           STR_GAZER: 10
           STR_RAIDERS_EARLY: 1
@@ -474,8 +484,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 5
-          STR_ETHEREAL_CYBERDISC: 3
-          STR_ETHEREAL: 2
+#          STR_ETHEREAL_CYBERDISC: 3
+#          STR_ETHEREAL: 2
           STR_MUTON: 20
           STR_FLOATER: 15
           STR_GAZER: 10
@@ -490,7 +500,7 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 8
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL: 10
           STR_MUTON: 20
           STR_FLOATER: 10
           STR_GAZER: 10
@@ -506,8 +516,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 3
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 10
           STR_MUTON: 20
           STR_FLOATER: 5
           STR_GAZER: 10
@@ -522,8 +532,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 8
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL_CYBERDISC: 5
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 10
           STR_MUTON: 20
           STR_FLOATER: 10
           STR_GAZER: 5
@@ -548,7 +558,7 @@
         timer: 1300
       - ufo: STR_ABDUCTOR #I would like Infiltrator UFO here
         count: 1
-        trajectory: P5 
+        trajectory: P5
         timer: 6000
       - ufo: STR_MEDIUM_SCOUT #vanilla, changed
         count: 1
@@ -578,6 +588,7 @@
         count: 2
         trajectory: P7
         timer: 60
+        objectiveOnTheLandingSite: true
   - type: STR_ALIEN_BASE
     points: 50
     objective: 2
@@ -630,8 +641,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 5
-          STR_ETHEREAL_CYBERDISC: 3
-          STR_ETHEREAL: 2
+#          STR_ETHEREAL_CYBERDISC: 3
+#          STR_ETHEREAL: 2
           STR_MUTON: 10
           STR_FLOATER: 15
           STR_GAZER: 10
@@ -646,7 +657,7 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 8
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL: 10
           STR_MUTON: 15
           STR_FLOATER: 10
           STR_GAZER: 10
@@ -662,8 +673,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 3
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 10
           STR_MUTON: 10
           STR_FLOATER: 5
           STR_GAZER: 10
@@ -678,8 +689,8 @@
           STR_CHASER: 5
           STR_SNAKEMAN: 8
           STR_SNAKEMAN_SALAMANDRON: 2
-          STR_ETHEREAL_CYBERDISC: 5
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 10
           STR_MUTON: 15
           STR_FLOATER: 10
           STR_GAZER: 5
@@ -718,11 +729,13 @@
         count: 1
         trajectory: P6
         timer: 60
+        objectiveOnTheLandingSite: true
   - type: STR_ALIEN_TERROR
     despawnEvenIfTargeted: true
     points: 10
     objective: 3
     spawnZone: 3 #Mission zone for terror missions
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_SECTOID: 30
@@ -792,8 +805,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 7
           STR_SNAKEMAN_SALAMANDRON: 3
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 5
           STR_MUTON: 15
           STR_FLOATER: 10
           STR_CHASER: 10
@@ -809,8 +822,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 7
           STR_SNAKEMAN_SALAMANDRON: 3
-          STR_ETHEREAL_CYBERDISC: 5
-          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 5
           STR_MUTON: 15
           STR_FLOATER: 10
           STR_CHASER: 10
@@ -827,8 +840,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 5
-          STR_ETHEREAL_CYBERDISC: 3
-          STR_ETHEREAL: 7
+#          STR_ETHEREAL_CYBERDISC: 3
+#          STR_ETHEREAL: 7
           STR_MUTON: 10
           STR_FLOATER: 5
           STR_CHASER: 10
@@ -868,6 +881,7 @@
     points: 10
     objective: 3
     spawnZone: 3 #Mission zone for terror missions
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_SECTOID: 20
@@ -908,8 +922,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 7
           STR_SNAKEMAN_SALAMANDRON: 3
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 5
           STR_MUTON: 15
           STR_FLOATER: 10
           STR_CHASER: 10
@@ -925,8 +939,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 7
           STR_SNAKEMAN_SALAMANDRON: 3
-          STR_ETHEREAL_CYBERDISC: 5
-          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 5
           STR_ORDER_OF_ELIMINATION: 5
           STR_MUTON: 15
           STR_FLOATER: 10
@@ -944,8 +958,8 @@
           STR_SECTOID: 10
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 5
-          STR_ETHEREAL_CYBERDISC: 2
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 2
+#          STR_ETHEREAL: 10
           STR_ORDER_OF_ELIMINATION: 10
           STR_MUTON: 10
           STR_FLOATER: 5
@@ -1042,8 +1056,8 @@
           STR_SNAKEMAN: 5
           STR_SNAKEMAN_SALAMANDRON: 5
           STR_CEREBREAL: 10
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 10
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 10
           STR_MUTON: 10
           STR_GAZER: 30
           STR_FLOATER: 10
@@ -1054,8 +1068,8 @@
           STR_SNAKEMAN: 5
           STR_SNAKEMAN_SALAMANDRON: 5
           STR_CEREBREAL: 10
-          STR_ETHEREAL_CYBERDISC: 10
-          STR_ETHEREAL: 20
+#          STR_ETHEREAL_CYBERDISC: 10
+#          STR_ETHEREAL: 20
           STR_MUTON: 20
           STR_GAZER: 20
           STR_FLOATER: 10
@@ -1126,16 +1140,33 @@
     retaliationOdds: 0
     objective: 4
     spawnUfo: STR_BATTLESHIP #Spawned for the final retaliation run
-    raceWeights: # In the case of a shootdown, race comes from the UFO that triggered the mission.
+    raceWeights: &RetalRaces # In the case of a shootdown, race comes from the UFO that triggered the mission.
       0:
+          STR_SECTOID: 13
+          STR_SNAKEMAN_SALAMANDRON: 10
+          STR_CHTONITE: 10
+          STR_CEREBREAL: 5
+          STR_FLOATER: 10
+          STR_CHASER: 10
+      25:
+          STR_GAZER: 5
+          STR_WASPITE: 5
+          STR_SECTOID: 13
+          STR_SNAKEMAN: 10
+          STR_SNAKEMAN_SALAMANDRON: 10
+          STR_CHTONITE: 10
+          STR_CEREBREAL: 5
+          STR_FLOATER: 10
+          STR_CHASER: 10
+      34:
           STR_GAZER: 5
           STR_WASPITE: 5
           STR_SECTOID: 13
           STR_SECTOID_SECTOPOD: 2
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 10
-          STR_ETHEREAL: 5
-          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 5
           STR_MUTON: 10
           STR_CHTONITE: 10
           STR_CEREBREAL: 5
@@ -1148,8 +1179,8 @@
           STR_SECTOID_SECTOPOD: 2
           STR_SNAKEMAN: 10
           STR_SNAKEMAN_SALAMANDRON: 10
-          STR_ETHEREAL: 5
-          STR_ETHEREAL_CYBERDISC: 5
+#          STR_ETHEREAL: 5
+#          STR_ETHEREAL_CYBERDISC: 5
           STR_ORDER_OF_ELIMINATION: 5
           STR_MUTON: 10
           STR_CHTONITE: 10
@@ -1191,6 +1222,96 @@
         interruptPercentage: 80
         hunterKillerPercentage: 100
         huntMode: 2
+  - type: STR_SENTRY_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_SENTRY_SHIP #Spawned for the final retaliation run
+    raceWeights: *RetalRaces # In the case of a shootdown, race comes from the UFO that triggered the mission.
+    waves:
+      - ufo: STR_SMALL_SCOUT
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_SMALL_SCOUT
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_LIGHT_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
+  - type: STR_SABOTEUR_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_SABOTEUR #Spawned for the final retaliation run
+    raceWeights: *RetalRaces # In the case of a shootdown, race comes from the UFO that triggered the mission.
+    waves:
+      - ufo: STR_SMALL_SCOUT
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_LIGHT_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
+      - ufo: STR_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 10
+        interruptPercentage: 10
+  - type: STR_TROOP_SHIP_ASSAULT_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_TROOP_SHIP_ASSAULT #Spawned for the final retaliation run
+    raceWeights: *RetalRaces # In the case of a shootdown, race comes from the UFO that triggered the mission.
+    waves:
+      - ufo: STR_SMALL_SCOUT
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_SMALL_SCOUT
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_LIGHT_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
+      - ufo: STR_LIGHT_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
+      - ufo: STR_FIGHTER_SHIP
+        count: 2
+        trajectory: P8
+        timer: 10
+        interruptPercentage: 10
+  - type: STR_ETHEREAL_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_DREADNOUGHT #Spawned for the final retaliation run
+    raceWeights:
+      0:
+          STR_ETHEREAL: 100
+    waves:
+      - ufo: STR_ARBITER
+        count: 1
+        trajectory: P8
+        timer: 5000
+        interruptPercentage: 50
   - type: STR_ALIEN_SUPPLY
     points: 0
     objective: 5
@@ -1202,7 +1323,7 @@
         timer: 6000
         objective: true
   - type: STR_MIB_GROUND_SUPPLY
-    points: 0
+    points: 10
     objective: 5
     raceWeights:
       0:
@@ -1214,7 +1335,7 @@
         timer: 6000
         objective: true
   - type: STR_MIB_SUPPLY
-    points: 0
+    points: 20
     objective: 5
     raceWeights:
       0:
@@ -1225,17 +1346,17 @@
         trajectory: P9
         timer: 6000
         objective: true
+      - ufo: STR_MIB_ESCORT_SHIP
+        count: 2
+        trajectory: P8
+        timer: 30
+        escort: true
+        hunterKillerPercentage: 100
   - type: STR_MIB_COVERUP
-    points: 0
+    points: 100
     raceWeights:
       0:
           STR_MIB: 100
-      20:
-          STR_MIB: 90
-      24:
-          STR_MIB: 80
-      29:
-          STR_MIB: 65
     waves:
       - ufo: STR_MIB_TRANSPORTER
         count: 1
@@ -1265,9 +1386,25 @@
         count: 1
         trajectory: P2
         timer: 1500
-
+  - type: STR_MIB_FREIGHT
+    points: 10
+    objective: 5
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_FREIGHT_SHIP
+        count: 1
+        trajectory: PX1A_CITIES
+        interruptPercentage: 15
+        timer: 6000
+        objective: true
+      - ufo: STR_MIB_ESCORT_SHIP
+        count: 2
+        trajectory: P8
+        timer: 30
+        escort: true
   - type: STR_MIB_OUTPOST
-    despawnEvenIfTargeted: true
     objective: 2
     spawnZone: 7
     siteType: STR_MIB_OUTPOST
@@ -1281,6 +1418,110 @@
         timer: 500
         objective: true
         objectiveOnTheLandingSite: true
+      - ufo: STR_MIB_ESCORT_SHIP
+        count: 2
+        trajectory: P8
+        timer: 30
+        escort: true
+        hunterKillerPercentage: 100
+  - type: STR_MIB_HQ
+    points: 0
+    objective: 2
+    siteType: STR_MIB_HQ_ASSAULT
+    spawnZone: 4 #Mission zone for alien bases
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_TRANSPORTER
+        count: 1
+        trajectory: P5
+        timer: 15000
+      - ufo: STR_MIB_MUDRANGER_CONVOY_LOADED
+        count: 3
+        trajectory: P1
+        timer: 60
+      - ufo: STR_MIB_SCOUT_SHIP
+        count: 1
+        trajectory: P5
+        timer: 4500
+      - ufo: STR_MIB_ARMORY_SHIP
+        count: 2
+        trajectory: P5
+        timer: 60
+      - ufo: STR_MIB_FREIGHT_SHIP
+        count: 1
+        trajectory: P5
+        timer: 60
+      - ufo: STR_MIB_FREIGHT_SHIP
+        count: 1
+        trajectory: P5
+        timer: 60
+      - ufo: STR_MIB_ENGINEERING_SHIP
+        count: 1
+        trajectory: P_CHWC1
+        timer: 500
+        objective: true
+        objectiveOnTheLandingSite: true
+      - ufo: STR_MIB_ESCORT_SHIP
+        count: 2
+        trajectory: P8
+        timer: 30
+        escort: true
+        hunterKillerPercentage: 100
+  - type: STR_MIB_AA_SHIPMENT
+    points: 50
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_ARMORY_SHIP
+        count: 1
+        trajectory: P_CITIES
+        timer: 800
+  - type: STR_MIB_WEAPONS_DISTRIBUTION
+    points: 10
+    objective: 3
+    spawnZone: 3
+    siteType: STR_MIB_WEAPONS_DISTRIBUTION_SITE
+    respawnUfoAfterSiteDespawn: true
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_ARMORY_SHIP
+        count: 1
+        trajectory: P7
+        timer: 800
+        objective: true
+        objectiveOnTheLandingSite: true
+  - type: STR_MIB_DOMINATION
+    points: 500
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_ESCORT_SHIP
+        count: 2
+        trajectory: P0
+        timer: 9000
+        hunterKillerPercentage: 100
+      - ufo: STR_MIB_STEALTH_BOMBER
+        count: 2
+        trajectory: P8
+        timer: 60
+        hunterKillerPercentage: 100
+      - ufo: STR_MIB_STRIKE_SHIP
+        count: 1
+        trajectory: P8
+        timer: 60
+        hunterKillerPercentage: 100
+      - ufo: STR_MIB_DEFENDER
+        count: 3
+        trajectory: P8
+        escort: true
+        timer: 60
+        hunterKillerPercentage: 100
 
   - type: STR_MIB_MAGMA_ARCTIC_BASE_RAID
     despawnEvenIfTargeted: true
@@ -1301,6 +1542,7 @@
     objective: 3
     spawnZone: 7
     siteType: STR_MIB_OLD_UFO_LANDING_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_MIB: 100
@@ -1317,6 +1559,7 @@
     objective: 3
     spawnZone: 7
     siteType: STR_MIB_OLD_UFO_CRASH_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_MIB: 100
@@ -1327,6 +1570,51 @@
         timer: 500
         objective: true
         objectiveOnTheLandingSite: true
+
+  - type: STR_MAGMA_REACTOR_MIB
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 7
+    siteType: STR_MAGMA_REACTOR_MIB
+    respawnUfoAfterSiteDespawn: true
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_STRIKE_SHIP
+        count: 1
+        trajectory: P_CHWC1
+        timer: 500
+        objective: true
+        objectiveOnTheLandingSite: true
+
+  - type: STR_CRUISE_LINER_MIB
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 10
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_CRUISE_LINER_MIB
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 19000
+        objective: true
+
+  - type: STR_MIB_LUNAR_BASE_LANDING
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 0
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
 
   - type: STR_DAVID_VINCENT_HOUSE
     despawnEvenIfTargeted: false
@@ -1347,7 +1635,7 @@
     spawnZone: 0
     raceWeights:
       0:
-          STR_SECTOID: 100 
+          STR_SECTOID: 100
     waves:
       - ufo: dummy
         count: 1
@@ -1355,7 +1643,22 @@
         timer: 9000
         objective: true
 
+  - type: STR_FOREST_LODGE_DEFENSE
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 2
+    raceWeights:
+      0:
+          STR_ZOMBIE_STERILE: 100
+    waves:
+      - ufo: STR_FOREST_LODGE_DEFENSE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
   - type: STR_HYBRID_SMALL_GROUND_CONVOY
+    points: 20
     despawnEvenIfTargeted: true
     objective: 3
     spawnZone: 6
@@ -1370,6 +1673,7 @@
         objective: true
 
   - type: STR_HYBRID_MEDIUM_GROUND_CONVOY
+    points: 45
     despawnEvenIfTargeted: true
     objective: 3
     spawnZone: 6
@@ -1388,6 +1692,7 @@
     objective: 3
     spawnZone: 7
     siteType: STR_HYBRID_MIB_MEETING
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_MIB: 80
@@ -1405,6 +1710,7 @@
     objective: 3
     spawnZone: 1
     siteType: STR_HYBRID_SECTOID_MEETING
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_SECTOID: 100
@@ -1427,17 +1733,19 @@
         objective: true
         objectiveOnTheLandingSite: true
 
-  - type: STR_HYBRID_BASE
-    points: 0
-    retaliationOdds: 0
+  - type: STR_HYBRID_KEEP
+    objective: 2
+    spawnZone: 7
+    siteType: STR_HYBRID_KEEP
     raceWeights:
       0:
           STR_HYBRID: 100
     waves:
-      - ufo: STR_KEEP
+      - ufo: dummy
         count: 1
-        trajectory: B0
-        timer: 15000
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
 
   - type: STR_ALIEN_DIPLOMACY
     points: 0
@@ -1813,7 +2121,7 @@
   - type: STR_CULT_MANOR_BLACK_LOTUS_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_MANOR_BLACK_LOTUS_ASSAULT 
+    siteType: STR_CULT_MANOR_BLACK_LOTUS_ASSAULT
     raceWeights:
       0:
           STR_BLACK_LOTUS: 100
@@ -1826,7 +2134,7 @@
   - type: STR_CULT_MANOR_CHURCH_OF_DAGON_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_MANOR_CHURCH_OF_DAGON_ASSAULT 
+    siteType: STR_CULT_MANOR_CHURCH_OF_DAGON_ASSAULT
     raceWeights:
       0:
           STR_CHURCH_OF_DAGON: 100
@@ -1839,7 +2147,7 @@
   - type: STR_CULT_MANOR_ZSRR_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_MANOR_ZSRR_ASSAULT 
+    siteType: STR_CULT_MANOR_ZSRR_ASSAULT
     raceWeights:
       0:
           STR_ZSRR: 100
@@ -1852,7 +2160,7 @@
   - type: STR_CULT_MANOR_EXALT_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_MANOR_EXALT_ASSAULT 
+    siteType: STR_CULT_MANOR_EXALT_ASSAULT
     raceWeights:
       0:
           STR_EXALT: 100
@@ -1865,7 +2173,7 @@
   - type: STR_CULT_GREATER_MANOR_BLACK_LOTUS_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATER_MANOR_BLACK_LOTUS_ASSAULT 
+    siteType: STR_CULT_GREATER_MANOR_BLACK_LOTUS_ASSAULT
     raceWeights:
       0:
           STR_BLACK_LOTUS: 100
@@ -1878,7 +2186,7 @@
   - type: STR_CULT_GREATER_MANOR_CHURCH_OF_DAGON_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATER_MANOR_CHURCH_OF_DAGON_ASSAULT 
+    siteType: STR_CULT_GREATER_MANOR_CHURCH_OF_DAGON_ASSAULT
     raceWeights:
       0:
           STR_CHURCH_OF_DAGON: 100
@@ -1891,7 +2199,7 @@
   - type: STR_CULT_GREATER_MANOR_ZSRR_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATER_MANOR_ZSRR_ASSAULT 
+    siteType: STR_CULT_GREATER_MANOR_ZSRR_ASSAULT
     raceWeights:
       0:
           STR_ZSRR: 100
@@ -1904,7 +2212,7 @@
   - type: STR_CULT_GREATER_MANOR_EXALT_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATER_MANOR_EXALT_ASSAULT 
+    siteType: STR_CULT_GREATER_MANOR_EXALT_ASSAULT
     raceWeights:
       0:
           STR_EXALT: 100
@@ -1917,7 +2225,7 @@
   - type: STR_CULT_GREATEST_MANOR_BLACK_LOTUS_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATEST_MANOR_BLACK_LOTUS_ASSAULT 
+    siteType: STR_CULT_GREATEST_MANOR_BLACK_LOTUS_ASSAULT
     raceWeights:
       0:
           STR_BLACK_LOTUS: 100
@@ -1930,7 +2238,7 @@
   - type: STR_CULT_GREATEST_MANOR_CHURCH_OF_DAGON_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATEST_MANOR_CHURCH_OF_DAGON_ASSAULT 
+    siteType: STR_CULT_GREATEST_MANOR_CHURCH_OF_DAGON_ASSAULT
     raceWeights:
       0:
           STR_CHURCH_OF_DAGON: 100
@@ -1943,7 +2251,7 @@
   - type: STR_CULT_GREATEST_MANOR_ZSRR_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATEST_MANOR_ZSRR_ASSAULT 
+    siteType: STR_CULT_GREATEST_MANOR_ZSRR_ASSAULT
     raceWeights:
       0:
           STR_ZSRR: 100
@@ -1956,7 +2264,7 @@
   - type: STR_CULT_GREATEST_MANOR_EXALT_ASSAULT
     objective: 2
     spawnZone: 3
-    siteType: STR_CULT_GREATEST_MANOR_EXALT_ASSAULT 
+    siteType: STR_CULT_GREATEST_MANOR_EXALT_ASSAULT
     raceWeights:
       0:
           STR_EXALT: 100
@@ -1971,6 +2279,7 @@
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_INFILTRATION_BLACK_LOTUS_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_BLACK_LOTUS: 100
@@ -1987,6 +2296,7 @@
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_INFILTRATION_CHURCH_OF_DAGON_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_CHURCH_OF_DAGON: 100
@@ -1995,12 +2305,15 @@
         count: 1
         trajectory: P_CHWC1_Z3
         timer: 9000
+        objective: true
+        objectiveOnTheLandingSite: true
 
   - type: STR_CULT_INFILTRATION_ZSRR
     operationType: 1
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_INFILTRATION_ZSRR_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_ZSRR: 100
@@ -2009,12 +2322,15 @@
         count: 1
         trajectory: P_CHWC1_Z3
         timer: 9000
+        objective: true
+        objectiveOnTheLandingSite: true
 
   - type: STR_CULT_INFILTRATION_EXALT
     operationType: 1
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_INFILTRATION_EXALT_SITE
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_EXALT: 100
@@ -2023,6 +2339,8 @@
         count: 1
         trajectory: P_CHWC1_Z3
         timer: 9000
+        objective: true
+        objectiveOnTheLandingSite: true
 
   - type: STR_CULT_STREET_FIGHTING_BLACK_LOTUS
     interruptResearch: STR_BLACK_LOTUS_NETWORK
@@ -2090,6 +2408,7 @@
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_ASSASSINATION_BLACK_LOTUS
+    respawnUfoAfterSiteDespawn: true
     raceWeights: {} #Special case, race comes from base.
     waves:
       - ufo: STR_UH_1B_HUEY
@@ -2105,6 +2424,7 @@
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_ASSASSINATION_CHURCH_OF_DAGON
+    respawnUfoAfterSiteDespawn: true
     raceWeights: {} #Special case, race comes from base.
     waves:
       - ufo: STR_CHINOOK
@@ -2120,6 +2440,7 @@
     objective: 3
     spawnZone: 3
     siteType: STR_CULT_ASSASSINATION_ZSRR
+    respawnUfoAfterSiteDespawn: true
     raceWeights: {} #Special case, race comes from base.
     waves:
       - ufo: STR_MI_24
@@ -2184,6 +2505,21 @@
           STR_EXALT: 100
     waves:
       - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
+  - type: STR_CULT_EXALT_SURVIVAL_CAMP
+    interruptResearch: STR_DESTROY_EXALT
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_EXALT: 100
+    waves:
+      - ufo: STR_CULT_EXALT_SURVIVAL_CAMP
         count: 1
         trajectory: CA_SPAWN
         timer: 9000
@@ -2374,6 +2710,21 @@
           STR_ZSRR: 100
     waves:
       - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
+  - type: STR_ZSRR_TRAINING_CAMP
+    interruptResearch: STR_DESTROY_ZSRR
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_ZSRR: 100
+    waves:
+      - ufo: STR_ZSRR_TRAINING_CAMP
         count: 1
         trajectory: CA_SPAWN
         timer: 9000
@@ -2783,6 +3134,23 @@
         timer: 9000
         objective: true
 
+  - type: STR_MONSTERS_HUNT_MIB
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    siteType: STR_MONSTERS_HUNT_MIB
+    respawnUfoAfterSiteDespawn: true
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_TRANSPORTER
+        count: 1
+        trajectory: P_CHWC1_Z6
+        timer: 500
+        objective: true
+        objectiveOnTheLandingSite: true
+
   - type: STR_MONGORN_KING_CAVE
     interruptResearch: STR_MONSTERS_FINAL_SOLUTION
     despawnEvenIfTargeted: true
@@ -3024,7 +3392,7 @@
         huntMode: 2
         huntBehavior: 1
 
-  - type: STR_CULT_GREATEST_MANOR_MIG19_INTERCEPTION
+  - type: STR_CULT_GREATEST_MANOR_MIG29_INTERCEPTION
     retaliationOdds: 0
     raceWeights: {}
     operationType: 6
@@ -3117,6 +3485,21 @@
         huntMode: 2
         huntBehavior: 1
 
+  - type: STR_ZOMBIE_ISOLATION
+    interruptResearch: STR_PHARAOH_HAS_FALLEN
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_ZOMBIE_STERILE: 100
+    waves:
+      - ufo: STR_ZOMBIE_ISOLATION
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
   - type: STR_ZOMBIE_INFESTATION_BASIC
     interruptResearch: STR_ZOMBIE_ARE_BREEDING
     despawnEvenIfTargeted: true
@@ -3172,6 +3555,21 @@
           STR_ZOMBIE_STERILE: 100
     waves:
       - ufo: STR_ZOMBIE_HIVE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
+  - type: STR_VON_HAGEN_REFUGE
+    interruptResearch: STR_PHARAOH_HAS_FALLEN
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 11
+    raceWeights:
+      0:
+          STR_ZOMBIE_STERILE: 100
+    waves:
+      - ufo: STR_VON_HAGEN_REFUGE
         count: 1
         trajectory: CA_SPAWN
         timer: 9000
@@ -3334,6 +3732,19 @@
         trajectory: CA_SPAWN
         timer: 13000
         objective: true
+
+  - type: STR_SLEEP_WAVE_EMITTER
+    objective: 2
+    spawnZone: 10
+    siteType: STR_SLEEP_WAVE_EMITTER_ASSAULT
+    raceWeights:
+      0:
+          STR_AQUATOID: 100
+    waves:
+      - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
 
   - type: STR_AQUATOID_TRAP
     interruptResearch: STR_UCITY
@@ -3502,6 +3913,21 @@
         timer: 2000
         objective: true
 
+  - type: STR_CYBERWEB_RECRUITMENT
+    interruptResearch: STR_CYBERDREDNAUGHT_SECURED
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_CYBERWEB: 100
+    waves:
+      - ufo: STR_CYBERWEB_RECRUITMENT
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
   - type: STR_CYBERWEB_CENTURION_RAMPAGE
     interruptResearch: STR_CYBERDREDNAUGHT_SECURED
     despawnEvenIfTargeted: true
@@ -3562,6 +3988,20 @@
         timer: 2000
         objective: true
 
+  - type: STR_WILD_PINK_CAVES
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 0
+    raceWeights:
+      0:
+          STR_DIMENSION_X_FAUNA: 100
+    waves:
+      - ufo: STR_WILD_PINK_CAVES
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 200
+        objective: true
+
   - type: STR_DIMENSION_X_BASE_DEFENSE_FAUNA
     interruptResearch: STR_WRAP_UP_DIMENSION_X_EXPLORATION
     despawnEvenIfTargeted: true
@@ -3585,6 +4025,37 @@
     raceWeights:
       0:
           STR_ANTHROPOD: 50
+    waves:
+      - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_BASE_DEFENSE_DIMENSION_X
+    points: 0
+    retaliationOdds: 0
+    objective: 6
+    ignoreBaseDefenses: true
+    spawnUfo: STR_TROOP_SHIP_ASSAULT
+    raceWeights:
+      0:
+          STR_ANTHROPOD: 70
+          STR_DIMENSION_X_FAUNA: 100
+    waves:
+      - ufo: STR_TROOP_SHIP_ASSAULT
+        count: 1
+        trajectory: P8
+        timer: 3000
+
+  - type: STR_CYBERWEB_POWER_PLANT
+    interruptResearch: STR_CYBERWEB_POWER_PLANT_SECURED
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 0
+    raceWeights:
+      0:
+          STR_CYBERWEB: 100
     waves:
       - ufo: dummy
         count: 1
@@ -3634,6 +4105,76 @@
         count: 1
         trajectory: P_PATROL
         timer: 8000
+
+  - type: STR_THE_BRAINSUCKED_PARTY
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_THE_BRAINSUCKED: 100
+    waves:
+      - ufo: STR_THE_BRAINSUCKED_PARTY
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_THE_BRAINSUCKED_HARVEST
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_THE_BRAINSUCKED: 100
+    waves:
+      - ufo: STR_THE_BRAINSUCKED_HARVEST
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_CULT_INVESTIGATION_THE_BRAINSUCKED
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_THE_BRAINSUCKED: 100
+    waves:
+      - ufo: STR_CULT_INVESTIGATION_THE_BRAINSUCKED
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
+  - type: STR_THE_BRAINSUCKED_LAIR
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_THE_BRAINSUCKED: 100
+    waves:
+      - ufo: STR_THE_BRAINSUCKED_LAIR
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_INFESTED_CYBERWEB_FORTRESS_ASSAULT
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 0
+    raceWeights:
+      0:
+          STR_THE_BRAINSUCKED: 100
+    waves:
+      - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
 
   - type: STR_DIMENSION_X_PARTY
     interruptResearch: STR_CYBERWEB_DIMENSIONAL_PORTAL_TAKEN
@@ -3701,6 +4242,24 @@
         trajectory: CA_SPAWN
         timer: 2000
         objective: true
+
+  - type: STR_DIMENSION_X_INCURSION_MIB
+    interruptResearch: STR_CYBERWEB_DIMENSIONAL_PORTAL_TAKEN
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    siteType: STR_DIMENSION_X_INCURSION_MIB
+    respawnUfoAfterSiteDespawn: true
+    raceWeights:
+      0:
+          STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_SCIENCE_SHIP
+        count: 1
+        trajectory: P_CHWC1_Z6
+        timer: 500
+        objective: true
+        objectiveOnTheLandingSite: true
 
   - type: STR_HIDDEN_CAVES_FEW
     interruptResearch: STR_INTO_THE_DARK
@@ -3923,9 +4482,23 @@
     spawnZone: 1
     raceWeights:
       0:
-          STR_ZOMBIE_FARMER: 100
+          STR_ZOMBIE_STERILE: 100
     waves:
       - ufo: STR_CROP_CIRCLES_ZOMBIE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_CEREAL_CULT
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_FARMER: 100
+    waves:
+      - ufo: STR_CEREAL_CULT
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -3987,6 +4560,48 @@
         timer: 2000
         objective: true
 
+  - type: STR_HYBRID_WORKSHOP
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_HYBRID: 100
+    waves:
+      - ufo: STR_HYBRID_WORKSHOP
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_HYBRID_HIDEOUT
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_HYBRID: 100
+    waves:
+      - ufo: STR_HYBRID_HIDEOUT
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_HYBRID_DRONE_FACTORY
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_HYBRID: 100
+    waves:
+      - ufo: STR_HYBRID_DRONE_FACTORY
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
   - type: STR_HYBRID_CLONING_FARM
     despawnEvenIfTargeted: true
     objective: 3
@@ -3996,6 +4611,20 @@
           STR_HYBRID: 100
     waves:
       - ufo: STR_HYBRID_CLONING_FARM
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_HYBRID_CAMPUS
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_HYBRID: 100
+    waves:
+      - ufo: STR_HYBRID_CAMPUS
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -4071,6 +4700,34 @@
         timer: 2000
         objective: true
 
+  - type: STR_DARK_ONE_RAMPAGE
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_POSTAL: 100
+    waves:
+      - ufo: STR_DARK_ONE_RAMPAGE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_ARMORY_OF_APOCALYPSE
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_CULT_OF_APOCALYPSE: 100
+    waves:
+      - ufo: STR_ARMORY_OF_APOCALYPSE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
   - type: STR_CULT_OF_APOCALYPSE_TOWN_CLEANUP
     despawnEvenIfTargeted: true
     objective: 3
@@ -4108,6 +4765,20 @@
           STR_CULT_OF_APOCALYPSE: 100
     waves:
       - ufo: STR_CULT_OF_APOCALYPSE_CITY_RIOT
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_DEMON_TERROR
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_CULT_OF_APOCALYPSE: 100
+    waves:
+      - ufo: STR_DEMON_TERROR
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -4256,7 +4927,6 @@
         objective: true
 
   - type: STR_MAGMA_LAB
-    interruptResearch: STR_ZOMBIE_IMPLANT
     despawnEvenIfTargeted: true
     objective: 3
     spawnZone: 6
@@ -4318,7 +4988,7 @@
     spawnZone: 3
     raceWeights:
       0:
-          STR_OSIRON: 100 
+          STR_OSIRON: 100
     waves:
       - ufo: STR_OSIRON_NEST
         count: 1
@@ -4335,6 +5005,20 @@
           STR_OSIRON: 100
     waves:
       - ufo: STR_OSIRON_HACIENDA
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 9000
+        objective: true
+
+  - type: STR_DR_TANAKAS_SECRET_STASH
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_OSIRON: 100
+    waves:
+      - ufo: STR_DR_TANAKAS_SECRET_STASH
         count: 1
         trajectory: CA_SPAWN
         timer: 9000
@@ -4519,6 +5203,51 @@
         timer: 2000
         objective: true
 
+  - type: STR_MIB_DROPSHIP_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_MIB_DROPSHIP #Spawned for the final retaliation run
+    raceWeights: # In the case of a shootdown, race comes from the UFO that triggered the mission.
+      0:
+        STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_SCOUT_SHIP
+        count: 3
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+      - ufo: STR_MIB_STEALTH_BOMBER
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 5
+
+  - type: STR_MIB_STEALTH_BOMBER_RETALIATION
+    points: 0
+    retaliationOdds: 0
+    objective: 4
+    spawnUfo: STR_MIB_STEALTH_BOMBER #Spawned for the final retaliation run
+    raceWeights: # In the case of a shootdown, race comes from the UFO that triggered the mission.
+      0:
+        STR_MIB: 100
+    waves:
+      - ufo: STR_MIB_SCOUT_SHIP
+        count: 3
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 20
+      - ufo: STR_MIB_DROPSHIP
+        count: 2
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
+      - ufo: STR_MIB_STEALTH_BOMBER
+        count: 1
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 20
+
   - type: STR_MIB_RETALIATION
     points: 0
     retaliationOdds: 0
@@ -4534,22 +5263,27 @@
         count: 1
         trajectory: P8
         timer: 3000
+        interruptPercentage: 10
+      - ufo: STR_MIB_SCOUT_SHIP
+        count: 3
+        trajectory: P8
+        timer: 3000
+        interruptPercentage: 10
       - ufo: STR_MIB_DROPSHIP
         count: 2
         trajectory: P8
         timer: 3000
-      - ufo: STR_MIB_STEALTH_BOMBER
-        count: 2
-        trajectory: P8
-        timer: 3000
+        interruptPercentage: 10
       - ufo: STR_MIB_STEALTH_BOMBER
         count: 3
         trajectory: P8
         timer: 3000
+        interruptPercentage: 10
       - ufo: STR_MIB_STRIKE_SHIP
         count: 2
         trajectory: P8
         timer: 3000
+        interruptPercentage: 10
 
   - type: STR_HYBRID_RETALIATION
     points: 0
@@ -4566,14 +5300,17 @@
         count: 1
         trajectory: P8
         timer: 3000
+        interruptPercentage: 5
       - ufo: STR_HYBRID_AIRCAR
         count: 2
         trajectory: P8
         timer: 3000
+        interruptPercentage: 5
       - ufo: STR_HYBRID_LANDER
         count: 2
         trajectory: P8
         timer: 3000
+        interruptPercentage: 5
 
   - type: STR_SYNDICATE_PHASE_1
     interruptResearch: STR_SYNDICATE_OPERATIONS
@@ -4749,6 +5486,20 @@
         timer: 2000
         objective: true
 
+  - type: STR_ABYSSAL_ARTIFACT_DELIVERY
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 8
+    raceWeights:
+      0:
+          STR_CHURCH_OF_DAGON: 100
+    waves:
+      - ufo: STR_ABYSSAL_ARTIFACT_DELIVERY
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
   - type: STR_CHRYSSALID_VILLAGE
     despawnEvenIfTargeted: true
     objective: 3
@@ -4771,7 +5522,7 @@
       0:
           STR_WASPITE: 100
     waves:
-      - ufo: CYBERMINES
+      - ufo: STR_CYBERMINES
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -4786,6 +5537,20 @@
           STR_JARHEAD: 100
     waves:
       - ufo: STR_JARHEAD_TERROR
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_MANNEQUIN_MADNESS
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_CHURCH_OF_DAGON: 100
+    waves:
+      - ufo: STR_MANNEQUIN_MADNESS
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -4939,7 +5704,7 @@
     spawnZone: 3 #Mission zone for terror missions
     raceWeights:
       0:
-          STR_MUTON: 100
+          STR_FLOATER: 100
     waves:
       - ufo: STR_SMALL_SCOUT
         count: 1
@@ -4960,6 +5725,7 @@
     objective: 3
     spawnZone: 3 #Mission zone for terror missions
     siteType: STR_ALIEN_MIB_MEETING
+    respawnUfoAfterSiteDespawn: true
     raceWeights:
       0:
           STR_SECTOID: 100
@@ -5120,6 +5886,20 @@
         timer: 2000
         objective: true
 
+  - type: STR_HEART_OF_THE_WOODS
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_GANG_PINKY_DEVILS: 100
+    waves:
+      - ufo: STR_HEART_OF_THE_WOODS
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
   - type: STR_TRADING_WITH_THE_WIZKIDS
     despawnEvenIfTargeted: true
     objective: 3
@@ -5129,6 +5909,20 @@
           STR_GANG_TECH_WIZARDS: 100
     waves:
       - ufo: STR_TRADING_WITH_THE_WIZKIDS
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_DATA_JOCKEYS
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_GANG_TECH_WIZARDS: 100
+    waves:
+      - ufo: STR_DATA_JOCKEYS
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
@@ -5216,6 +6010,20 @@
         count: 1
         trajectory: CA_SPAWN
         timer: 2000
+        objective: true
+
+  - type: STR_DEN_OF_VILLAINY
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_CRIMINALS: 100
+    waves:
+      - ufo: STR_DEN_OF_VILLAINY
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 3250
         objective: true
 
   - type: STR_OOZE_NEST
@@ -5460,7 +6268,6 @@
         timer: 13000
         objective: true
 
-
   - type: STR_HSD_HABITAT_ATTACK_LOBSTERMAN
     despawnEvenIfTargeted: true
     objective: 3
@@ -5487,6 +6294,20 @@
         count: 1
         trajectory: CA_SPAWN
         timer: 13000
+        objective: true
+
+  - type: STR_TLETH_GEOTHERMAL_COLLECTOR
+    despawnEvenIfTargeted: true
+    objective: 3
+    spawnZone: 10
+    raceWeights:
+      0:
+          STR_TASOTH_FACTORY: 100
+    waves:
+      - ufo: STR_TLETH_GEOTHERMAL_COLLECTOR
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 5000
         objective: true
 
   - type: STR_DREAMSCAPE_VILLA
@@ -5559,6 +6380,20 @@
         timer: 2000
         objective: true
 
+  - type: STR_AGENT_WILHEARD_CRUISE
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 10
+    raceWeights:
+      0:
+          STR_GHOST: 100
+    waves:
+      - ufo: STR_AGENT_WILHEARD_CRUISE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
   - type: STR_ASYLUM_APPARITIONS
     interruptResearch: STR_ASYLUM_APPARITIONS_COMPLETED
     despawnEvenIfTargeted: false
@@ -5569,6 +6404,104 @@
           STR_GHOST: 100
     waves:
       - ufo: STR_ASYLUM_APPARITIONS
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_THE_EXORCISM
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_GHOST: 100
+    waves:
+      - ufo: STR_THE_EXORCISM
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_THE_SOUND_OF_GRAVES
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_GHOST: 100
+    waves:
+      - ufo: STR_THE_SOUND_OF_GRAVES
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_IMPOSSIBLE_INTERNET_INTELLIGENCE
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_RECLAMATION_OF_AETHER: 100
+    waves:
+      - ufo: STR_IMPOSSIBLE_INTERNET_INTELLIGENCE
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_TELEVISED_GHOST_HUNTING
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_RECLAMATION_OF_AETHER: 100
+    waves:
+      - ufo: STR_TELEVISED_GHOST_HUNTING
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_RECLAMATION_OF_AETHER_LABORATORY
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 3
+    raceWeights:
+      0:
+          STR_RECLAMATION_OF_AETHER: 100
+    waves:
+      - ufo: STR_RECLAMATION_OF_AETHER_LABORATORY
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 13000
+        objective: true
+
+  - type: STR_AETHER_NEXUS_ASSAULT
+    objective: 2
+    spawnZone: 3
+    siteType: STR_AETHER_NEXUS_ASSAULT
+    raceWeights:
+      0:
+          STR_RECLAMATION_OF_AETHER: 100
+    waves:
+      - ufo: dummy
+        count: 1
+        trajectory: CA_SPAWN
+        timer: 2000
+        objective: true
+
+  - type: STR_NIGHT_AT_THE_MUSEUM
+    despawnEvenIfTargeted: false
+    objective: 3
+    spawnZone: 1
+    raceWeights:
+      0:
+          STR_GHOST: 100
+    waves:
+      - ufo: STR_NIGHT_AT_THE_MUSEUM
         count: 1
         trajectory: CA_SPAWN
         timer: 13000
@@ -5680,6 +6613,7 @@
         hunterKillerPercentage: 100
 
   - type: STR_USTATION
+    interruptResearch: STR_ALIEN_BRAIN_AUTOPSY
     despawnEvenIfTargeted: false
     objective: 3
     spawnZone: 0

@@ -1,3 +1,4 @@
+globalWeight: 122
 lookWeights:
   - 30
   - 30
@@ -9,6 +10,7 @@ maleFirst:
   - Adrian
   - Alexander
   - Alfredo
+  - Andrew
   - Austin
   - Ben
   - Brandon
@@ -17,10 +19,12 @@ maleFirst:
   - Carl
   - Chance
   - Charlie
+  - Chris
   - Clarence
   - Cody
   - Connor
   - Damian
+  - Daniel
   - Donald
   - Dwight
   - Dylan
@@ -47,7 +51,9 @@ maleFirst:
   - Lester
   - Liam
   - Mark
+  - Michael
   - Miles
+  - Nolan
   - Omar
   - Oscar
   - Owen
@@ -131,12 +137,14 @@ femaleFirst:
   - Violet
   - Zoey
 maleLast:
+  - Baker
   - Becker
   - Benedict
   - Bohannon
   - Bowers
   - Bradley
   - Brasher
+  - Bravo
   - Brewster
   - Bryant
   - Burroughs
@@ -154,6 +162,7 @@ maleLast:
   - Epstein
   - Evans
   - Fath
+  - Friedley
   - Gallagher
   - Gates
   - Goddard
@@ -162,6 +171,7 @@ maleLast:
   - Gutierrez
   - Harding
   - Harper
+  - Hestand
   - Hicks
   - Horton
   - Hudson
@@ -174,6 +184,7 @@ maleLast:
   - Kendrick
   - King
   - Kirk
+  - Koester
   - Lawson
   - Machado
   - Majka
@@ -190,9 +201,11 @@ maleLast:
   - Partridge
   - Patrick
   - Perkins
+  - Pierce
   - Porter
   - Prewitt
   - Rapp
+  - Reith
   - Ritchie
   - Rooney
   - Rossi
@@ -214,4 +227,6 @@ maleLast:
   - Wade
   - Wagner
   - Webb
+  - Wilder
+  - Willis
   - Tyler

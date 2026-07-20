@@ -1,4 +1,4 @@
-﻿terrains:
+terrains:
   - delete: CULTA
   - delete: DESERT
   - delete: FOREST
@@ -18,10 +18,10 @@
       - U_EXT02
       - U_BITS
       - U_FLOOR
-    #groups: 
-      #0 - else 
+    #groups:
+      #0 - else
       #1 - coridor
-      #2 - general base enter 
+      #2 - general base enter
       #3 - general base control centre
       #4 - Cydonian brain
       #5 - Auditorium
@@ -572,6 +572,10 @@
       - name: UBASE_SOL_10 # brain node room
         width: 20
         length: 20
+      - name: UBASE_ENORMOUS_TALL_SOL_00
+        width: 40
+        length: 40
+        groups: 15 #tall hangar
       - name: UBASE_FILL_20x20
         width: 20
         length: 20
@@ -616,7 +620,26 @@
         width: 10
         length: 10
         groups: 14 #Tritanium matrix
-      - name: CEREBRAL_CHAMBER 
+      - name: UBASE_TALL_HQ
+        width: 20
+        length: 20
+        groups: 16 #tall HQ
+        items:
+          STR_SPAWN_ALIEN_SMALL_PLASMA_TURRET:
+            - [3, 8, 2]
+            - [3, 10, 2]
+        fuseTimers:
+          STR_SPAWN_ALIEN_SMALL_PLASMA_TURRET: [0, 0]
+        randomizedItems:
+            - position: [6, 6, 3]
+              amount: 1
+              mixed: true
+              itemList: [STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_ALENIUM_SHARD]
+            - position: [12, 13, 3]
+              amount: 1
+              mixed: true
+              itemList: [STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_ALENIUM_SHARD]
+      - name: CEREBRAL_CHAMBER
         width: 20
         length: 20
         groups: 9 #big base control centre (brain)
@@ -885,6 +908,12 @@
       - name: SOLBAN40
         width: 10
         length: 10
+      - name: URBANDIO00
+        width: 10
+        length: 10
+      - name: URBANDIO01
+        width: 20
+        length: 20
       - name: CIVURBAN41 # house by Civilian
         width: 10
         length: 10
@@ -933,6 +962,15 @@
       - name: CIVURBAN56 # two-story hotel by Civilian
         width: 20
         length: 20
+      - name: URBANDIOHUGE00
+        width: 30
+        length: 30
+      - name: URBANDIOHUGE01
+        width: 30
+        length: 30
+      - name: URBANDIOHUGE02
+        width: 30
+        length: 30
       - name: CIVURBAN57 # hipermarket by Civilian
         width: 40
         length: 40
@@ -1213,6 +1251,7 @@
       - VILFRNITURE2
     civilianTypes:
       - STR_MALE_CIVILIAN_HOOLIGAN
+    script: RURAL
     mapBlocks: *AnchorRural
   - name: RICE_FARM
     script: RICE_FARM
@@ -1476,6 +1515,15 @@
       - name: URBANJUNKDIO_05
         width: 10
         length: 10
+      - name: URBANJUNKDIO_06
+        width: 10
+        length: 10
+      - name: URBANJUNKDIO_07
+        width: 10
+        length: 10
+      - name: URBANJUNKDIO_08
+        width: 20
+        length: 20
       - name: URBANJUNK_ROAD_00a
         width: 10
         length: 10
@@ -1593,7 +1641,7 @@
       - STR_MALE_DETECTIVE
       - STR_FEMALE_CASUAL
     script: CHEMTOWN
-    mapBlocks:
+    mapBlocks: &Chemtown
       - name: CHEMTOWN00
         width: 10
         length: 10
@@ -1677,6 +1725,13 @@
       - name: CHEMTOWN52
         width: 20
         length: 20
+      - name: CHEMTOWNHUGE01
+        width: 30
+        length: 30
+      - name: CHEMTOWN_EXIT
+        width: 20
+        length: 20
+        groups: 5
   - name: CHEMTOWN_ROADS
     mapDataSets:
       - BLANKS
@@ -1763,6 +1818,23 @@
       - name: CHEMTOWN52
         width: 20
         length: 20
+      - name: CHEMTOWNHUGE01
+        width: 30
+        length: 30
+      - name: CHEMTOWN_EXIT
+        width: 20
+        length: 20
+        groups: 5
+  - name: CHEMTOWN_SF
+    mapDataSets:
+      - BLANKS
+      - MILEXT_SF
+      - MILWARE_SF
+      - MILBARR_SF
+      - MILINDUSTRIAL_SF
+      - MILTECH_SF
+    script: CHEMTOWN
+    mapBlocks: *Chemtown
   - name: INDUSTRIALSLUM
     mapDataSets:
       - BLANKS
@@ -1870,9 +1942,36 @@
       - name: INDUSTRIALSLUMSOL10
         width: 20
         length: 20
+      - name: INDUSTRIALSLUMDIO04
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO05
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO06
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO07
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO08
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO09
+        width: 10
+        length: 10
       - name: INDUSTRIALSLUMDIO10
         width: 20
         length: 20
+      - name: INDUSTRIALSLUMDIO11
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMDIO12
+        width: 20
+        length: 20
+      - name: INDUSTRIALSLUMDIO13
+        width: 10
+        length: 10
       - name: INDUSTRIALSLUMDIO14
         width: 10
         length: 10
@@ -1905,6 +2004,21 @@
       - name: INDUSTRIALSLUMDIO23
         width: 10
         length: 10
+      - name: INDUSTRIALSLUMDIO24
+        width: 20
+        length: 20
+      - name: INDUSTRIALSLUMDIO26
+        width: 20
+        length: 20
+      - name: INDUSTRIALSLUMDIO27
+        width: 10
+        length: 10
+      - name: INDUSTRIALSLUMHUGE01
+        width: 30
+        length: 30
+      - name: INDUSTRIALSLUMHUGE02
+        width: 30
+        length: 30
       - name: INDUSTRIALSLUMROADWE2
         width: 10
         length: 10
@@ -2136,7 +2250,7 @@
         length: 10
         groups: 4
   - name: PORTTFTD
-    mapDataSets:
+    mapDataSets: &PortTilesets
       - BLANKS
       - PORTROADS
       - PORTURBITS
@@ -2208,6 +2322,9 @@
       - name: PORTUFO11
         width: 10
         length: 10
+      - name: PORTUFO11B
+        width: 10
+        length: 10
       - name: PORTUFO12
         width: 10
         length: 10
@@ -2232,17 +2349,42 @@
       - name: PORTUFO19
         width: 20
         length: 20
+      - name: PORTUFO19B
+        width: 20
+        length: 20
       - name: PORTUFO20
+        width: 20
+        length: 20
+      - name: PORTUFO20B
+        width: 20
+        length: 20
+      - name: PORTUFO21
         width: 20
         length: 20
       - name: PORTUFO22
         width: 20
         length: 20
+      - name: PORTUFO23
+        width: 10
+        length: 10
+      - name: PORTUFO24
+        width: 10
+        length: 10
+      - name: PORTUFO25
+        width: 10
+        length: 10
+      - name: PORTUFO26
+        width: 10
+        length: 10
       - name: PORTUFO27
         width: 10
         length: 10
         groups: [3, 4]
       - name: PORTUFO28
+        width: 10
+        length: 10
+        groups: 3
+      - name: PORTUFO28B
         width: 10
         length: 10
         groups: 3
@@ -2258,19 +2400,53 @@
         width: 10
         length: 10
         groups: 3
+      - name: PORTUFO31B
+        width: 10
+        length: 10
+        groups: 3
+      - name: PORTUFO32
+        width: 20
+        length: 20
+      - name: PORTUFO33
+        width: 10
+        length: 10
+        groups: 3
+      - name: PORTUFO34
+        width: 10
+        length: 10
+        groups: 3
+      - name: PORTUFO35
+        width: 10
+        length: 10
+        groups: 3
+      - name: PORTUFO36
+        width: 10
+        length: 10
+        groups: 5
+      - name: PORTUFO37
+        width: 20
+        length: 20
+      - name: PORTUFO38
+        width: 20
+        length: 20
+      - name: PORTUFOHUGE00
+        width: 30
+        length: 30
+      - name: PORTUFOHUGE01
+        width: 30
+        length: 30
+      - name: PORTUFOHUGE02
+        width: 30
+        length: 30
+      - name: PORTUFOHUGEDIO37
+        width: 30
+        length: 30
       - name: PORTROAD_WE
         width: 10
         length: 10
         groups: 2
   - name: PORTTFTD_PIER
-    mapDataSets:
-      - BLANKS
-      - PORTROADS
-      - PORTURBITS
-      - ROADS
-      - URBITS
-      - SEAURBAN
-      - SEABITS
+    mapDataSets: *PortTilesets
     civilianTypes: &AnchorPortTFTDCivilians
       - MALE_CIVILIAN
       - STR_MALE_SAILOR
@@ -2291,16 +2467,19 @@
     script: PORTTFTD_PIER
     mapBlocks: *AnchorPortTFTD
   - name: PORTTFTD_PIER_BIG
-    mapDataSets:
-      - BLANKS
-      - PORTROADS
-      - PORTURBITS
-      - ROADS
-      - URBITS
-      - SEAURBAN
-      - SEABITS
+    mapDataSets: *PortTilesets
     civilianTypes: *AnchorPortTFTDCivilians
     script: PORTTFTD_PIER_BIG
+    mapBlocks: *AnchorPortTFTD
+  - name: PORTTFTD_PIER_VERY_SMALL
+    mapDataSets: *PortTilesets
+    civilianTypes: *AnchorPortTFTDCivilians
+    script: PORTTFTD_PIER_VERY_SMALL
+    mapBlocks: *AnchorPortTFTD
+  - name: PORTTFTD_PIER_SMALL
+    mapDataSets: *PortTilesets
+    civilianTypes: *AnchorPortTFTDCivilians
+    script: PORTTFTD_PIER_SMALL
     mapBlocks: *AnchorPortTFTD
   - name: POLAR
     mapDataSets:
@@ -2314,15 +2493,15 @@
       - name: POLAR00
         width: 10
         length: 10
-        groups: [0, 1, 2, 3, 4]
+        groups: [0, 1]
       - name: POLAR01
         width: 10
         length: 10
-        groups: [0, 1, 2, 3, 4]
+        groups: [0, 1]
       - name: POLAR02
         width: 10
         length: 10
-        groups: [0, 1, 2, 3, 4]
+        groups: [0, 1]
       - name: POLAR03
         width: 10
         length: 10
@@ -2381,6 +2560,9 @@
         width: 20
         length: 20
       - name: POLARHUGE00
+        width: 30
+        length: 30
+      - name: POLARHUGE01
         width: 30
         length: 30
   - name: COMRCURBAN
@@ -2467,6 +2649,7 @@
       - name: COMRCURBAN07
         width: 20
         length: 20
+        groups: [0, 8]
       - name: COMRCURBAN08
         width: 20
         length: 20
@@ -2615,6 +2798,36 @@
       - name: COMRCURBAN51
         width: 10
         length: 10
+      - name: COMRCURBAN52
+        width: 10
+        length: 10
+      - name: COMRCURBAN53
+        width: 10
+        length: 10
+      - name: COMRCURBAN54
+        width: 10
+        length: 10
+      - name: COMRCURBAN55
+        width: 10
+        length: 10
+      - name: COMRCURBAN_MEY_04
+        width: 20
+        length: 20
+      - name: COMRCURBAN_MEY_05
+        width: 20
+        length: 20
+      - name: COMRCURBANHUGE01
+        width: 30
+        length: 30
+      - name: COMRCURBANHUGE02
+        width: 30
+        length: 30
+      - name: COMRCURBANHUGE03
+        width: 30
+        length: 30
+      - name: COMRCURBANHUGE04
+        width: 30
+        length: 30
   - name: ASHEN
     mapDataSets:
       - BLANKS
@@ -2749,7 +2962,7 @@
       - DESERT_PINK
       - DESERTBITS_PINK
       - DESERT_ROADS_PINK
-    script: DESERT_PINK
+    script: DESERT
     mapBlocks: *AnchorVanillaDesert
   - name: CULTA
     script: FARM
@@ -3118,6 +3331,9 @@
       - name: SOLFOREST17
         width: 20
         length: 20
+      - name: SOLFOREST18
+        width: 10
+        length: 10
       - name: FINNIKFOREST00
         width: 10
         length: 10
@@ -3188,6 +3404,26 @@
         width: 10
         length: 10
         groups: 4
+  - name: FOREST_RED
+    ambienceRandom: *ForestAmbientSounds
+    ambienceRandomDelay: *StandardAmbientSoundsDelay
+    mapDataSets:
+      - BLANKS
+      - FORESTRED
+      - FORESTBITS
+      - ROADS
+    civilianTypes:
+      - MALE_CIVILIAN
+      - STR_MALE_GREASER
+      - STR_MALE_FORESTER
+      - STR_FEMALE_CASUAL
+      - STR_FEMALE_GLAMOUR
+      - STR_HOSTESS
+      - STR_MALE_CIVILIAN_HUNTER
+      - STR_FEMALE_CIVILIAN_HUNTER
+      - STR_DOGE
+    script: FOREST
+    mapBlocks: *AnchorVanillaForest
   - name: FORESTSWAMP
     ambienceRandom: *ForestAmbientSounds
     ambienceRandomDelay: *StandardAmbientSoundsDelay
@@ -3522,6 +3758,12 @@
       - name: JUNGLEDIO05
         width: 10
         length: 10
+      - name: JUNGLEDIO06
+        width: 10
+        length: 10
+      - name: JUNGLEDIO07
+        width: 10
+        length: 10
       - name: JUNGLESOL01
         width: 10
         length: 10
@@ -3711,6 +3953,9 @@
         width: 20
         length: 20
       - name: MOUNTBD12
+        width: 20
+        length: 20
+      - name: MOUNTBDDIO01
         width: 20
         length: 20
       - name: MOUNTBDSOLHUGE00
@@ -4265,6 +4510,51 @@
       - name: XBASS_45 # Tritanium Foundry
         width: 10
         length: 10
+      - name: XBASS_46 # Advanced Sick Bay
+        width: 10
+        length: 10
+      - name: XBASS_47 # Dimensional Receiver
+        width: 10
+        length: 10
+      - name: XBASS_51 # Huge Warehouse 1
+        width: 10
+        length: 10
+      - name: XBASS_52 # Huge Warehouse 2
+        width: 10
+        length: 10
+      - name: XBASS_53 # Huge Warehouse 3
+        width: 10
+        length: 10
+      - name: XBASS_54 # Huge Warehouse 4
+        width: 10
+        length: 10
+      - name: XBASS_55 # Huge Warehouse 5
+        width: 10
+        length: 10
+      - name: XBASS_56 # Huge Warehouse 6
+        width: 10
+        length: 10
+      - name: XBASS_57 # Huge Warehouse 7
+        width: 10
+        length: 10
+      - name: XBASS_58 # Huge Warehouse 8
+        width: 10
+        length: 10
+      - name: XBASS_59 # Huge Warehouse 9
+        width: 10
+        length: 10
+      - name: XBASS_61 # Big Gym 1
+        width: 10
+        length: 10
+      - name: XBASS_62 # Big Gym 2
+        width: 10
+        length: 10
+      - name: XBASS_63 # Big Gym 3
+        width: 10
+        length: 10
+      - name: XBASS_64 # Big Gym 4
+        width: 10
+        length: 10
   - name: UBASE_NO_EARTH
     mapDataSets:
       - BLANKS
@@ -4676,7 +4966,7 @@
       - name: ENTER_CHAMBER_02
         width: 10
         length: 10
-        groups: 8 #big base enter   
+        groups: 8 #big base enter
       - name: UBASE_DESCENT_LIFT
         width: 10
         length: 10
@@ -4697,12 +4987,12 @@
   - name: UAC_BASE
     mapDataSets:
       - BLANKS
-      - UAC_BASE
+      - VAST_BASE
       - UAC_WALL02
-      - UAC_PODS
+      - VAST_PODS
       - BRAIN
-      - UAC_BASE2
-      - UAC_FRN
+      - VAST_BASE2
+      - VAST_FRN
       - A_EXT02
       - UAC_BITS
       - A_FLOOR
@@ -5065,7 +5355,7 @@
       - BLANKS
       - UAC_MOON_CAVE
       - UAC_WALL02
-      - UAC_PODS
+      - VAST_PODS
       - UAC_DECOR
     mapBlocks:
       - name: MUM_VILLAGE_E00
@@ -5215,8 +5505,6 @@
         items:
           STR_UAC_CODE_BOOK:
             - [20, 10, 1]
-          STR_UAC_BFG:
-            - [21, 5, 2]
           STR_UAC_BFG_BATTERY:
             - [21, 5, 2]
             - [21, 5, 2]
@@ -5645,7 +5933,7 @@
       - MANSIONBITS
       - XCOMEXIT
     script: EMANSION
-    mapBlocks: &EMansion
+    mapBlocks:
       - name: EMANS00
         width: 20
         length: 20
@@ -5679,18 +5967,9 @@
         width: 20
         length: 20
         revealedFloors: [6, 7]
-  - name: EMANSION_SMALL
-    mapDataSets:
-      - BLANKS
-      - COMMERCE
-      - XB3BITZ1
-      - MANSIONFURNITURE
-      - URBITS
-      - MANSIONGARDEN
-      - MANSIONFLOOR
-      - MANSIONBITS
-    script: EMANSION_SMALL
-    mapBlocks: *EMansion
+      - name: EMANS12
+        width: 10
+        length: 10
   - name: MARS
     mapDataSets:
       - BLANKS
@@ -5733,6 +6012,52 @@
         width: 10
         length: 10
         groups: 2
+  - name: SEAVOLCANO
+    ambience: 400
+    ambientVolume: 0.5
+    mapDataSets:
+      - BLANKS
+      - SEASAND
+      - SEAVOLC
+    script: SEAVOLCANO
+    mapBlocks:
+      - name: VOLC00
+        width: 10
+        length: 10
+        groups: [0, 1]
+      - name: VOLC01
+        width: 10
+        length: 10
+      - name: VOLC02
+        width: 10
+        length: 10
+      - name: VOLC03
+        width: 10
+        length: 10
+      - name: VOLC04
+        width: 10
+        length: 10
+      - name: VOLC05
+        width: 10
+        length: 10
+      - name: VOLC06
+        width: 10
+        length: 10
+      - name: VOLC07
+        width: 10
+        length: 10
+      - name: VOLC08
+        width: 10
+        length: 10
+      - name: VOLC09
+        width: 20
+        length: 20
+      - name: VOLC10
+        width: 20
+        length: 20
+      - name: VOLC11
+        width: 20
+        length: 20
   - name: SEABED
     ambience: 400
     ambientVolume: 0.5
@@ -5909,6 +6234,12 @@
       - name: UCITY14
         width: 20
         length: 20
+      - name: UCITY01_DIO
+        width: 20
+        length: 20
+      - name: UCITY02_DIO
+        width: 10
+        length: 10
   - name: GRUNGE
     ambience: 400
     ambientVolume: 0.5
@@ -6117,7 +6448,7 @@
             - position: [1, 1, 2]
               amount: 3
               mixed: true
-              itemList: &standardCyberwebStash [STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_AXE, STR_AXE, STR_INCENDIARY_GRENADE, STR_INCENDIARY_GRENADE, STR_STUN_ROD_2, STR_STUN_ROD_2, STR_MEDI_PACK, STR_MEDI_PACK, STR_MEDI_PACK, STR_ALIEN_ELECTRONICS, STR_MUTANT_BLOOD_PLASMA, STR_PSICLONE, STR_PSICLONE, STR_ALIEN_GRENADE, STR_SONIC_PULSER, STR_MASS_DRIVER_PISTOL_CLIP, STR_MASS_DRIVER_RIFLE_CLIP, STR_HEAVY_MASS_DRIVER_CLIP, STR_CANISTER_GUN_CLIP_CH, STR_CANISTER_GUN_CLIP_I, STR_TOXIGUN_FLASK, STR_PLASMA_CASTER_CLIP, STR_PLASMA_PISTOL_CLIP, STR_SONIC_PISTOL_CLIP, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_CANNON_CLIP, STR_CONCUSSION_CANNON_CLIP, STR_TLETH_SPEAR, STR_TLETH_HATCHET, STR_VIBRO_BLADE, STR_ALIEN_MULTITOOL, STR_ALIEN_ALLOY_WELDER, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_AQUA_PLASTICS, STR_SPIDERWEB, STR_ALIEN_COMMUNICATOR, STR_ALIEN_COMMUNICATOR] # 1 x standard Cyberweb stash
+              itemList: &standardCyberwebStash [STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_AXE, STR_AXE, STR_INCENDIARY_GRENADE, STR_INCENDIARY_GRENADE, STR_STUN_ROD_2, STR_STUN_ROD_2, STR_MEDI_PACK, STR_MEDI_PACK, STR_MEDI_PACK, STR_ALIEN_ELECTRONICS, STR_MUTANT_BLOOD_PLASMA, STR_PSICLONE, STR_PSICLONE, STR_ALIEN_GRENADE, STR_SONIC_PULSER, STR_MASS_DRIVER_PISTOL_CLIP, STR_MASS_DRIVER_RIFLE_CLIP, STR_HEAVY_MASS_DRIVER_CLIP, STR_CANISTER_GUN_CLIP_CH, STR_CANISTER_GUN_CLIP_I, STR_TOXIGUN_FLASK, STR_PLASMA_CASTER_CLIP, STR_PLASMA_PISTOL_CLIP, STR_SONIC_PISTOL_CLIP, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_CANNON_CLIP, STR_CONCUSSION_CANNON_CLIP, STR_TLETH_SPEAR, STR_TLETH_HATCHET, STR_VIBRO_BLADE, STR_ALIEN_MULTITOOL, STR_ALIEN_ALLOY_WELDER, STR_ALIEN_ALLOYS, STR_ALIEN_ALLOYS, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_AQUA_PLASTICS, STR_SPIDERWEB, STR_ALIEN_COMMUNICATOR, STR_ALIEN_COMMUNICATOR, STR_CYBER_EYE, STR_CYBER_SKIN, STR_CYBER_HEART, STR_HORMONE_REGULATOR] # 1 x standard Cyberweb stash
       - name: CYBERWEB_29
         width: 10
         length: 10
@@ -6140,6 +6471,39 @@
       - name: CYBERWEB_35
         width: 10
         length: 10
+      - name: CYBERWEB_36
+        width: 10
+        length: 10
+      - name: CYBERWEB_37
+        width: 10
+        length: 10
+        groups: 9
+        items:
+          STR_CYBERWEB_BATTERY:
+            - [1, 6, 1]
+            - [1, 5, 2]
+            - [7, 1, 2]
+            - [8, 2, 2]
+        randomizedItems:
+            - position: [8, 1, 2]
+              amount: 3
+              mixed: true
+              itemList: *standardCyberwebStash
+      - name: CYBERWEB_38
+        width: 10
+        length: 10
+        groups: 9
+        items:
+          STR_CYBERWEB_BATTERY:
+            - [1, 2, 1]
+            - [2, 1, 1]
+            - [7, 8, 1]
+            - [8, 8, 1]
+        randomizedItems:
+            - position: [1, 1, 1]
+              amount: 3
+              mixed: true
+              itemList: *standardCyberwebStash
   - name: CYBERWEBLAIR
     mapDataSets:
       - BLANKS
@@ -6164,7 +6528,6 @@
       - CYBERPIPES
       - SPECIALTYPE
       - COMPUTERS
-      - ALIEN_EGGS
     script: CYBERWEB_WAREHOUSE
     mapBlocks: &Cyberwarehouse
       - name: WARE_00
@@ -6186,7 +6549,7 @@
             - position: [9, 9, 2]
               amount: 2
               mixed: true
-              itemList: &richCyberwebStash [STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_AXE, STR_AXE, STR_INCENDIARY_GRENADE, STR_INCENDIARY_GRENADE, STR_STUN_ROD_2, STR_STUN_ROD_2, STR_MEDI_PACK, STR_MEDI_PACK, STR_MEDI_PACK, STR_ALIEN_ELECTRONICS, STR_MUTANT_BLOOD_PLASMA, STR_PSICLONE, STR_PSICLONE, STR_ALIEN_GRENADE, STR_SONIC_PULSER, STR_MASS_DRIVER_PISTOL_CLIP, STR_MASS_DRIVER_RIFLE_CLIP, STR_HEAVY_MASS_DRIVER_CLIP, STR_CANISTER_GUN_CLIP_CH, STR_CANISTER_GUN_CLIP_I, STR_TOXIGUN_FLASK, STR_PLASMA_CASTER_CLIP, STR_PLASMA_PISTOL_CLIP, STR_SONIC_PISTOL_CLIP, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_CANNON_CLIP, STR_CONCUSSION_CANNON_CLIP, STR_TLETH_SPEAR, STR_TLETH_HATCHET, STR_VIBRO_BLADE, STR_ALIEN_MULTITOOL, STR_ALIEN_ALLOY_WELDER, STR_ALIEN_ALLOYS, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_DURATHREAD_MANUFACTURING, STR_ZRBITE_TANK, STR_AQUA_PLASTICS, STR_ALIEN_COMMUNICATOR] # rich Cyberweb stash
+              itemList: &richCyberwebStash [STR_ALIEN_DATA_SLATE, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_AXE, STR_AXE, STR_INCENDIARY_GRENADE, STR_INCENDIARY_GRENADE, STR_STUN_ROD_2, STR_STUN_ROD_2, STR_MEDI_PACK, STR_MEDI_PACK, STR_MEDI_PACK, STR_ALIEN_ELECTRONICS, STR_MUTANT_BLOOD_PLASMA, STR_PSICLONE, STR_PSICLONE, STR_ALIEN_GRENADE, STR_SONIC_PULSER, STR_MASS_DRIVER_PISTOL_CLIP, STR_MASS_DRIVER_RIFLE_CLIP, STR_HEAVY_MASS_DRIVER_CLIP, STR_CANISTER_GUN_CLIP_CH, STR_CANISTER_GUN_CLIP_I, STR_TOXIGUN_FLASK, STR_PLASMA_CASTER_CLIP, STR_PLASMA_PISTOL_CLIP, STR_SONIC_PISTOL_CLIP, STR_SONIC_BLASTA_RIFLE_CLIP, STR_SONIC_CANNON_CLIP, STR_CONCUSSION_CANNON_CLIP, STR_TLETH_SPEAR, STR_TLETH_HATCHET, STR_VIBRO_BLADE, STR_ALIEN_MULTITOOL, STR_ALIEN_ALLOY_WELDER, STR_ALIEN_ALLOYS, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_DURATHREAD_MANUFACTURING, STR_ZRBITE_TANK, STR_AQUA_PLASTICS, STR_ALIEN_COMMUNICATOR, STR_CYBER_EYE, STR_CYBER_EYE, STR_CYBER_SKIN, STR_CYBER_SKIN, STR_CYBER_HEART, STR_CYBER_HEART, STR_HORMONE_REGULATOR, STR_HORMONE_REGULATOR, STR_MAGNETOKINETIC_GEAR] # rich Cyberweb stash
             - position: [10, 10, 2]
               amount: 2
               mixed: true
@@ -6362,6 +6725,12 @@
       - name: CAVES_06
         width: 20
         length: 20
+      - name: CAVES_07
+        width: 20
+        length: 20
+      - name: CAVES_08
+        width: 20
+        length: 20
       - name: CAVESDIO_01
         width: 20
         length: 20
@@ -6377,6 +6746,21 @@
       - name: CAVESDIO_05
         width: 20
         length: 20
+      - name: CAVESDIO_06
+        width: 20
+        length: 20
+      - name: CAVESDIO_07
+        width: 20
+        length: 20
+      - name: CAVESDIO_08
+        width: 20
+        length: 20
+      - name: CAVESDIO_09
+        width: 20
+        length: 20
+      - name: CAVESDIO_10
+        width: 20
+        length: 20
       - name: CAVESEXIT
         width: 20
         length: 20
@@ -6389,7 +6773,7 @@
     mapDataSets:
       - BLANKS
       - CAVEBLACK
-    mapScripts: [CAVE_A, CAVE_B, CAVE_C, CAVE_D]
+    script: CAVE
     mapBlocks: &Caves
       - name: CAVES_00
         width: 20
@@ -6465,6 +6849,30 @@
               amount: 1
               mixed: true
               itemList: [STR_PIPE, STR_PIPE, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_JACKET, STR_SPIDERWEB, STR_SPIDERWEB, STR_SCRAP_METAL, STR_SCRAP_METAL, STR_SCRAP_METAL, STR_SCRAP_METAL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BONE_CLUB, STR_RUSTY_BLADE, STR_CHITIN_KNIFE, STR_BROKEN_LANTERN, STR_DULLED_PROMETHEUM, STR_STRANGE_ALUMINIUM_TABLET, STR_MYSTERIOUS_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVES_07
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [7, 2, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL]
+            - position: [14, 11, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
+      - name: CAVES_08
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [2, 11, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL]
+            - position: [10, 10, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
       - name: CAVESDIO_01
         width: 20
         length: 20
@@ -6488,6 +6896,58 @@
       - name: CAVESDIO_05
         width: 20
         length: 20
+      - name: CAVESDIO_06
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [8, 13, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SHOGG_LANTERN, STR_SHOGG_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_STRANGE_ALUMINIUM_TABLET, STR_STRANGE_ALUMINIUM_TABLET, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_07
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 11, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SHOGG_LANTERN, STR_SHOGG_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_STRANGE_ALUMINIUM_TABLET, STR_STRANGE_ALUMINIUM_TABLET, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_08
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 7, 0]
+              amount: 2
+              mixed: true
+              itemList: [STR_SHOGG_LANTERN, STR_SHOGG_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_BROKEN_LANTERN, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_DULLED_PROMETHEUM, STR_STRANGE_ALUMINIUM_TABLET, STR_STRANGE_ALUMINIUM_TABLET, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+            - position: [10, 9, 0]
+              amount: 3
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
+            - position: [9, 12, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
+            - position: [10, 9, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
+      - name: CAVESDIO_09
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 12, 2]
+              amount: 1
+              mixed: true
+              itemList: [STR_CHITIN, STR_MONSTROUS_TOOTH, STR_BEER_BOTTLE, STR_OLD_BOOT, STR_OLD_BOOT, STR_OLD_JACKET, STR_OLD_JACKET, STR_SPIDERWEB, STR_SKULL, STR_SKULL, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_OLD_HANDBAG, STR_SHIV, STR_SHIV, STR_SHIV, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_DINO_EGG_SHELL, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_REMAINS, STR_PILE_OF_GORE, STR_PILE_OF_GORE, STR_PILE_OF_GORE]
+      - name: CAVESDIO_10
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 6, 1]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
       - name: URBAN03 # landing zone
         width: 10
         length: 10
@@ -6496,13 +6956,13 @@
     mapDataSets:
       - BLANKS
       - CAVERED
-    mapScripts: [CAVE_A, CAVE_B, CAVE_C, CAVE_D]
+    script: CAVE
     mapBlocks: *Caves
   - name: BROWNCAVE
     mapDataSets:
       - BLANKS
       - CAVEBROWN
-    mapScripts: [CAVE_A, CAVE_B, CAVE_C, CAVE_D]
+    script: CAVE
     civilianTypes:
       - MALE_CIVILIAN
       - STR_MALE_GREASER
@@ -6529,7 +6989,7 @@
     mapDataSets:
       - BLANKS
       - CAVEICE
-    mapScripts: [CAVE_A, CAVE_B, CAVE_C, CAVE_D]
+    script: CAVE
     mapBlocks: &IceCaves
       - name: CAVES_00
         width: 20
@@ -6600,6 +7060,22 @@
               amount: 1
               mixed: true
               itemList: [STR_SKULL, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BONE_CLUB, STR_MYSTERIOUS_SKULL]
+      - name: CAVES_07
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [7, 2, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BONE_CLUB, STR_MYSTERIOUS_SKULL]
+      - name: CAVES_08
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [2, 11, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_BONE, STR_BONE, STR_BONE, STR_BIG_BONE, STR_BIG_BONE, STR_BONE_CLUB, STR_MYSTERIOUS_SKULL]
       - name: CAVESDIO_01
         width: 20
         length: 20
@@ -6623,6 +7099,58 @@
       - name: CAVESDIO_05
         width: 20
         length: 20
+      - name: CAVESDIO_06
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [9, 6, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_07
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 11, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_08
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 7, 0]
+              amount: 2
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+            - position: [10, 9, 0]
+              amount: 3
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+            - position: [9, 12, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+            - position: [10, 9, 0]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_09
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 12, 2]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
+      - name: CAVESDIO_10
+        width: 20
+        length: 20
+        randomizedItems:
+            - position: [6, 6, 1]
+              amount: 1
+              mixed: true
+              itemList: [STR_SKULL, STR_SKULL, STR_SKULL, STR_SKULL, STR_MYSTERIOUS_SKULL, STR_MYSTERIOUS_SKULL, STR_DRAGON_SKULL, STR_DINO_EGG_SHELL]
       - name: URBAN03 # landing zone
         width: 10
         length: 10
@@ -6667,6 +7195,9 @@
       - name: CAVESLAB_06
         width: 20
         length: 20
+      - name: CAVESLAB_07
+        width: 20
+        length: 20
       - name: CAVESLABDIO_01
         width: 20
         length: 20
@@ -6680,6 +7211,12 @@
         width: 20
         length: 20
       - name: CAVESLABDIO_05
+        width: 20
+        length: 20
+      - name: CAVESLABDIO_06
+        width: 20
+        length: 20
+      - name: CAVESLABDIO_07
         width: 20
         length: 20
       - name: URBAN03 # landing zone, invisible
@@ -6762,6 +7299,12 @@
       - name: ISLANDURBANDIO02
         width: 20
         length: 20
+      - name: ISLANDURBANDIO03
+        width: 20
+        length: 20
+      - name: ISLANDURBANDIOHUGE00
+        width: 30
+        length: 30
       - name: ISLANDURBAN_XCOM
         width: 10
         length: 10
@@ -6791,16 +7334,6 @@
       - STR_MALE_CIVILIAN_BLACK
       - STR_MALE_DETECTIVE
     script: ISLANDURBAN_BEACH
-    mapBlocks: *AnchorIslandUrban
-  - name: ISLANDURBAN_SURFTIME
-    mapDataSets:
-      - BLANKS
-      - SEAURBAN
-      - ISLANDURBAN1
-      - ISLANDURBAN2
-      - ISLANDURBAN3
-      - SEABITS
-    script: ISLANDURBAN_SURFTIME
     mapBlocks: *AnchorIslandUrban
   - name: STORMMOUNTAIN
     mapDataSets:
@@ -6908,7 +7441,7 @@
       - name: STORMMOUNTAIN04
         width: 10
         length: 10
-        randomizedItems: 
+        randomizedItems:
             - position: [4, 2, 1]
               amount: 1
               mixed: true
@@ -7314,7 +7847,7 @@
       - URBAN40K2
       - COMPLEXBITS
     script: NOOBERIA
-    mapBlocks:
+    mapBlocks: &Nooberia
       - name: NOOBERIA0X0X
         width: 10
         length: 10
@@ -7402,6 +7935,22 @@
       - name: NOOBERIA29
         width: 10
         length: 10
+      - name: NOOBERIA_OSIRON_BOXES
+        width: 10
+        length: 10
+        groups: 8
+        items:
+          STR_GOOD_OSIRON_CRATE:
+            - [1, 3, 1]
+            - [1, 4, 1]
+            - [1, 5, 1]
+            - [1, 6, 1]
+            - [1, 7, 1]
+            - [1, 8, 1]
+            - [2, 4, 1]
+            - [3, 4, 1]
+            - [4, 4, 1]
+            - [2, 6, 1]
       - name: NOOBERIA_CARS
         width: 10
         length: 10
@@ -7413,12 +7962,278 @@
             - [6, 4, 3]
         fuseTimers:
           STR_SPAWN_ZSRR_ARMORED_CAR: [0, 0]
-  - name: MOONBERIA
+      - name: NOOBERIA_TANAKA
+        width: 20
+        length: 20
+        groups: 10
+        items:
+          STR_MIB_CRATE:
+            - [10, 7, 0]
+          STR_SECRET_FILES_3:
+            - [4, 7, 4]
+        randomizedItems:
+            - position: [4, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: &TanakaTreasure
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_GOOD_OSIRON_CRATE
+                - STR_TRITANIUM_AMMO_CRATE
+                - STR_TRITANIUM_AMMO_CRATE
+                - STR_MEDICAL_SUPPLIES_RICH
+                - STR_MEDICAL_SUPPLIES_RICH
+                - STR_EXPLOSIVES_BOX_ADVANCED
+                - STR_EXPLOSIVES_BOX_ADVANCED
+                - STR_SYNDICATE_WEAPON_BOX
+                - STR_UAC_WEAPON_BOX
+                - STR_MIB_CRATE
+            - position: [4, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 6, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 7, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 8, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 9, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 10, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 11, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 12, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 13, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [4, 14, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 6, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 7, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 8, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 9, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 10, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 11, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 12, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 13, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [15, 14, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 7, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 8, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 9, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 10, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 11, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [6, 12, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 7, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 8, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 9, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 10, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 11, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 12, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [7, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [8, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [9, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [10, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [11, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 4, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [7, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [8, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [9, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [10, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [11, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+            - position: [12, 5, 1]
+              amount: 1
+              mixed: true
+              itemList: *TanakaTreasure
+  - name: NOOBERIA_GRASS
+    mapDataSets:
+      - BLANKS
+      - MOUNTGRASS
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_TROP
+    mapDataSets:
+      - BLANKS
+      - MOUNTTROP
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_MUD
+    mapDataSets:
+      - BLANKS
+      - MOUNTMUD
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_WASTE
+    mapDataSets:
+      - BLANKS
+      - MOUNTWASTE
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_ROCK
+    mapDataSets:
+      - BLANKS
+      - MOUNTROCK
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_SAND
+    mapDataSets:
+      - BLANKS
+      - MOUNTSAND
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: NOOBERIA_SAND_NOCACTI
+    mapDataSets:
+      - BLANKS
+      - MOUNTSAND_NOCACTI
+      - URBAN40K2
+      - COMPLEXBITS
+    script: NOOBERIA
+    mapBlocks: *Nooberia
+  - name: MOONBERIA_MIB
     mapDataSets:
       - BLANKS
       - MOUNTMOON
-      - URBAN40K2MOON
-      - COMPLEXBITSMOON
+      - URBAN40KMIBMOON
+      - COMPLEXBITSMIBMOON
     script: NOOBERIA
     mapBlocks:
       - name: MOONBERIA0X0X
@@ -7512,6 +8327,10 @@
         width: 10
         length: 10
         groups: 9
+      - name: MOONBERIA_EXIT
+        width: 10
+        length: 10
+        groups: 8
   - name: URBAN_LOW
     mapDataSets:
       - BLANKS
@@ -7639,6 +8458,7 @@
       - XCOMEXIT
       - PENTA_X
       - DUNGEON
+      - DUNGEONEXTRA
     script: CATACOMBS
     mapBlocks: &Catacombs
       - name: CATACOMBS_00
@@ -7648,12 +8468,28 @@
         items:
           STR_PICKAXE:
             - [9, 2, 0]
+      - name: CATACOMBS_00B
+        width: 10
+        length: 10
+        groups: 6
+        items:
+          STR_PICKAXE:
+            - [9, 5, 0]
+      - name: CATACOMBS_00C
+        width: 10
+        length: 10
+        groups: 6
+        items:
+          STR_PICKAXE:
+            - [4, 0, 0]
       - name: CATACOMBS_01
         width: 10
         length: 10
+        groups: [0, 7] # 7 means open on all sides
       - name: CATACOMBS_02
         width: 10
         length: 10
+        groups: [0, 7]
       - name: CATACOMBS_03
         width: 10
         length: 10
@@ -7669,30 +8505,39 @@
       - name: CATACOMBS_07
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_08
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_09
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_10
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_11
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_12
         width: 10
         length: 10
+        groups: [0, 7]
       - name: CATACOMBS_13
         width: 10
         length: 10
+        groups: [0, 7]
       - name: CATACOMBS_14
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_15
         width: 20
         length: 20
+        groups: [0, 7]
         randomizedItems:
             - position: [11, 6, 0]
               amount: 2
@@ -7777,9 +8622,11 @@
       - name: CATACOMBS_20
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_21
         width: 20
         length: 20
+        groups: [0, 7]
         randomizedItems:
             - position: [14, 14, 0]
               amount: 4
@@ -7788,6 +8635,7 @@
       - name: CATACOMBS_22
         width: 10
         length: 10
+        groups: [0, 7]
         randomizedItems:
             - position: [8, 8, 1]
               amount: 3
@@ -7797,18 +8645,70 @@
               amount: 3
               mixed: true
               itemList: *TombGuardTreasure
+      - name: CATACOMBS_23
+        width: 20
+        length: 20
+        groups: [0, 7]
+        randomizedItems:
+            - position: [9, 8, 0]
+              amount: 3
+              mixed: true
+              itemList: *TombGuardTreasure
+      - name: CATACOMBS_31
+        width: 20
+        length: 20
+        groups: [0, 7]
+      - name: CATACOMBS_32
+        width: 20
+        length: 20
+        groups: [0, 7]
+      - name: CATACOMBS_33
+        width: 10
+        length: 10
+      - name: CATACOMBS_34
+        width: 10
+        length: 10
+        groups: [0, 7]
+      - name: CATACOMBS_35
+        width: 10
+        length: 10
+        groups: [0, 7]
+      - name: CATACOMBS_36
+        width: 10
+        length: 10
+        groups: [0, 7]
+      - name: CATACOMBS_37
+        width: 20
+        length: 20
+        groups: [0, 7]
       - name: CATACOMBS_DIABLO_03
         width: 20
         length: 20
+        groups: [0, 7]
       - name: CATACOMBS_DIABLO_04
         width: 10
         length: 10
+        groups: [0, 7]
       - name: CATACOMBS_DIABLO_05
         width: 10
         length: 10
+        groups: [0, 7]
       - name: CATACOMBS_DIABLO_07
         width: 20
         length: 20
+        groups: [0, 7]
+      - name: CATACOMBS_DIABLO_10
+        width: 10
+        length: 10
+        groups: [0, 7]
+      - name: CATACOMBS_DIABLO_11
+        width: 20
+        length: 20
+        groups: [0, 7]
+      - name: CATACOMBS_DIABLO_12
+        width: 10
+        length: 10
+        groups: [0, 7]
       - name: CATACOMBS_LZ
         width: 10
         length: 10
@@ -7938,6 +8838,21 @@
       - name: OCEANTEMPLE09
         width: 20
         length: 20
+  - name: CARGO_SHIP
+    mapDataSets:
+      - BLANKS
+      - SEAURBAN
+      - CARGO1
+      - CARGO2_IND
+      - XBITSUFO
+      - CARGO3
+    civilianTypes:
+      - STR_MALE_SAILOR
+    script: CARGO_SHIP
+    mapBlocks:
+      - name: CARGO00
+        width: 30
+        length: 70
   - name: CRUISE_LINER
     mapDataSets:
       - BLANKS
@@ -8026,7 +8941,7 @@
             - position: [18, 27, 0]
               amount: 3
               mixed: false
-              itemList: &rareOsironWares [STR_ALIEN_ELECTRONICS, STR_XCOM_FLYING_DRONE, STR_MILITARY_COMPUTER]
+              itemList: &rareOsironWares [STR_ALIEN_ELECTRONICS, STR_ALIEN_ELECTRONICS, STR_SYNTHMUSCLES, STR_SYNTHMUSCLES, STR_ALIEN_DATA_SLATE, STR_ALIEN_DATA_SLATE, STR_MILITARY_COMPUTER, STR_MILITARY_COMPUTER, STR_ALENIUM_SHARD, STR_XCOM_FLYING_DRONE]
   - name: OSIRON_CRUISE_LINER_SMALL
     mapDataSets:
       - BLANKS
@@ -8287,7 +9202,7 @@
       - BLANKS
       - MOON_FINNIK
       - UAC_WALL02
-      - UAC_FRN
+      - VAST_FRN
       - XCOMEXIT
     script: MOON_UAC
     mapBlocks:
@@ -8423,7 +9338,7 @@
             - position: [16, 12, 0]
               amount: 6
               mixed: true
-              itemList: &standardAndGoodWizkidsStash [STR_JUMPSUIT, STR_THROWING_STARS, STR_THROWING_STARS, STR_KNIFE, STR_KNIFE, STR_WAKIZASHI, STR_WAKIZASHI, STR_KATANA, STR_KATANA, STR_ELECTRIC_CLUB, STR_ELECTRIC_CLUB, STR_ELECTRIC_PROD, STR_TASER, STR_TASER, STR_TASER_CLIP, STR_TASER_CLIP, STR_TASER_CLIP, STR_FLASHBANG_GRENADE, STR_FLASHBANG_GRENADE, STR_SMOKE_GRENADE, STR_SMOKE_GRENADE, STR_PROXIMITY_GRENADE, STR_BOOM_BOX, STR_FIRE_EXTINGUISHER, STR_SECRET_FILES_1, STR_SECRET_FILES_1, STR_STIMS, STR_STIMS, STR_GOLDEN_DRAGONS, STR_GOLDEN_DRAGONS, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_FIRST_AID, STR_MEDI_BAG, STR_MEDI_BAG, STR_MEDI_PACK, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_BRIEFCASE, STR_WEAPON_BOX, STR_WEAPON_BOX, STR_WEAPON_BOX_REINFORCED, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_RICH, STR_JUMPSUIT, STR_JUMPSUIT, STR_JUMPSUIT, STR_GRAVMODULE_ARMOR, STR_BULLETPROOF_COAT, STR_THROWING_STARS, STR_KATANA, STR_ELECTRIC_PROD, STR_ELECTRIC_PROD, STR_STUN_ROD_2, STR_HYDRA_LASER, STR_HYDRA_LASER_CLIP, STR_HYDRA_LASER_CLIP, STR_EMP_GRENADE, STR_EMP_GRENADE, STR_PROXIMITY_GRENADE, STR_PROXIMITY_GRENADE, STR_SECRET_FILES_1, STR_SECRET_FILES_2, STR_SECRET_FILES_2, STR_MILITARY_COMPUTER, STR_QUANTUM_COMPUTER, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_BIG_HEALING_SPRAY, STR_BIG_HEALING_SPRAY, STR_MEDI_PACK, STR_MEDI_PACK, STR_TRAUMA_PACK, STR_TRAUMA_PACK, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_MONEY_BAG, STR_MICROGRAV, STR_GRAV_MODULE, STR_WEAPON_BOX_REINFORCED, STR_WEAPON_BOX_REINFORCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_RICH, STR_MEDICAL_SUPPLIES_RICH, STR_ALIEN_COMMUNICATOR] # 1 x standard Wizkids stash, 1 x good Wizkids stash
+              itemList: &standardAndGoodWizkidsStash [STR_JUMPSUIT, STR_THROWING_STARS, STR_THROWING_STARS, STR_KNIFE, STR_KNIFE, STR_WAKIZASHI, STR_WAKIZASHI, STR_KATANA, STR_KATANA, STR_ELECTRIC_CLUB, STR_ELECTRIC_CLUB, STR_ELECTRIC_PROD, STR_TASER, STR_TASER, STR_TASER_CLIP, STR_TASER_CLIP, STR_TASER_CLIP, STR_FLASHBANG_GRENADE, STR_FLASHBANG_GRENADE, STR_SMOKE_GRENADE, STR_SMOKE_GRENADE, STR_PROXIMITY_GRENADE, STR_BOOM_BOX, STR_FIRE_EXTINGUISHER, STR_SECRET_FILES_1, STR_SECRET_FILES_1, STR_STIMS, STR_STIMS, STR_GOLDEN_DRAGONS, STR_GOLDEN_DRAGONS, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_FIRST_AID, STR_MEDI_BAG, STR_MEDI_BAG, STR_MEDI_PACK, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_BRIEFCASE, STR_WEAPON_BOX, STR_WEAPON_BOX, STR_WEAPON_BOX_REINFORCED, STR_AMMO_BOX, STR_AMMO_BOX, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_RICH, STR_JUMPSUIT, STR_JUMPSUIT, STR_JUMPSUIT, STR_GRAVMODULE_ARMOR, STR_BULLETPROOF_COAT, STR_THROWING_STARS, STR_KATANA, STR_ELECTRIC_PROD, STR_ELECTRIC_PROD, STR_STUN_ROD_2, STR_HYDRA_LASER, STR_HYDRA_LASER_CLIP, STR_HYDRA_LASER_CLIP, STR_EMP_GRENADE, STR_EMP_GRENADE, STR_PROXIMITY_GRENADE, STR_PROXIMITY_GRENADE, STR_SECRET_FILES_1, STR_SECRET_FILES_2, STR_SECRET_FILES_2, STR_MILITARY_COMPUTER, STR_QUANTUM_COMPUTER, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_HEALING_SPRAY, STR_BIG_HEALING_SPRAY, STR_BIG_HEALING_SPRAY, STR_MEDI_PACK, STR_MEDI_PACK, STR_TRAUMA_PACK, STR_TRAUMA_PACK, STR_CYBERWEB_BATTERY, STR_CYBERWEB_BATTERY, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_MONEY_BAG, STR_MICROGRAV, STR_GRAV_MODULE, STR_WEAPON_BOX_REINFORCED, STR_WEAPON_BOX_REINFORCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_RICH, STR_MEDICAL_SUPPLIES_RICH, STR_ALIEN_COMMUNICATOR, STR_MAGNETOKINETIC_GEAR] # 1 x standard Wizkids stash, 1 x good Wizkids stash
             - position: [4, 3, 0]
               amount: 5
               mixed: true
@@ -8459,6 +9374,76 @@
               amount: 5
               mixed: true
               itemList: *standardWizkidsStash
+  - name: CLUB_MALIBU
+    mapDataSets:
+      - BLANKS
+      - XCOMENTRY
+      - XCOMEXIT
+      - CLUBMALIBU1
+      - CLUBMALIBU2
+    script: CLUB_MALIBU
+    mapBlocks:
+      - name: CLUBMALIBU_PB1
+        width: 30
+        length: 30
+        groups: [0, 1]
+        items:
+          STR_MONEY_BAG:
+            - [1, 28, 2]
+        randomizedItems:
+            - position: [25, 10, 1]
+              amount: 1
+              mixed: true
+              itemList: &behindTheBar [STR_WAKIZASHI, STR_MACHETE, STR_MACHETE, STR_BILLHOOK, STR_BILLHOOK, STR_TONFA, STR_TONFA, STR_GOLF_STICK, STR_GOLF_STICK, STR_BASEBALL_BAT, STR_BASEBALL_BAT, STR_BASEBALL_BAT, STR_BASEBALL_BAT, STR_WOODEN_CLUB, STR_WOODEN_CLUB, STR_WOODEN_CLUB, STR_PIPE, STR_PIPE, STR_PIPE, STR_PIPE, STR_WRENCH, STR_WRENCH, STR_CROWBAR, STR_CROWBAR, STR_CROWBAR, STR_ELECTRIC_CLUB, STR_ELECTRIC_CLUB, STR_FLASHBANG_GRENADE, STR_BOOM_BOX, STR_BOOM_BOX, STR_BOOM_BOX, STR_FIRE_EXTINGUISHER, STR_FIRE_EXTINGUISHER, STR_FIRE_EXTINGUISHER, STR_FIRE_EXTINGUISHER, STR_FIRE_EXTINGUISHER, STR_FIRST_AID, STR_FIRST_AID, STR_FIRST_AID, STR_SURFBOARD]
+            - position: [9, 20, 1]
+              amount: 1
+              mixed: true
+              itemList: *behindTheBar
+            - position: [22, 0, 2]
+              amount: 1
+              mixed: true
+              itemList: *behindTheBar
+            - position: [4, 13, 1]
+              amount: 1
+              mixed: true
+              itemList: &assortedCriminalStash [STR_SECRET_FILES_1, STR_SECRET_FILES_1, STR_SECRET_FILES_1, STR_SECRET_FILES_2, STR_SECRET_FILES_2, STR_ILLEGAL_REQUISITION_FILES, STR_CRIMINAL_RECORDS, STR_CRIMINAL_RECORDS, STR_CRIMINAL_RECORDS, STR_GOLDEN_DRAGONS, STR_GOLDEN_DRAGONS, STR_GOLDEN_DRAGONS, STR_FIRST_AID, STR_FIRST_AID, STR_MEDI_BAG, STR_MEDI_BAG, STR_MEDI_PACK, STR_BONE, STR_OLD_BOOK, STR_OLD_BOOK, STR_OLD_BOOK, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_5000, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_MONEY_BRIEFCASE, STR_MONEY_BAG, STR_STORM, STR_PSICLONE, STR_DURATHREAD, STR_WEAPON_BOX_RAMSHACKLE, STR_WEAPON_BOX, STR_WEAPON_BOX_REINFORCED, STR_AMMO_BOX, STR_EXPLOSIVES_BOX_SIMPLE, STR_EXPLOSIVES_BOX_STANDARD, STR_EXPLOSIVES_BOX_ADVANCED, STR_MEDICAL_SUPPLIES_CHEAP, STR_MEDICAL_SUPPLIES_STANDARD, STR_MEDICAL_SUPPLIES_RICH, STR_GOOD_OSIRON_CRATE]
+            - position: [2, 19, 1]
+              amount: 1
+              mixed: true
+              itemList: *assortedCriminalStash
+            - position: [6, 18, 0]
+              amount: 3
+              mixed: true
+              itemList: *assortedCriminalStash
+      - name: CLUBMALIBU_PB4
+        width: 30
+        length: 30
+        groups: [0, 1]
+        randomizedItems:
+            - position: [12, 1, 2]
+              amount: 1
+              mixed: true
+              itemList: *behindTheBar
+            - position: [2, 0, 1]
+              amount: 1
+              mixed: true
+              itemList: *behindTheBar
+            - position: [20, 14, 2]
+              amount: 1
+              mixed: true
+              itemList: *assortedCriminalStash
+            - position: [5, 25, 1]
+              amount: 1
+              mixed: true
+              itemList: *assortedCriminalStash
+            - position: [18, 13, 1]
+              amount: 1
+              mixed: true
+              itemList: *assortedCriminalStash
+            - position: [15, 15, 0]
+              amount: 1
+              mixed: true
+              itemList: *assortedCriminalStash
   - name: USTATIONSIDE
     enviroEffects: STR_SPACE
     script: USTATIONSIDE

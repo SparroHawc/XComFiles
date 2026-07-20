@@ -1,4 +1,5 @@
-﻿lookWeights: 
+globalWeight: 30
+lookWeights: 
   - 10  
   - 30 
   - 30 
@@ -26,25 +27,46 @@ femaleFirst:
   - Olga
   - Rosa
 maleLast:
-  - Gonzalez
-  - Rodriguez
-  - Perez
-  - Hernandez 
-  - Garcia 
-  - Martinez
-  - Sanchez
-  - Lopez
-  - Diaz
-  - Rojas
-  - Ramirez
-  - Castillo
-  - Gomez
-  - Romero
-  - Fernandez
-  - Mendoza
-  - Torres
-  - Gutierrez
+  - Alvarez
+  - Blanco
   - Borregales
+  - Castillo
+  - Contreras
+  - Diaz
+  - Fernandez
+  - Flores
   - Fuentes
-  - Narvaez
+  - Garcia 
   - Gomez
+  - Gonzalez
+  - Gutierrez
+  - Hernandez 
+  - Herrera 
+  - Jimenez
+  - Lopez
+  - Marquez
+  - Martinez
+  - Medina
+  - Mendez
+  - Mendoza
+  - Morales
+  - Moreno
+  - Narvaez
+  - Parra
+  - Peña
+  - Perez
+  - Quintero
+  - Ramirez
+  - Ramos
+  - Rivas
+  - Rivero
+  - Rodriguez
+  - Rojas
+  - Romero
+  - Ruiz
+  - Salazar
+  - Sanchez
+  - Silva
+  - Suarez
+  - Torres
+  - Vargas

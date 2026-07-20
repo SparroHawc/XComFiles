@@ -1,4 +1,4 @@
-﻿ufoTrajectories:
+ufoTrajectories:
   - id: P0
     groundTimer: 3000
     waypoints:
@@ -88,6 +88,25 @@
     waypoints:
       - [5, 4, 80]
       - [5, 0, 100]
+  - id: P5_SEA
+    groundTimer: 4000
+    waypoints:
+      - [10, 4, 100]
+      - [10, 2, 50]
+      - [10, 2, 20]
+      - [10, 1, 15]
+      - [10, 0, 20]
+      - [10, 2, 29]
+      - [10, 1, 42]
+      - [10, 0, 90]
+  - id: P6_SEA
+    groundTimer: 5000
+    waypoints:
+      - [10, 4, 100]
+      - [10, 3, 50]
+      - [10, 2, 25]
+      - [10, 1, 16]
+      - [10, 0, 100]
   - id: H0
     groundTimer: 5000
     waypoints:
@@ -158,6 +177,20 @@
       - [1, 3, 100]
       - [2, 3, 100]
       - [3, 1, 60]
+  - id: P_CITIES
+    groundTimer: 100
+    waypoints:
+      - [3, 4, 100]
+      - [3, 1, 100]
+  - id: PX1A_CITIES
+    groundTimer: 100
+    waypoints:
+      - [3, 4, 100]
+      - [3, 2, 75]
+      - [3, 2, 60]
+      - [3, 1, 50]
+      - [3, 1, 70]
+      - [3, 1, 100]
   - id: P_PATROL
     groundTimer: 100
     waypoints:
@@ -225,7 +258,7 @@
       - [4, 1, 44]
       - [1, 0, 20]
       #- [0, 2, 70]
-      - [0, 1, 80]     
+      - [0, 1, 80]
   - id: P_HUNT_GROUND
     groundTimer: 100
     waypoints:
@@ -262,6 +295,12 @@
       - [5, 1, 100]
       - [3, 1, 100]
       - [5, 0, 100]
+  - id: P_CHWC1_Z6
+    groundTimer: 500
+    waypoints:
+      - [5, 1, 100]
+      - [6, 1, 100]
+      - [5, 0, 100]
   - id: P_PATROL_HELI
     groundTimer: 100
     waypoints:
@@ -275,6 +314,12 @@
       - [0, 1, 55]
       - [2, 2, 75]
       - [5, 2, 100]
+  - id: FLYBY_GROUND
+    groundTimer: 0
+    waypoints:
+      - [5, 4, 100]
+      - [5, 4, 100]
+      - [5, 4, 100]
   - id: CA_SPAWN
     groundTimer: 0
     waypoints:

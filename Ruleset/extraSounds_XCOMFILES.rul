@@ -1,4 +1,4 @@
-﻿extraSounds:
+extraSounds:
   - type: GEO.CAT
     files:
       139: Resources/Weapons_Compilation/WeaponSounds/MG3.wav
@@ -135,6 +135,7 @@
       192: Resources/Races_Compilation/BullfrogRace/Sounds/Bullfrog_aggro.wav
       193: Resources/Races_Compilation/BullfrogRace/Sounds/Bullfrog_fire.wav
       194: Resources/Races_Compilation/BullfrogRace/Sounds/monster6_death.wav
+      195: Resources/Races_Compilation/AsmodeanCobraRace/Cobra_death.wav
 #
       198: Resources/Races_Compilation/SnakemanRace/BadassChryssalid_death.wav
       199: Resources/Races_Compilation/SnakemanRace/BadassChryssalid_aggro.wav
@@ -189,8 +190,8 @@
       253: Resources/Races_Compilation/ZombieRace/PharaohDeath.wav
       254: Resources/Races_Compilation/ZombieRace/TombGuardMaleDeath1.wav
       255: Resources/Races_Compilation/ZombieRace/TombGuardMaleDeath2.wav
-#
-      257: Resources/Races_Compilation/GhostRace/PoltergeistDeath.wav
+      256: Resources/Races_Compilation/GhostRace/AntediluvianGhostRoar.wav
+      257: Resources/Races_Compilation/GhostRace/AntediluvianGhostDeath.wav
       258: Resources/Races_Compilation/GhostRace/GhostMovement.wav
       259: Resources/Races_Compilation/GhostRace/KnightGhostDeath.wav
       260: Resources/Races_Compilation/GhostRace/GhostLaugh.wav
@@ -205,7 +206,8 @@
       269: Resources/Races_Compilation/ShamblerRace/Shambler_aggro.wav
       270: Resources/FactionsPack/BlackLotus/Avatar_death.wav
       271: Resources/Races_Compilation/GhostRace/GhostRangedTerrorAttack.wav
-#
+      272: Resources/Sounds_Compilation/ItemSounds/Reload_Ectoplasm.wav
+      273: Resources/Sounds_Compilation/ItemSounds/StasisGrenadeFail.wav
       274: Resources/Weapons_Compilation/WeaponSounds/Bolt03.wav
       275: Resources/Sounds_Compilation/ItemSounds/Wolf3d.wav
       276: Resources/Sounds_Compilation/ItemSounds/StasisGrenade.wav
@@ -240,6 +242,10 @@
       305: Resources/Sounds_Compilation/ItemSounds/BoomBox/MusicInstructor_RockYourBody.ogg
       306: Resources/Sounds_Compilation/ItemSounds/BoomBox/Prodigy_NoGood.ogg
 #
+      393: Resources/Armors_Compilation/ShadowSuit/Holodevice.wav
+      394: Resources/Sounds_Compilation/MiscEffects/sci-fi-door.wav
+      395: Resources/Sounds_Compilation/MiscEffects/sci-fi-door-lower.wav
+      396: Resources/Sounds_Compilation/MiscEffects/sci-fi-door-lowest.wav
       397: Resources/Sounds_Compilation/MiscEffects/Splash.wav
       398: Resources/Sounds_Compilation/MiscEffects/Barrier.wav
       399: Resources/Sounds_Compilation/AmbientSounds/Bubbles.wav
@@ -248,6 +254,21 @@
       410: Resources/Sounds_Compilation/AmbientSounds/Tornado_Siren.wav
 #
       420: Resources/Weapons_Compilation/WeaponSounds/Magic.wav
+      421: Resources/Weapons_Compilation/WeaponSounds/M9.wav
+      422: Resources/Weapons_Compilation/WeaponSounds/mp7.wav
+      423: Resources/Weapons_Compilation/WeaponSounds/tommyGunColt45.wav
+      424: Resources/Weapons_Compilation/WeaponSounds/svd.wav
+      425: Resources/Weapons_Compilation/WeaponSounds/tt33.wav
+      426: Resources/Weapons_Compilation/WeaponSounds/m60.wav
+      427: Resources/Weapons_Compilation/WeaponSounds/AK47.wav
+      428: Resources/Weapons_Compilation/WeaponSounds/p90.wav
+      429: Resources/Weapons_Compilation/WeaponSounds/DE.wav
+      430: Resources/Weapons_Compilation/WeaponSounds/MP5.wav
+      431: Resources/Weapons_Compilation/WeaponSounds/PKM.wav
+      432: Resources/Weapons_Compilation/WeaponSounds/m14.wav
+      433: Resources/Weapons_Compilation/WeaponSounds/Barett_M82A1.wav
+      434: Resources/Weapons_Compilation/WeaponSounds/m249.wav
+      435: Resources/Weapons_Compilation/WeaponSounds/mp5_burst1b.wav
 #
       500: Resources/Tanks_Compilation/Seabot/SeabotMove.wav
       501: Resources/Tanks_Compilation/Seabot/SeabotDeath.wav
@@ -262,6 +283,9 @@
 #
       615: Resources/Races_Compilation/TasothRace/Tentaculat_move.wav
 #
+      662: Resources/Sounds_Compilation/ItemSounds/decrease.wav
+      663: Resources/Sounds_Compilation/ItemSounds/BUCKLE.wav
+      664: Resources/Sounds_Compilation/MiscEffects/Splat.wav
       665: Resources/Weapons_Compilation/WeaponSounds/fire3.wav
       666: Resources/Races_Compilation/DemonRace/Imp_Fireball.wav
       667: Resources/Races_Compilation/DemonRace/Imp_Death1.wav
@@ -309,6 +333,75 @@
       833: Resources/Sounds_Compilation/HumanScreams/FemaleBerserk03.wav
 #
       999: Resources/Sounds_Compilation/ItemSounds/Blank.wav
+#
+      1001: Resources/Sounds_Compilation/ItemSounds/Reload_Laser_Pistol.wav
+      1002: Resources/Sounds_Compilation/ItemSounds/Reload_Laser_Rifle.wav
+      1003: Resources/Sounds_Compilation/ItemSounds/Reload_Heavy_Laser.wav
+      1006: Resources/Sounds_Compilation/ItemSounds/Ident_big.wav
+      1007: Resources/Sounds_Compilation/ItemSounds/Ident_small.wav
+      1008: Resources/Sounds_Compilation/ItemSounds/Ident.wav
+      1009: Resources/Sounds_Compilation/ItemSounds/Reload_Charge.wav
+      1010: Resources/Sounds_Compilation/ItemSounds/Reload_Mortar.wav
+      1011: Resources/Sounds_Compilation/ItemSounds/Reload_Pistol.wav
+      1012: Resources/Sounds_Compilation/ItemSounds/Reload_Hunting_Rifle.wav
+      1013: Resources/Sounds_Compilation/ItemSounds/Reload_Old_Shotgun.wav
+      1014: Resources/Sounds_Compilation/ItemSounds/Reload_Colt_1911.wav
+      1015: Resources/Sounds_Compilation/ItemSounds/Reload_Big_Iron.wav
+      1016: Resources/Sounds_Compilation/ItemSounds/Reload_Small_Clip.wav
+      1017: Resources/Sounds_Compilation/ItemSounds/Reload_SMG.wav
+      1018: Resources/Sounds_Compilation/ItemSounds/Reload_Mosin_Nagant.wav
+      1019: Resources/Sounds_Compilation/ItemSounds/Reload_G36c.wav
+      1020: Resources/Sounds_Compilation/ItemSounds/Reload_Sniper_Rifle.wav
+      1021: Resources/Sounds_Compilation/ItemSounds/Reload_Shotgun_1.wav
+      1022: Resources/Sounds_Compilation/ItemSounds/Reload_Shotgun_2.wav
+      1023: Resources/Sounds_Compilation/ItemSounds/Reload_Shotgun_3.wav
+      1024: Resources/Sounds_Compilation/ItemSounds/Reload_DB.wav
+      1025: Resources/Sounds_Compilation/ItemSounds/DSSGCOCK.wav
+      1026: Resources/Sounds_Compilation/ItemSounds/dsdreload.wav
+      1027: Resources/Sounds_Compilation/ItemSounds/Reload_Walther_CP99.wav
+      1028: Resources/Sounds_Compilation/ItemSounds/Reload_Machine_Gun.wav
+      1029: Resources/Sounds_Compilation/ItemSounds/Reload_Minigun.wav
+      1030: Resources/Sounds_Compilation/ItemSounds/Reload_Cannon.wav
+      1031: Resources/Sounds_Compilation/ItemSounds/Reload_AR.wav
+      1032: Resources/Sounds_Compilation/ItemSounds/Reload_AR2.wav
+      1033: Resources/Sounds_Compilation/ItemSounds/Reload_AR3.wav
+      1034: Resources/Sounds_Compilation/ItemSounds/Reload_Light_Sniper.wav
+      1035: Resources/Sounds_Compilation/ItemSounds/Reload_Pistol_2.wav
+      1036: Resources/Sounds_Compilation/ItemSounds/Reload_G11.wav
+      1037: Resources/Sounds_Compilation/ItemSounds/Reload_Medium_Sniper.wav
+      1038: Resources/Sounds_Compilation/ItemSounds/Reload_Metal.wav
+      1039: Resources/Sounds_Compilation/ItemSounds/Reload_Precision_Rifle.wav
+      1040: Resources/Sounds_Compilation/ItemSounds/Reload_Grenade_Launcher_Tech.wav
+      1041: Resources/Sounds_Compilation/ItemSounds/Reload_Chaingun.wav
+      1042: Resources/Sounds_Compilation/ItemSounds/Reload_Advanced_Rocket_Launcher.wav
+#
+      1067: Resources/Sounds_Compilation/ItemSounds/Reload_Smartpistol.wav
+      1068: Resources/Sounds_Compilation/ItemSounds/Reload_Smartgun.wav
+      1069: Resources/Sounds_Compilation/ItemSounds/Reload_Warp.wav
+      1070: Resources/Sounds_Compilation/ItemSounds/Reload_Smart_Shotgun.wav
+      1071: Resources/Sounds_Compilation/ItemSounds/Reload_Pulse_Pistol.wav
+      1072: Resources/Sounds_Compilation/ItemSounds/Reload_Pulse_Rifle.wav
+      1073: Resources/Sounds_Compilation/ItemSounds/Reload_Pulse_Cannon.wav
+      1074: Resources/Sounds_Compilation/ItemSounds/Reload_Cyber.wav
+#
+      1091: Resources/Sounds_Compilation/ItemSounds/Reload_Mass_Driver_Pistol.wav
+      1092: Resources/Sounds_Compilation/ItemSounds/Reload_Mass_Driver_Rifle.wav
+      1093: Resources/Sounds_Compilation/ItemSounds/Reload_Heavy_Mass_Driver.wav
+      1094: Resources/Sounds_Compilation/ItemSounds/Reload_Toxigun.wav
+      1095: Resources/Sounds_Compilation/ItemSounds/Reload_Gauss_Pistol.wav
+      1096: Resources/Sounds_Compilation/ItemSounds/Reload_Gauss_Rifle.wav
+      1097: Resources/Sounds_Compilation/ItemSounds/Reload_Heavy_Gauss.wav
+      1098: Resources/Sounds_Compilation/ItemSounds/Reload_Energy.wav
+      1099: Resources/Sounds_Compilation/ItemSounds/Reload_Insert.wav
+      1100: Resources/Sounds_Compilation/ItemSounds/Reload_Bow.wav
+      1101: Resources/Sounds_Compilation/ItemSounds/Reload_Crossbow.wav
+      1102: Resources/Sounds_Compilation/ItemSounds/Reload_Stapler.wav
+      1103: Resources/Sounds_Compilation/ItemSounds/Reload_Single_Shot.wav
+      1104: Resources/Sounds_Compilation/ItemSounds/Reload_Online.wav
+      1105: Resources/Sounds_Compilation/ItemSounds/Reload_Hiss.wav
+      1106: Resources/Sounds_Compilation/ItemSounds/Reload_Hiss_Big.wav
+#
+      1200: Resources/Sounds_Compilation/AnimalSounds/LionRoar.wav
 #
       1501: Resources/Sounds_Compilation/AnimalSounds/BIRDS1.wav
       1502: Resources/Sounds_Compilation/AnimalSounds/BIRDS2.wav

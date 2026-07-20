@@ -1,10 +1,12 @@
-﻿crafts:
+crafts:
   - delete: STR_SKYRANGER
   - delete: STR_INTERCEPTOR
   - delete: STR_LIGHTNING
   - delete: STR_FIRESTORM
   - delete: STR_AVENGER
   - type: STR_MUDRANGER
+    requires:
+      - STR_MUDRANGER
     sprite: 827
     fuelMax: 50
     damageMax: 90
@@ -14,7 +16,6 @@
     soldiers: 14
     vehicles: 2
     pilots: 3
-    maxItems: 999
     costBuy: 90000
     costRent: 2000
     costSell: 75000
@@ -47,7 +48,6 @@
     soldiers: 12
     vehicles: 2
     pilots: 3
-    maxItems: 999
     costRent: 20000
     costSell: 90000
     refuelRate: 30
@@ -78,7 +78,6 @@
     soldiers: 5
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costBuy: 150000
     costRent: 25000
     costSell: 100000
@@ -111,7 +110,6 @@
     soldiers: 4
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costBuy: 20000
     costRent: 1000
     costSell: 15000
@@ -154,7 +152,6 @@
     soldiers: 5
     vehicles: 0
     pilots: 2
-    maxItems: 999
     costBuy: 75000
     costRent: 5000
     costSell: 50000
@@ -190,7 +187,6 @@
     soldiers: 2
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costBuy: 15000
     costRent: 1000
     costSell: 10000
@@ -226,7 +222,6 @@
     soldiers: 2
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costBuy: 60000
     costRent: 10000
     costSell: 45000
@@ -262,7 +257,6 @@
     soldiers: 6
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costBuy: 100000
     costRent: 6000
     costSell: 75000
@@ -303,7 +297,6 @@
     costBuy: 125000
     costRent: 15000
     costSell: 90000
-    maxItems: 999
     refuelRate: 50
     repairRate: 4
     radarRange: 350
@@ -341,7 +334,6 @@
     soldiers: 16
     vehicles: 3
     pilots: 1
-    maxItems: 999
     costBuy: 250000
     costRent: 15000
     costSell: 150000
@@ -372,7 +364,6 @@
     soldiers: 8
     vehicles: 1
     pilots: 1
-    maxItems: 999
     costBuy: 300000
     costRent: 20000
     costSell: 200000
@@ -393,6 +384,46 @@
           width: 10
           length: 20
     listOrder: 7380
+  - type: STR_SCARAB_MIN
+    requires:
+      - STR_XCOM_MINOTAURS_YES
+    sprite: 892
+    fuelMax: 800
+    damageMax: 80
+    speedMax: 390
+    armor: 2
+    accel: 1
+    soldiers: 1
+    pilots: 1
+    costRent: 12000
+    costSell: 240000
+    refuelRate: 50
+    radarRange: 75
+    radarChance: 50
+    sightRange: 75
+    repairRate: 4
+    transferTime: 72
+    score: 75
+    battlescapeTerrainData:
+      name: SCARAB_MIN
+      mapDataSets:
+        - BLANKS
+        - RAPIER
+      mapBlocks:
+        - name: SCARAB_MIN
+          width: 20
+          length: 20
+          items:
+            STR_SPAWN_XCOM_MINOTAUR:
+              - [12, 7, 1]
+              - [12, 8, 1]
+              - [13, 8, 1]
+              - [8, 7, 1]
+              - [8, 8, 1]
+              - [7, 8, 1]
+          fuseTimers:
+            STR_SPAWN_XCOM_MINOTAUR: [0, 0]
+    listOrder: 7385
   - type: STR_HAWKEYE
     requires:
       - STR_IMPROVED_RADAR_CRAFT
@@ -404,7 +435,6 @@
     soldiers: 9
     vehicles: 1
     pilots: 1
-    maxItems: 999
     costSell: 1160000
     costRent: 100000
     refuelRate: 75
@@ -441,7 +471,7 @@
       - 6
       - 6
       - 6
-    weaponStrings: [STR_BEAM, STR_ELECTRONICS, STR_ELECTRONICS, STR_ELECTRONICS]
+    weaponStrings: [STR_BEAM_CANNON, STR_ELECTRONICS, STR_ELECTRONICS, STR_ELECTRONICS]
     accel: 1
     costRent: 300000
     costSell: 1550000
@@ -452,6 +482,8 @@
     sightRange: 1900
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -480,7 +512,6 @@
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     allowLanding: false
     costSell: 630000
     costRent: 170000
@@ -516,7 +547,6 @@
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     allowLanding: false
     costBuy: 400000
     costRent: 225000
@@ -527,6 +557,8 @@
     sightRange: 1696
     transferTime: 96
     score: 150
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -545,12 +577,11 @@
     costSell: 285000
     weaponTypes:
       - 0
-      - 2
-    weaponStrings: [STR_CANNON, STR_LIGHT_MISSILES]
+      - 3
+    weaponStrings: [STR_CANNON, STR_HEAVY_MISSILES]
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     sprite: 3
     fuelMax: 1000
     damageMax: 100
@@ -563,6 +594,8 @@
     sightRange: 1696
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -572,7 +605,7 @@
         - name: INTERCEPTOR
           width: 10
           length: 10
-    listOrder: 7460
+    listOrder: 7485
   - type: STR_SKYRAIDER
     requires:
       - STR_SKYRAIDER
@@ -587,7 +620,6 @@
     soldiers: 10
     vehicles: 1
     pilots: 1
-    maxItems: 999
     repairRate: 4
     radarRange: 672
     radarChance: 100
@@ -617,7 +649,6 @@
     soldiers: 14
     vehicles: 3
     pilots: 1
-    maxItems: 999
     costBuy: 0
     costSell: 275000
     costRent: 100000
@@ -650,7 +681,6 @@
     soldiers: 16
     vehicles: 4
     pilots: 1
-    maxItems: 999
     costRent: 100000
     costSell: 700000
     refuelRate: 50
@@ -667,6 +697,7 @@
         - PLANE_ALLOY
         - CRAFTBIT_ALLOY
         - AVENGER_NEW
+        - NOTHING
       mapBlocks:
         - name: SKYMARSHALL
           width: 10
@@ -707,7 +738,6 @@
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costSell: 900000
     costRent: 850000
     refuelRate: 40
@@ -717,6 +747,8 @@
     repairRate: 8
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -745,10 +777,9 @@
     soldiers: 2
     vehicles: 0
     pilots: 2
-    maxItems: 999
     avoidBonus: 21
     costRent: 1000000
-    costSell: 3000000
+    costSell: 2555000
     refuelItem: STR_ELERIUM_115
     refuelRate: 5
     radarRange: 672
@@ -757,6 +788,8 @@
     repairRate: 30
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -786,7 +819,6 @@
     soldiers: 8
     vehicles: 0
     pilots: 2
-    maxItems: 999
     costRent: 900000
     costSell: 1150000
     refuelItem: STR_ELERIUM_115
@@ -797,6 +829,8 @@
     repairRate: 25
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: SENTINEL
       mapDataSets:
@@ -827,7 +861,6 @@
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     avoidBonus: 21
     costRent: 1000000
     costSell: 1350000
@@ -838,6 +871,8 @@
     sightRange: 1696
     repairRate: 20
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: INTERCEPTOR
       mapDataSets:
@@ -866,7 +901,6 @@
     soldiers: 18
     vehicles: 4
     pilots: 2
-    maxItems: 999
     costRent: 150000
     costSell: 1550000
     refuelItem: STR_ZRBITE
@@ -877,6 +911,8 @@
     sightRange: 1696
     transferTime: 72
     score: 400
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: DROPSHIP
       mapDataSets:
@@ -884,7 +920,7 @@
         - DROPSHIP
         - DROPSHIP2
       mapBlocks:
-        - name: DROPSHIP
+        - name: IRONFIST
           width: 10
           length: 20
     deployment:
@@ -921,11 +957,10 @@
       - [0, 1]
       - 4
       - 4
-    weaponStrings: [STR_BEAM, STR_SHIELD, STR_SHIELD]
+    weaponStrings: [STR_BEAM_CANNON, STR_SHIELD, STR_SHIELD]
     soldiers: 8
     vehicles: 1
     pilots: 1
-    maxItems: 999
     costRent: 750000
     costSell: 2000000
     refuelItem: STR_ELERIUM_115
@@ -935,12 +970,13 @@
     sightRange: 1696
     repairRate: 25
     score: 300
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: LIGHTNI2
       mapDataSets:
         - BLANKS
-        - LIGHTNIN
-        - U_WALL02
+        - LIGHTNI2
       mapBlocks:
         - name: LIGHTNI2
           width: 10
@@ -969,13 +1005,12 @@
       - 2
       - 4
       - 6
-    weaponStrings: [STR_BEAM, STR_LIGHT_MISSILES, STR_SHIELD, STR_ELECTRONICS]
+    weaponStrings: [STR_BEAM_CANNON, STR_LIGHT_MISSILES, STR_SHIELD, STR_ELECTRONICS]
     soldiers: 1
     vehicles: 0
     pilots: 1
-    maxItems: 999
     costRent: 1100000
-    costSell: 1650000
+    costSell: 1400000
     refuelItem: STR_ELERIUM_115
     refuelRate: 5
     radarRange: 672
@@ -984,18 +1019,19 @@
     score: 250
     avoidBonus: 24
     repairRate: 16
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
-      name: LIGHTNI2
+      name: FIRESTORM
       mapDataSets:
         - BLANKS
         - LIGHTNIN
-        - U_WALL02
       mapBlocks:
-        - name: LIGHTNI2
+        - name: FIRESTORM
           width: 10
           length: 10
     deployment:
-       - [4, 6, 1, 0]
+       - [6, 5, 1, 2]
     listOrder: 7680
   - type: STR_AVENGER
     requires:
@@ -1013,13 +1049,12 @@
       - [0, 1]
       - 3
       - 4
-    weaponStrings: [STR_BEAM, STR_BEAM, STR_HEAVY_MISSILES, STR_SHIELD]
+    weaponStrings: [STR_BEAM_CANNON, STR_BEAM_CANNON, STR_HEAVY_MISSILES, STR_SHIELD]
     soldiers: 26
     vehicles: 4
     pilots: 4
-    maxItems: 999
     costRent: 1500000
-    costSell: 4000000
+    costSell: 3600000
     refuelItem: STR_ELERIUM_115
     refuelRate: 2
     radarRange: 672
@@ -1028,6 +1063,8 @@
     repairRate: 32
     score: 400
     spacecraft: true
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: AVENGER
       mapDataSets:
@@ -1104,7 +1141,7 @@
     damageMax: 90
     speedMax: 130
     accel: 1
-    soldiers: 14
+    soldiers: 15
     vehicles: 4
     costBuy: 90000
     costRent: 2000
@@ -1123,6 +1160,7 @@
         - C_EXT_NOSE_SIDE_GOLD
         - C_INT_XCOM
         - SUBBITS
+        - C_INT_ENGINE_S
       mapBlocks:
         - name: FATSUB
           width: 10
@@ -1144,7 +1182,6 @@
     soldiers: 15
     vehicles: 2
     pilots: 1
-    maxItems: 999
     costRent: 150000
     costSell: 2150000
     refuelRate: 100
@@ -1153,6 +1190,8 @@
     sightRange: 1696
     transferTime: 72
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: KITSUNE
       mapDataSets:
@@ -1188,6 +1227,8 @@
     refuelRate: 100
     transferTime: 96
     score: 250
+    pilotSoldierBonusesRequired:
+      - STR_COMBAT_PILOT_TRAINING
     battlescapeTerrainData:
       name: STARFIGHTER
       mapDataSets:
@@ -1201,7 +1242,6 @@
     deployment:
       - [6, 13, 0, 2]
       - [2, 13, 0, 6]
-    maxItems: 999
     fuelMax: 4000
     damageMax: 300
     speedMax: 6000
@@ -1210,6 +1250,112 @@
     avoidBonus: 22
     powerBonus: 20
     listOrder: 7595
+  - type: STR_XCOM_AIRCAR
+    requires:
+      - STR_XCOM_AIRCAR
+    sprite: 890
+    weapons: 1
+    weaponTypes:
+      - 0
+    weaponStrings: [STR_CANNON]
+    soldiers: 4
+    pilots: 1
+    vehicles: 0
+    costRent: 25000
+    costSell: 815000
+    repairRate: 2
+    radarRange: 300
+    radarChance: 20
+    sightRange: 550
+    refuelRate: 60
+    transferTime: 96
+    score: 150
+    battlescapeTerrainData:
+      name: HYBRID_AIRCAR_XCOM
+      mapDataSets:
+        - BLANKS
+        - C_EXT_WALL_RED
+        - C_EXT_ROOF_RED
+        - C_EXT_NOSE_BUMPLESS_RED
+        - C_EXT_NOSE_SIDE_RED
+        - C_EXT_ENGINE_S_RED
+        - LIFTER
+        - C_EXT_XCOM_DARK
+        - C_INT_HALF_XCOM
+        - XBASEN_BEDS
+        - C_EXT_GLASSWALL
+        - HYBRID_CRAFT_XCOM
+      mapBlocks:
+        - name: HYBRID_AIRCAR_XCOM
+          width: 10
+          length: 10
+    craftInventoryTile: [4, 4, 1]
+    fuelMax: 1000
+    damageMax: 80
+    speedMax: 1900
+    accel: 3
+    listOrder: 7365
+  - type: STR_XCOM_LANDER
+    requires:
+      - STR_XCOM_LANDER
+    sprite: 891
+    weapons: 2
+    weaponTypes:
+      - 0
+      - 0
+    weaponStrings: [STR_CANNON, STR_CANNON]
+    soldiers: 14
+    pilots: 2
+    vehicles: 2
+    costRent: 400000
+    costSell: 2500000
+    repairRate: 2
+    radarRange: 400
+    radarChance: 25
+    sightRange: 625
+    refuelRate: 60
+    transferTime: 96
+    score: 200
+    deployment:
+      - [5, 4, 1, 3]
+      - [12, 4, 1, 4]
+      - [6, 7, 1, 0]
+      - [11, 7, 1, 1]
+      - [6, 9, 1, 2]
+      - [13, 9, 1, 0]
+      - [10, 12, 2, 0]
+      - [9, 13, 2, 0]
+      - [10, 6, 2, 4]
+      - [9, 7, 2, 4]
+      - [10, 8, 2, 4]
+      - [9, 9, 2, 6]
+      - [10, 10, 2, 0]
+      - [9, 11, 2, 0]
+    battlescapeTerrainData:
+      name: HYBRID_LANDER_XCOM
+      mapDataSets:
+        - BLANKS
+        - C_EXT_WALL_RED
+        - C_EXT_ROOF_RED
+        - C_EXT_NOSE_BUMPLESS_RED
+        - C_EXT_NOSE_SIDE_RED
+        - C_EXT_ENGINE_S_RED
+        - LIFTER
+        - C_EXT_XCOM_DARK
+        - C_INT_HALF_XCOM
+        - XBASEN_BEDS
+        - C_EXT_GLASSWALL
+        - HYBRID_CRAFT_XCOM
+      mapBlocks:
+        - name: HYBRID_LANDER_XCOM
+          width: 20
+          length: 20
+    craftInventoryTile: [7, 7, 1]
+    fuelMax: 1250
+    damageMax: 180
+    speedMax: 1400
+    accel: 2
+    listOrder: 7366
   - type: STR_VIPER_XCOM
     requires:
       - STR_VIPER_XCOM
@@ -1220,6 +1366,7 @@
     accel: 6
     armor: 2
     soldiers: 7
+    pilots: 1
     vehicles: 0
     costRent: 75000
     costSell: 2200000
@@ -1373,6 +1520,8 @@
         - URBITS
         - URBAN
         - FRNITURE
+        - BATHBITZ_HT
+        - TAVERN
         - CAFEENTRY
       mapBlocks:
         - name: D_ATRIUM_DEF
@@ -1412,7 +1561,44 @@
             STR_SPAWN_CIVILIAN_FEMALE_DOCTOR: [0, 0]
             STR_SPAWN_CIVILIAN_PRIEST: [0, 0]
             STR_SPAWN_CIVILIAN_DOGE: [0, 0]
-    craftInventoryTile: [16, 3, 0]
+        - name: D_ATRIUM_3_DEF
+          width: 20
+          length: 20
+          items:
+            STR_SPAWN_CIVILIAN_HOSTESS:
+              - [9, 10, 0]
+            STR_SPAWN_CIVILIAN_MALE_GREASER:
+              - [8, 12, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP:
+              - [6, 17, 1]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR:
+              - [5, 15, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD:
+              - [13, 4, 1]
+              - [13, 10, 0]
+              - [6, 9, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK:
+              - [13, 11, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER:
+              - [12, 15, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_DOCTOR:
+              - [11, 5, 1]
+            STR_SPAWN_CIVILIAN_PRIEST:
+              - [14, 5, 1]
+            STR_SPAWN_CIVILIAN_DOGE:
+              - [10, 9, 0]
+          fuseTimers:
+            STR_SPAWN_CIVILIAN_HOSTESS: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_GREASER: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP: [0, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER: [0, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_DOCTOR: [0, 0]
+            STR_SPAWN_CIVILIAN_PRIEST: [0, 0]
+            STR_SPAWN_CIVILIAN_DOGE: [0, 0]
+    craftInventoryTile: [6, 3, 0]
   - type: STR_MANSION_DEFENSE_SYNDICATE
     requires:
       - STR_MANSION_DEFENSE
@@ -1438,6 +1624,8 @@
         - URBITS
         - URBAN
         - FRNITURE
+        - BATHBITZ_HT
+        - TAVERN
         - CAFEENTRY
       mapBlocks:
         - name: D_ATRIUM_DEF
@@ -1496,7 +1684,63 @@
             STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER: [0, 0]
             STR_SPAWN_CIVILIAN_MALE_DOCTOR: [0, 0]
             STR_SPAWN_CIVILIAN_DOGE: [0, 0]
-    craftInventoryTile: [16, 3, 0]
+        - name: D_ATRIUM_3_DEF
+          width: 20
+          length: 20
+          items:
+            STR_SPAWN_XCOM_COUNCIL_MEMBER:
+              - [8, 9, 1]
+            STR_SPAWN_CIVILIAN_MALE_ELITE_SOLDIER:
+              - [18, 7, 0]
+              - [18, 5, 1]
+              - [16, 14, 1]
+              - [12, 18, 1]
+              - [1, 16, 1]
+              - [1, 2, 1]
+            STR_SPAWN_CIVILIAN_MALE_GREASER:
+              - [11, 12, 0]
+              - [14, 13, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP:
+              - [8, 7, 0]
+              - [8, 16, 1]
+              - [12, 9, 1]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR:
+              - [5, 4, 0]
+              - [7, 12, 1]
+            STR_SPAWN_CIVILIAN_HOSTESS:
+              - [6, 15, 1]
+              - [12, 11, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD:
+              - [9, 10, 0]
+              - [2, 3, 0]
+              - [12, 17, 0]
+              - [8, 7, 1]
+              - [15, 10, 1]
+              - [8, 13, 1]
+              - [6, 2, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK:
+              - [8, 15, 0]
+              - [14, 5, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER:
+              - [8, 2, 0]
+            STR_SPAWN_CIVILIAN_MALE_DOCTOR:
+              - [9, 13, 1]
+            STR_SPAWN_CIVILIAN_DOGE:
+              - [15, 13, 1]
+              - [9, 13, 0]
+          fuseTimers:
+            STR_SPAWN_XCOM_COUNCIL_MEMBER: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_ELITE_SOLDIER: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_GREASER: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP: [0, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR: [0, 0]
+            STR_SPAWN_CIVILIAN_HOSTESS: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_FARMER: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_DOCTOR: [0, 0]
+            STR_SPAWN_CIVILIAN_DOGE: [0, 0]
+    craftInventoryTile: [6, 3, 0]
   - type: STR_SCIENTIST_HOUSE
     requires:
       - STR_SCIENTIST_HOUSE
@@ -1529,6 +1773,8 @@
           items:
             STR_SPAWN_DAVID_VINCENT:
               - [11, 7, 0]
+            STR_FLOPPY_LOG:
+              - [8, 10, 0]
           randomizedItems:
               - position: [9, 10, 0]
                 amount: 1
@@ -1537,6 +1783,119 @@
           fuseTimers:
             STR_SPAWN_DAVID_VINCENT: [0, 0]
     craftInventoryTile: [9, 8, 1]
+  - type: STR_FOREST_LODGE
+    requires:
+      - STR_FOREST_LODGE
+    sprite: 827
+    fuelMax: 50
+    damageMax: 90
+    speedMax: 130
+    accel: 1
+    soldiers: 1
+    vehicles: 0
+    costBuy: 0
+    costRent: 0
+    costSell: 0
+    refuelRate: 100
+    repairRate: 1
+    transferTime: 1
+    score: 5
+    battlescapeTerrainData:
+      name: FOREST_LODGE
+      mapDataSets:
+        - BLANKS
+        - VILROADS
+        - VILBITS
+        - VILBAN_XCOM
+        - VILFRNITURE
+      mapBlocks:
+        - name: FOREST_LODGE
+          width: 20
+          length: 20
+          items:
+            STR_NITRO_EXPRESS:
+              - [2, 13, 0]
+            STR_NITRO_EXPRESS_CLIP:
+              - [2, 13, 0]
+              - [2, 13, 0]
+              - [2, 13, 0]
+              - [2, 13, 0]
+              - [2, 13, 0]
+              - [2, 13, 0]
+              - [2, 13, 0]
+            STR_DOUBLE_BARRELED:
+              - [5, 8, 1]
+            STR_DOUBLE_BARRELED_BUCKSHOT:
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+              - [5, 8, 1]
+            STR_BOLT_ACTION:
+              - [3, 11, 2]
+            STR_BOLT_ACTION_CLIP:
+              - [3, 11, 2]
+              - [3, 11, 2]
+              - [3, 11, 2]
+              - [3, 11, 2]
+              - [3, 11, 2]
+            STR_HUNTING_RIFLE:
+              - [3, 10, 3]
+            STR_HUNTING_RIFLE_CLIP:
+              - [3, 10, 3]
+              - [3, 10, 3]
+              - [3, 10, 3]
+              - [3, 10, 3]
+              - [3, 10, 3]
+            STR_PUMP_ACTION:
+              - [7, 8, 3]
+            STR_PUMP_ACTION_SHELLS:
+              - [7, 8, 3]
+              - [7, 8, 3]
+              - [7, 8, 3]
+              - [7, 8, 3]
+            STR_SPAWN_CIVILIAN_HOSTESS_XCOM:
+              - [13, 7, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD_XCOM:
+              - [4, 10, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP_XCOM:
+              - [11, 11, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR_XCOM:
+              - [11, 15, 0]
+            STR_SPAWN_CIVILIAN_MALE_GREASER_XCOM:
+              - [4, 15, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK_XCOM:
+              - [5, 9, 1]
+            STR_SPAWN_CIVILIAN_PRIEST_XCOM:
+              - [6, 6, 1]
+            STR_SPAWN_CIVILIAN_MALE_DOCTOR_XCOM:
+              - [12, 9, 1]
+            STR_SPAWN_CIVILIAN_FEMALE_DOCTOR_XCOM:
+              - [10, 8, 1]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_HUNTER_XCOM:
+              - [3, 13, 2]
+            STR_SPAWN_CIVILIAN_MALE_FORESTER_XCOM:
+              - [4, 7, 2]
+            STR_SPAWN_CIVILIAN_CIVILIAN_WORKER_XCOM:
+              - [8, 8, 2]
+          fuseTimers:
+            STR_SPAWN_CIVILIAN_HOSTESS_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BODYGUARD_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_VIP_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_GLAMOUR_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_GREASER_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_BLACK_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_PRIEST_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_DOCTOR_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_FEMALE_DOCTOR_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_CIVILIAN_HUNTER_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_MALE_FORESTER_XCOM: [0, 0]
+            STR_SPAWN_CIVILIAN_CIVILIAN_WORKER_XCOM: [0, 0]
   - type: STR_PENTAGRAM_UPLANET_ACID
     requires:
       - STR_PENTAGRAM_UPLANET_ACID

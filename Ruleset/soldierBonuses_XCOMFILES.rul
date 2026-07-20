@@ -2,6 +2,13 @@ soldierBonuses:
 # Template
   - name: STR_FIRST_TEST
     visibilityAtDark: 20     # +20 tiles
+    visibilityAtDay: 20     # +20 tiles
+    heatVision: 20
+    psiVision: 20
+    frontArmor: 1
+    sideArmor: 1
+    rearArmor: 1
+    underArmor: 1
     stats:
       tu: 0
       stamina: 0
@@ -28,6 +35,244 @@ soldierBonuses:
         flatOne: -1
       stun:
         flatOne: 4
+# Careers
+  - name: STR_CAREER_COMMONER
+    stats:
+      mana: 4
+    recovery:
+      morale:
+        flatOne: 2
+  - name: STR_CAREER_MARTIAL_ARTIST
+    stats:
+      stamina: 4
+      melee: 4
+  - name: STR_CAREER_SABOTEUR
+    stats:
+      reactions: 2
+    visibilityAtDark: 1
+  - name: STR_CAREER_RANGER
+    stats:
+      reactions: 2
+      firing: 2
+      stamina: 4
+  - name: STR_CAREER_SAPPER
+    stats:
+      throwing: 2
+    recovery:
+      stun:
+        flatOne: 2
+  - name: STR_CAREER_MARINE
+    stats:
+      firing: 3
+      strength: 3
+  - name: STR_CAREER_SPY
+    stats:
+      reactions: 2
+      mana: 4
+    recovery:
+      morale:
+        flatOne: 1
+  - name: STR_CAREER_MARKSMAN
+    stats:
+      firing: 5
+  - name: STR_CAREER_SOLDIER
+    stats:
+      firing: 2
+      health: 2
+      stamina: 4
+  - name: STR_CAREER_POLICE_OFFICER
+    stats:
+      firing: 3
+      melee: 3
+  - name: STR_CAREER_DETECTIVE
+    stats:
+      health: 2
+      melee: 2
+      mana: 4
+  - name: STR_CAREER_JOURNALIST
+    stats:
+      psiStrength: 1
+    recovery:
+      morale:
+        flatOne: 1
+      energy:
+        flatOne: 1
+  - name: STR_CAREER_STUDENT
+    stats:
+      mana: 10
+  - name: STR_CAREER_SAILOR
+    stats:
+      strength: 4
+      melee: 2
+  - name: STR_CAREER_MYSTERY_HUNTER
+    stats:
+      bravery: 10
+  - name: STR_CAREER_PILOT
+    stats:
+      reactions: 4
+      firing: 2
+  - name: STR_CAREER_MEDIC
+    stats:
+      mana: 8
+    recovery:
+      energy:
+        flatOne: 1
+  - name: STR_CAREER_PSYCHOLOGIST
+    stats:
+      psiSkill: 2
+      psiStrength: 1
+      health: 1
+  - name: STR_CAREER_FIREMAN
+    stats:
+      tu: 3
+      strength: 1
+      throwing: 2
+  - name: STR_CAREER_EXPLORER
+    stats:
+      tu: 2
+      health: 2
+      stamina: 4
+  - name: STR_CAREER_DATA_ANALYST
+    stats:
+      mana: 4
+      psiStrength: 2
+  - name: STR_CAREER_ADEPT
+    stats:
+      health: 1
+      psiSkill: 3
+      mana: 1
+  - name: STR_CAREER_THIEF
+    stats:
+      tu: 2
+    visibilityAtDark: 1
+  - name: STR_CAREER_ILLUSIONIST
+    stats:
+      tu: 5
+  - name: STR_CAREER_DELIVERY_MAN
+    stats:
+      stamina: 10
+  - name: STR_CAREER_MOUNTAINEER
+    stats:
+      health: 5
+  - name: STR_CAREER_DRIVER
+    stats:
+      reactions: 5
+  - name: STR_CAREER_ATHLETE
+    stats:
+      throwing: 5
+  - name: STR_CAREER_LABORER
+    stats:
+      strength: 5
+  - name: STR_CAREER_FENCER
+    stats:
+      melee: 5
+  - name: STR_CAREER_MYSTIC
+    stats:
+      stamina: -2
+      psiStrength: 3
+  - name: STR_CAREER_ENGINEER
+    frontArmor: 1
+    sideArmor: 1
+    rearArmor: 1
+    underArmor: 1
+  - name: STR_CAREER_ASTRONOMER
+    stats:
+      mana: -6
+    visibilityAtDark: 2
+  - name: STR_CAREER_TRADER
+    stats:
+      health: -1
+    recovery:
+      energy:
+        flatOne: 3
+  - name: STR_CAREER_PUNK
+    stats:
+      mana: -2
+    recovery:
+      stun:
+        flatOne: 3
+  - name: STR_CAREER_COACH
+    stats:
+      reactions: -1
+    recovery:
+      morale:
+        flatOne: 3
+  - name: STR_CAREER_FARMER
+    stats:
+      strength: 2
+      health: 2
+      stamina: 4
+  - name: STR_CAREER_HUNTER
+    stats:
+      firing: 3
+      health: 3
+  - name: STR_CAREER_PRIEST
+    stats:
+      psiStrength: 1
+      mana: 2
+    recovery:
+      morale:
+        flatOne: 2
+  - name: STR_CAREER_HISTORIAN
+    stats:
+      health: -5
+      psiStrength: 2
+      melee: 1
+      mana: 6
+    recovery:
+      morale:
+        flatOne: 1
+  - name: STR_CAREER_ENTERTAINER
+    recovery:
+      morale:
+        flatOne: 1
+      energy:
+        flatOne: 1
+      stun:
+        flatOne: 1
+  - name: STR_CAREER_NEGOTIATOR
+    stats:
+      psiStrength: 1
+    frontArmor: 3
+  - name: STR_CAREER_ASTRONAUT
+    stats:
+      reactions: 2
+      health: 2
+    recovery:
+      morale:
+        flatOne: 1
+  - name: STR_CAREER_INSTITUTIONALIZED
+    stats:
+      reactions: 2
+      psiSkill: 5
+      mana: -10
+    recovery:
+      morale:
+        flatOne: -1
+    frontArmor: 1
+  - name: STR_CAREER_MERCENARY
+    stats:
+      firing: 2
+      throwing: 2
+      mana: 4
+  - name: STR_CAREER_BODYGUARD
+    stats:
+      reactions: 3
+      strength: 3
+  - name: STR_CAREER_ARISTOCRAT
+    stats:
+      psiStrength: 2
+      melee: 2
+  - name: STR_CAREER_SECRET_AGENT
+    stats:
+      tu: 1
+      stamina: 1
+      health: 1
+      reactions: 1
+      firing: 1
+      throwing: 1
+      strength: 1
+      mana: 1
 # Transformations
   - name: STR_MEDAL_COMMENDATED
     stats:
@@ -57,6 +302,9 @@ soldierBonuses:
       reactions: 5
       throwing: 5
       melee: 10
+  - name: STR_COMBAT_PILOT_TRAINING
+    stats:
+      stamina: 2
   - name: STR_SECTOID_LEGACY
     stats:
       stamina: 10
@@ -64,6 +312,23 @@ soldierBonuses:
       firing: 10
       psiSkill: 10
       strength: 5
+      mana: 10
+  - name: STR_STARCHILD
+    stats:
+      tu: 15
+      stamina: 15
+      health: 15
+      strength: 10
+      mana: -20
+  - name: STR_EARTHBORN
+    stats:
+      firing: 10
+      throwing: 10
+      mana: 20
+      psiStrength: 5
+    recovery:
+      morale:
+        flatOne: 2
   - name: STR_BLOOD_BOOSTING
     stats:
       tu: 10
@@ -83,14 +348,45 @@ soldierBonuses:
       melee: 5
       mana: -10
   - name: STR_CYBORG
-    visibilityAtDark: 5
-    frontArmor: 10
-    sideArmor: 10
-    rearArmor: 10
-    underArmor: 10
+    visibilityAtDark: 3
+    frontArmor: 5
+    sideArmor: 5
+    rearArmor: 5
+    underArmor: 5
     recovery:
       energy:
         flatOne: -1
+  - name: STR_CYBER_SIGHT
+    visibilityAtDark: 2
+    stats:
+      firing: 5
+      mana: -5
+  - name: STR_SUBDERMAL_MESH
+    frontArmor: 5
+    sideArmor: 5
+    rearArmor: 5
+    underArmor: 5
+    stats:
+      mana: -5
+  - name: STR_CYBER_HEART
+    frontArmor: 1
+    sideArmor: 1
+    rearArmor: 1
+    stats:
+      stamina: 20
+      mana: -10
+    recovery:
+      energy:
+        flatOne: 2
+  - name: STR_HORMONE_REGULATOR
+    stats:
+      stamina: 5
+      mana: -10
+    recovery:
+      stun:
+        flatOne: 1
+      morale:
+        flatOne: 1
   - name: STR_HELIX_KNIGHT
     stats:
       stamina: 10
@@ -116,12 +412,46 @@ soldierBonuses:
     sideArmor: 5
     rearArmor: 5
     underArmor: 5
+  - name: STR_PREDATOR
+    stats:
+      tu: 10
+      stamina: 30
+      strength: 2
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+      mana: 0
+    recovery:
+      energy:
+        flatOne: 3
   - name: STR_LIGHTCYCLING
     stats:
       reactions: 10
       firing: 10
       throwing: 5
       melee: 10
+  - name: STR_SPARTANISM
+    stats:
+      tu: 40
+      stamina: 40
+      health: 20
+      reactions: 20
+      throwing: 20
+      strength: 25
+      psiSkill: -50
+      melee: 40
+  - name: STR_INFERNALISM
+    visibilityAtDark: 2     # +2 tiles
+    stats:
+      tu: 20
+      stamina: 30
+      health: 20
+      reactions: 10
+      firing: 10
+      throwing: 10
+      strength: 15
+      melee: 20
+      mana: 20
 # Commendations
   - name: STR_MEDAL_ORIGINAL8_NAME
     stats:
@@ -254,12 +584,15 @@ soldierBonuses:
   - name: STR_MEDAL_CARREER_SCORE_4
     stats:
       bravery: 10
+      mana: 1
   - name: STR_MEDAL_CARREER_SCORE_7
     stats:
       bravery: 20
+      mana: 1
   - name: STR_MEDAL_CARREER_SCORE_10
     stats:
       bravery: 30
+      mana: 1
   - name: STR_MEDAL_CARREER_MISSIONS_1
     stats:
       health: 1
@@ -769,29 +1102,92 @@ soldierBonuses:
   - name: STR_MEDAL_CAMPAIGN_RIBBON_2
     stats:
       mana: 2
+    recovery:
+      morale:
+        flatOne: 1
   - name: STR_MEDAL_CAMPAIGN_RIBBON_3
     stats:
       mana: 3
+    recovery:
+      morale:
+        flatOne: 1
   - name: STR_MEDAL_CAMPAIGN_RIBBON_4
     stats:
       mana: 4
+    recovery:
+      morale:
+        flatOne: 1
   - name: STR_MEDAL_CAMPAIGN_RIBBON_5
     stats:
       mana: 5
+    recovery:
+      morale:
+        flatOne: 2
   - name: STR_MEDAL_CAMPAIGN_RIBBON_6
     stats:
       mana: 6
+    recovery:
+      morale:
+        flatOne: 2
   - name: STR_MEDAL_CAMPAIGN_RIBBON_7
     stats:
       mana: 7
+    recovery:
+      morale:
+        flatOne: 2
   - name: STR_MEDAL_CAMPAIGN_RIBBON_8
     stats:
       mana: 8
+    recovery:
+      morale:
+        flatOne: 3
   - name: STR_MEDAL_CAMPAIGN_RIBBON_9
     stats:
       mana: 9
+    recovery:
+      morale:
+        flatOne: 3
   - name: STR_MEDAL_CAMPAIGN_RIBBON_10
     stats:
+      mana: 10
+    recovery:
+      morale:
+        flatOne: 3
+  - name: STR_MEDAL_HEALER_1
+    stats:
+      mana: 1
+  - name: STR_MEDAL_HEALER_2
+    stats:
+      mana: 2
+  - name: STR_MEDAL_HEALER_3
+    stats:
+      mana: 3
+  - name: STR_MEDAL_HEALER_4
+    stats:
+      mana: 4
+  - name: STR_MEDAL_HEALER_5
+    stats:
+      bravery: 10
+      mana: 5
+  - name: STR_MEDAL_HEALER_6
+    stats:
+      bravery: 10
+      mana: 6
+  - name: STR_MEDAL_HEALER_7
+    stats:
+      bravery: 10
+      mana: 7
+  - name: STR_MEDAL_HEALER_8
+    stats:
+      bravery: 10
+      mana: 8
+  - name: STR_MEDAL_HEALER_9
+    stats:
+      bravery: 10
+      mana: 9
+  - name: STR_MEDAL_HEALER_10
+    stats:
+      bravery: 20
       mana: 10
   - name: STR_MEDAL_CARREER_KILLS_1
     stats:
@@ -1248,6 +1644,51 @@ soldierBonuses:
     recovery:
       stun:
         flatOne: 10
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_1
+    stats:
+      firing: 1
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_2
+    stats:
+      firing: 1
+      reactions: 1
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_3
+    stats:
+      firing: 2
+      reactions: 1
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_4
+    stats:
+      firing: 2
+      reactions: 2
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_5
+    stats:
+      firing: 3
+      reactions: 2
+      mana: 3
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_6
+    stats:
+      firing: 3
+      reactions: 3
+      mana: 3
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_7
+    stats:
+      firing: 4
+      reactions: 3
+      mana: 3
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_8
+    stats:
+      firing: 4
+      reactions: 4
+      mana: 3
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_9
+    stats:
+      firing: 5
+      reactions: 4
+      mana: 3
+  - name: STR_MEDAL_UFOS_SHOT_DOWN_10
+    stats:
+      firing: 5
+      reactions: 5
+      mana: 6
   - name: STR_MEDAL_GLOBETROTTER
     stats:
       tu: 5
@@ -1924,43 +2365,43 @@ soldierBonuses:
   - name: STR_MEDAL_TECHNICIAN_1
     stats:
       melee: 1
-      tu: 1
+      stamina: 1
   - name: STR_MEDAL_TECHNICIAN_2
     stats:
       melee: 2
-      tu: 2
+      stamina: 2
   - name: STR_MEDAL_TECHNICIAN_3
     stats:
       melee: 3
-      tu: 3
+      stamina: 3
   - name: STR_MEDAL_TECHNICIAN_4
     stats:
       melee: 4
-      tu: 4
+      stamina: 4
   - name: STR_MEDAL_TECHNICIAN_5
     stats:
       melee: 5
-      tu: 5
+      stamina: 5
   - name: STR_MEDAL_TECHNICIAN_6
     stats:
       melee: 6
-      tu: 6
+      stamina: 6
   - name: STR_MEDAL_TECHNICIAN_7
     stats:
       melee: 7
-      tu: 7
+      stamina: 7
   - name: STR_MEDAL_TECHNICIAN_8
     stats:
       melee: 8
-      tu: 8
+      stamina: 8
   - name: STR_MEDAL_TECHNICIAN_9
     stats:
       melee: 9
-      tu: 9
+      stamina: 9
   - name: STR_MEDAL_TECHNICIAN_10
     stats:
       melee: 10
-      tu: 10
+      stamina: 10
   - name: STR_MEDAL_TRADITIONALIST_1
     stats:
       stamina: 1
@@ -2304,7 +2745,7 @@ soldierBonuses:
   - name: STR_MEDAL_TASEMASTER_5
     stats:
       firing: 3
-      tu: 4
+      tu: 2
   - name: STR_MEDAL_TASEMASTER_6
     stats:
       firing: 3
